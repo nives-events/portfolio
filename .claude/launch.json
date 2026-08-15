@@ -1,0 +1,24 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000
+    },
+    {
+      "name": "athlones-finest",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "C:\\Users\\niall\\Downloads\\files 4\\athlones-finest-website\\node_modules\\vite\\bin\\vite.js",
+        "C:\\Users\\niall\\Downloads\\files 4\\athlones-finest-website",
+        "--port",
+        "4198",
+        "--strictPort"
+      ],
+      "port": 4198,
+      "autoPort": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+next-env.d.ts
+
+# build artefacts
+tsconfig.tsbuildinfo
+*.stackdump
+
+# env
+.env
+.env.*
+!.env.example
+
+# editor / os
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# local tooling
+.claude/settings.local.json
