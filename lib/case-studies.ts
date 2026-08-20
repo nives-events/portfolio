@@ -322,7 +322,7 @@ export const caseStudies: CaseStudyDetail[] = [
         heading: "The International Bandaging Competition",
         body: [
           "The centrepiece was a competition that turned a passive stand into something with a queue: guess the pressure you are applying, wrap, then see the real number on the device. It gave every visitor a reason to stop, and it gave us a natural qualifying conversation with each of them.",
-          "The two-sided poster below is the actual creative. The front pulled people in, the back explained the game in three steps. I designed both, and ran the competition on the floor across the days of the conference with the clinical team demonstrating.",
+          "The two-sided poster below is the actual creative. The front pulled people in, the back explained the game in three steps. I designed both, and ran the competition on the floor across the days of the conference alongside the clinical team, who handled the technique demonstrations.",
         ],
         pullStat: { value: "20+", label: "Qualified leads, tracked from stand to follow-up" },
         images: [
@@ -606,7 +606,7 @@ export const caseStudies: CaseStudyDetail[] = [
     tag: "Product marketing / GTM / Positioning",
     title: "The Booch Reboot: repositioning a drink nobody could explain",
     intro:
-      "Ireland doesn't have a kombucha problem. It has a kombucha understanding problem. All About Kombucha had a strong product, a distinctive brand and national distribution in 400+ outlets, and shoppers still couldn't say what it was for.",
+      "Ireland's kombucha problem was comprehension, not demand. All About Kombucha had a strong product, a distinctive brand and national distribution in 400+ outlets, and shoppers still couldn't say what it was for.",
     meta: {
       role: "Marketing strategy lead on the project team",
       timeline: "MSc Marketing Practice, University of Galway",
@@ -623,7 +623,7 @@ export const caseStudies: CaseStudyDetail[] = [
         heading: "The real constraint was not distribution",
         body: [
           "The obvious answer was more listings and more promotion. The evidence did not support it. The product was already on shelves in over 400 outlets, and the rate of sale was the problem rather than the availability. Consumer research kept surfacing the same thing: people did not understand what kombucha was, when they would drink it, or what it replaced in their week.",
-          "That reframes the brief completely. If the barrier is comprehension, more distribution just puts the same confusing bottle in front of more people. I called the strategy 'The Booch Reboot': build understanding, build cultural relevance, then convert that into subscribers. This isn't just about selling drinks. It's about building a daily wellness habit.",
+          "That reframes the brief completely. If the barrier is comprehension, more distribution just puts the same confusing bottle in front of more people. I called the strategy 'The Booch Reboot': build understanding, build cultural relevance, then convert that into subscribers, because a daily wellness habit is worth more than a single sale.",
         ],
       },
       {

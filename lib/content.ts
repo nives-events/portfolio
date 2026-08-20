@@ -53,7 +53,7 @@ export const hero = {
     { value: "€8.13", label: "Cost per qualified lead (CPL)" },
     { value: "400+", label: "Players engaged" },
   ] satisfies Stat[],
-  primaryCta: { label: "See my work", href: "#work" },
+  primaryCta: { label: "See my work", href: "/work" },
   secondaryCta: { label: "Get in touch", href: "#contact" },
 } as const;
 

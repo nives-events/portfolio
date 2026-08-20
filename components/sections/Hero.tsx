@@ -20,10 +20,10 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="container-page flex min-h-[88vh] items-center pb-24 pt-32"
+      className="container-page flex min-h-[88vh] flex-col items-center gap-12 pb-24 pt-32 lg:flex-row lg:gap-0"
     >
       {/* Left — text content */}
-      <div className="flex flex-1 flex-col justify-center lg:pr-16">
+      <div className="flex w-full flex-1 flex-col justify-center lg:pr-16">
         <p
           className="hero-rise text-xs font-medium uppercase tracking-[0.12em] text-muted"
           style={riseDelay(delays.eyebrow)}
@@ -89,22 +89,23 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Right — cut-out headshot, hidden on mobile. The PNG has a transparent
-          background, so it stands on the page rather than sitting in a frame.
-          Its 900×1170 source matches this box exactly, so nothing crops. */}
-      <div className="hero-rise relative hidden lg:block" style={riseDelay(600)}>
+      {/* Cut-out headshot. Stacks below the text on mobile/tablet, sits to the
+          right on desktop. The PNG has a transparent background, so it stands
+          on the page rather than sitting in a frame. Its 900×1170 source
+          matches the box ratio exactly, so nothing crops. */}
+      <div className="hero-rise relative order-first lg:order-last" style={riseDelay(600)}>
         {/* Accent glow, behind the figure */}
         <div
           aria-hidden="true"
-          className="absolute bottom-8 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-accent opacity-[0.10] blur-3xl"
+          className="absolute bottom-8 left-1/2 h-[260px] w-[260px] -translate-x-1/2 rounded-full bg-accent opacity-[0.10] blur-3xl sm:h-[340px] sm:w-[340px] lg:h-[420px] lg:w-[420px]"
         />
-        <div className="relative h-[520px] w-[400px]">
+        <div className="relative mx-auto h-[320px] w-[246px] sm:h-[420px] sm:w-[323px] lg:h-[520px] lg:w-[400px]">
           <Image
             src="/headshot.png"
             alt="Niall Awogboro, marketing across brand, growth, content and events, based in Dublin"
             fill
             priority
-            sizes="400px"
+            sizes="(min-width: 1024px) 400px, (min-width: 640px) 323px, 246px"
             className="object-contain object-bottom"
           />
         </div>
