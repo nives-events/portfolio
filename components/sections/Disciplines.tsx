@@ -20,7 +20,7 @@ export function Disciplines() {
           </h2>
         </Reveal>
 
-        <dl className="mx-auto mt-12 grid max-w-5xl gap-x-12 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+        <dl className="mx-auto mt-12 grid max-w-5xl gap-x-12 gap-y-12 justify-items-center md:grid-cols-2 lg:grid-cols-3">
           {disciplines.map((item, index) => (
             <Reveal
               key={item.label}

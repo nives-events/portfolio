@@ -41,7 +41,7 @@ export const nav: NavItem[] = [
 
 export const hero = {
   eyebrow: "Marketing Executive · Brand, Growth, Content & Events",
-  headlineLines: ["Meet Niall Awogboro", "the marketer with 5 hats"],
+  headlineLines: ["Meet Niall Awogboro", "The marketer with 5 hats"],
   positioning:
     "I run marketing end to end. The research, the positioning, the creative, the spend, and the reporting that says whether any of it worked.",
   supporting: [
