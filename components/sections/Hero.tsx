@@ -52,7 +52,7 @@ export function Hero() {
         </h1>
 
         <p
-          className="hero-rise mt-8 max-w-2xl text-lg text-primary/80"
+          className="hero-rise mt-8 max-w-2xl text-lg text-primary"
           style={riseDelay(delays.positioning)}
         >
           {hero.positioning}

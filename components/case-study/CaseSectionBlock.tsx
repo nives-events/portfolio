@@ -29,6 +29,22 @@ export function CaseSectionBlock({ section, banded }: { section: CaseSection; ba
             ))}
           </Reveal>
 
+          {section.links && section.links.length > 0 ? (
+            <Reveal delay={120} className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+              {section.links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm font-medium text-primary underline decoration-primary/30 underline-offset-4 transition-colors duration-150 hover:text-accent hover:decoration-accent"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </Reveal>
+          ) : null}
+
           {section.pullStat ? (
             <Reveal delay={160} className="mt-10 border-l-2 border-accent pl-6">
               <p className="font-mono text-4xl text-accent sm:text-5xl">{section.pullStat.value}</p>

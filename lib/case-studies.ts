@@ -391,6 +391,7 @@ export const caseStudies: CaseStudyDetail[] = [
       { value: "467%", label: "Return on ad spend (ROAS)" },
       { value: "€8.13", label: "Cost per qualified lead (CPL)" },
       { value: "4.1", label: "CAC to CLTV ratio" },
+      { value: "400+", label: "Players across 4 years" },
     ],
     sections: [
       {
@@ -399,6 +400,13 @@ export const caseStudies: CaseStudyDetail[] = [
         body: [
           "I founded Athlone's Finest in 2023 because local football in the midlands had an audience and no coverage worth the name. It is a consumer brand for 16 to 25 year olds: its own visual language, its own tone, and a content calendar running across TikTok, Instagram and Facebook.",
           "It grew to 36,000+ monthly organic impressions with followers doubled, and that audience is the asset. It is what I take into a sponsorship conversation, and it is what makes the paid campaigns cheap to run, because the retargeting pool already exists before I spend anything.",
+          "Over 400 players have turned out for Athlone's Finest across the four years it has been running, which is the number that actually proves the brand is real rather than a page. The 2026 six-a-side edition was covered by the Westmeath Independent, local press picking up a story that started as a page with no coverage worth the name.",
+        ],
+        links: [
+          {
+            label: "Read the coverage in the Westmeath Independent",
+            href: "https://www.westmeathindependent.ie/2026/08/05/athlones-finest-six-a-side-returns/",
+          },
         ],
       },
       {
@@ -461,6 +469,7 @@ export const caseStudies: CaseStudyDetail[] = [
         { value: "12", label: "Qualified leads generated" },
         { value: "150,000+", label: "Paid views on Meta" },
         { value: "36,000+", label: "Monthly organic impressions" },
+        { value: "400+", label: "Players across 4 years" },
       ],
       receipts: [
         {
@@ -595,9 +604,9 @@ export const caseStudies: CaseStudyDetail[] = [
     slug: "kombucha",
     index: "06",
     tag: "Product marketing / GTM / Positioning",
-    title: "All About Kombucha: repositioning a drink nobody could explain",
+    title: "The Booch Reboot: repositioning a drink nobody could explain",
     intro:
-      "The brand was in 400+ retail outlets and still growing slowly. Distribution was not the constraint. Most shoppers could not say what kombucha was for, and you cannot buy a product you cannot describe.",
+      "Ireland doesn't have a kombucha problem. It has a kombucha understanding problem. All About Kombucha had a strong product, a distinctive brand and national distribution in 400+ outlets, and shoppers still couldn't say what it was for.",
     meta: {
       role: "Marketing strategy lead on the project team",
       timeline: "MSc Marketing Practice, University of Galway",
@@ -605,6 +614,7 @@ export const caseStudies: CaseStudyDetail[] = [
     },
     heroStats: [
       { value: "400+", label: "Retail outlets already stocked" },
+      { value: "3", label: "Core personas built from research" },
       { value: "2x", label: "Subscription sales target in six months" },
     ],
     sections: [
@@ -613,39 +623,47 @@ export const caseStudies: CaseStudyDetail[] = [
         heading: "The real constraint was not distribution",
         body: [
           "The obvious answer was more listings and more promotion. The evidence did not support it. The product was already on shelves in over 400 outlets, and the rate of sale was the problem rather than the availability. Consumer research kept surfacing the same thing: people did not understand what kombucha was, when they would drink it, or what it replaced in their week.",
-          "That reframes the brief completely. If the barrier is comprehension, then more distribution just puts the same confusing bottle in front of more people.",
+          "That reframes the brief completely. If the barrier is comprehension, more distribution just puts the same confusing bottle in front of more people. I called the strategy 'The Booch Reboot': build understanding, build cultural relevance, then convert that into subscribers. This isn't just about selling drinks. It's about building a daily wellness habit.",
         ],
       },
       {
-        kicker: "02 · The repositioning",
-        heading: "From niche health product to everyday wellness drink",
+        kicker: "02 · The audience",
+        heading: "Three personas, one shared want",
         body: [
-          "The category the brand was sitting in was working against it. Positioned as a health product, kombucha competes with supplements and asks the shopper to have an opinion about fermentation. Positioned as an everyday wellness drink, it competes with the soft drink someone already buys at lunchtime, and the question becomes which one, not whether.",
-          "That is the argument the whole plan runs on: change the reference point, not the recipe. Messaging moved from what the product contains to when you would drink it, which is the version a shopper can repeat to themselves in an aisle.",
+          "The target was young professionals aged 23 to 35 in Ireland who care about wellness, fitness and staying on top of trends, and I built that out into three personas to keep the plan honest about who it was for: Jacob, a yoga instructor who values transparency and gut health; John, a finance professional who needs simple, effective solutions that fit a fast-paced life; and Gráinne, a marketing professional who wants healthy products that still feel socially relevant.",
+          "Across all three, the same insight held: nobody wants just a drink. They want something that fits their routine, their identity and their lifestyle. That reframed the positioning: All About is the modern Irish wellness brand for people who want to feel good, without sacrificing lifestyle. Not a niche health product. A daily lifestyle drink. That is the niche, and that is the opportunity.",
         ],
         images: [
           {
             src: "/work/kombucha/positioning.svg",
             alt: "Diagram: repositioning from niche health product competing with supplements, to everyday wellness drink competing with soft drinks, with the four go-to-market workstreams beneath",
             ratio: "aspect-[16/10]",
-            caption: "The repositioning argument, and the four workstreams built underneath it.",
+            caption: "The repositioning argument, and the workstreams built underneath it.",
           },
         ],
       },
       {
         kicker: "03 · The go-to-market plan",
-        heading: "Four workstreams, one message",
+        heading: "Four fixes, then scale",
         body: [
-          "The integrated go-to-market (GTM) plan ran across SEO and content marketing, website and conversion, event marketing and creator partnerships, and lifecycle communications. Search and content answered the comprehension problem directly, because people were already asking what kombucha does and getting answers from everyone except the brand. Event sampling and creator partnerships handled the part text cannot: taste.",
-          "Every workstream carried the same message and a different job, which is the only way a plan this wide stays coherent once four different people are executing it.",
+          "Before scale, I fixed the foundation. Messaging simplified to three pillars: gut health, low-sugar alternative, daily wellness habit. Brand alignment across the kombucha cans and the prebiotic sodas, which currently read as two different brands, into one visual identity and one voice. Website optimisation, with a kombucha education hub answering the questions people were already searching, and a structured SEO funnel: awareness keywords like 'what is kombucha' at the top, consideration keywords like 'kombucha after workout' in the middle, conversion keywords like 'kombucha subscription Ireland' at the bottom.",
+          "Social ran on a 40/30/20/10 content model: 40% education, 30% lifestyle, 20% user-generated content, 10% conversion, so the channel had a structured route from awareness to action rather than a feed of promotional posts.",
         ],
       },
       {
-        kicker: "04 · The commercial model",
+        kicker: "04 · The awareness campaign",
+        heading: "The All About Retreat, a proposed concept",
+        body: [
+          "Once the foundation was fixed, the plan shifted from clarity to scale, not through advertising but through culture. I proposed The All About Retreat: an immersive, culturally rooted weekend on the Aran Islands blending wellness, adventure and social connection. Sea swims, cycling and yoga by day; communal meals, live music and a proper Irish session by night, with the brand embedded across the experience rather than forced into it.",
+          "The retreat was designed as a content engine first: TikTok, Instagram Reels, stories and user-generated content produced by the creators attending, built to drive awareness, engagement, cultural relevance and consumer curiosity well beyond the weekend itself. This stayed a campaign concept in the plan we presented, not a booking we made.",
+        ],
+      },
+      {
+        kicker: "05 · The commercial model",
         heading: "A subscription designed around customer lifetime value",
         body: [
           "Retail gives you a transaction. Subscription gives you a relationship worth modelling, so I built the subscription proposition around customer lifetime value (CLTV): what a repeat drinker is worth over a year, what that justifies spending to acquire them, and where the CRM-led journey has to intervene to stop them lapsing after the second delivery.",
-          "The lifecycle comms were designed against that model rather than bolted on: onboarding that teaches the occasion, a nudge at the point where usage drops, and a win-back with a reason attached. The plan proposed doubling subscription sales inside six months, delivered as a phased roadmap with the sequencing and the dependencies made explicit rather than a wish list.",
+          "The lifecycle comms were designed against that model rather than bolted on: onboarding that teaches the occasion, a nudge at the point where usage drops, and a win-back with a reason attached. The plan proposed doubling subscription sales inside six months on a €40k budget, delivered as a phased roadmap with the sequencing made explicit rather than a wish list.",
         ],
         pullStat: { value: "6 months", label: "Phased roadmap to double subscription sales" },
       },
@@ -653,11 +671,11 @@ export const caseStudies: CaseStudyDetail[] = [
     results: {
       heading: "What it produced",
       summary:
-        "A positioning argument built on evidence, an integrated GTM plan across five channels, and a subscription model with a commercial target and a phased roadmap attached.",
+        "A positioning argument built on evidence, three personas grounding an integrated GTM plan, and a subscription model with a commercial target and a phased roadmap attached.",
       stats: [
         { value: "400+", label: "Retail outlets analysed" },
-        { value: "1", label: "Category repositioning, evidence-led" },
-        { value: "5", label: "Channels in the integrated plan" },
+        { value: "3", label: "Core personas built from research" },
+        { value: "40/30/20/10", label: "Content mix: education/lifestyle/UGC/conversion" },
         { value: "2x", label: "Subscription sales target, six months" },
       ],
     },
@@ -679,14 +697,15 @@ export const caseStudies: CaseStudyDetail[] = [
       { value: "61,000+", label: "Users analysed in GA4" },
       { value: "70.3%", label: "Mobile checkout abandonment" },
       { value: "95.4%", label: "Of revenue from desktop" },
+      { value: "19%", label: "Of users were returning customers" },
     ],
     sections: [
       {
         kicker: "01 · The picture",
         heading: "Same traffic, completely different outcome",
         body: [
-          "Across 61,000+ users, desktop and mobile split the traffic almost evenly: 50.6% against 48.6%. Revenue split 95.4% desktop against 4.6% mobile. Half the audience was arriving on a device that was converting at a fraction of the rate, which is a revenue problem disguised as an audience report.",
-          "Traffic dashboards hide this, because by the metric most people look at first, mobile was doing fine.",
+          "We split the work across the team: mobile performance, checkout drop-off, paid traffic ROI and returning-customer rate, each of us presenting a different piece of the same GA4 dataset. Across 61,000+ users, desktop and mobile split the traffic almost evenly: 50.6% against 48.6%. Revenue split 95.4% desktop against 4.6% mobile. Half the audience was arriving on a device that was converting at a fraction of the rate, which is a revenue problem disguised as an audience report.",
+          "Traffic dashboards hide this, because by the metric most people look at first, mobile was doing fine. Engagement told a truer story: a 59% engagement rate and an average of 1m43s on desktop against 22% and 22 seconds on mobile.",
         ],
         images: [
           {
@@ -698,19 +717,27 @@ export const caseStudies: CaseStudyDetail[] = [
         ],
       },
       {
-        kicker: "02 · The analysis",
+        kicker: "02 · The mobile checkout",
         heading: "Following it down the funnel in GA4",
         body: [
-          "Funnel exploration in Google Analytics 4 (GA4) put the loss in a specific place rather than a general one: 70.3% of mobile sessions that reached checkout abandoned it. Engagement told the same story earlier in the journey, with a 22% engagement rate on mobile against 59% on desktop.",
-          "So this was not a traffic quality problem or a product problem. It was a checkout that had been designed on a desktop and then squeezed onto a phone, losing people at the exact point where they had already decided to buy.",
+          "Funnel exploration in GA4 put the loss in a specific place rather than a general one. Add-to-cart rate held up reasonably well on mobile (18.0% against desktop's 22.6%), but the gap widened at every step after: begin-checkout rate dropped to 29.7% on mobile against 54.4% on desktop, and only 86 mobile sessions completed a purchase against 795 on desktop. Checkout abandonment overall came in at 70.3% mobile against 45.6% desktop.",
+          "Journey testing on the mobile site turned that number into specific, fixable problems: a slow-loading cart page, a mandatory Google account login with no guest checkout, complex checkout forms requiring billing and shipping addresses entered separately, address autofill that doesn't work on iPhone, only one payment option, and shipping restricted to the US and Canada with no notice given before checkout.",
         ],
         pullStat: { value: "70.3%", label: "Of mobile checkout sessions abandoned" },
       },
       {
-        kicker: "03 · The output",
+        kicker: "03 · The retention gap",
+        heading: "A store running almost entirely on first-time buyers",
+        body: [
+          "The second finding sat underneath the first: only 19% of users were returning customers, against 81% new. Returning users converted at more than double the rate of new users, 3.8% against 1.9%, but because there were so few of them, they generated only 28% of total revenue. High-intent customers existed. The store just wasn't built to keep them coming back.",
+          "That combination, low retention volume plus a materially higher conversion rate once retained, is what makes the fix worth prioritising: a loyalty programme with a points system and repeat-customer discounts, post-purchase email and remarketing automation, and targeted incentives such as limited-time offers and bundles aimed specifically at people who had already bought once.",
+        ],
+      },
+      {
+        kicker: "04 · The output",
         heading: "A prioritised roadmap, not a list of observations",
         body: [
-          "The deliverable was a conversion rate optimisation (CRO) roadmap ordered by expected impact against effort: simplify the mobile checkout to the smallest number of steps that still takes payment, introduce guest checkout so the account requirement stops killing first purchases, add mobile payment methods so nobody types a card number on a phone, and put CRM-led retention behind the people who do convert.",
+          "The deliverable was a conversion rate optimisation (CRO) roadmap ordered by expected impact against effort, covering both leaks: simplify the mobile checkout to the smallest number of steps that still takes payment, introduce guest checkout so the account requirement stops killing first purchases, add mobile payment methods so nobody types a card number on a phone, and build the retention loop, loyalty, CRM automation and targeted remarketing, behind the customers who already convert best.",
           "Prioritising is the part that makes an analysis usable. Anyone can produce twelve recommendations; the value is in saying which two to do first and what you expect to happen when you do.",
         ],
       },
@@ -718,11 +745,11 @@ export const caseStudies: CaseStudyDetail[] = [
     results: {
       heading: "What it produced",
       summary:
-        "A revenue leak traced from a top-line report to a specific step in a specific journey, with a fix list ordered by what would move the number fastest.",
+        "A revenue leak traced from a top-line report to two specific points in the customer journey, mobile checkout and retention, with a fix list ordered by what would move the number fastest.",
       stats: [
         { value: "61,000+", label: "Users analysed" },
         { value: "70.3%", label: "Mobile checkout abandonment identified" },
-        { value: "22% vs 59%", label: "Mobile against desktop engagement" },
+        { value: "19% vs 81%", label: "Returning against new users" },
         { value: "4", label: "Prioritised fixes in the roadmap" },
       ],
     },

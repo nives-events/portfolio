@@ -21,16 +21,15 @@ export function CaseStudiesGrid() {
           >
             <div className="container-page py-24">
               <Reveal>
-                <p className="text-xs font-medium uppercase tracking-widest text-muted">
-                  {group.eyebrow}
-                </p>
                 <h2
                   id={headingId}
-                  className="mt-4 font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl"
+                  className="font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl"
                 >
                   {group.heading}
                 </h2>
-                <p className="mt-3 max-w-prose text-lg text-primary/80">{group.intro}</p>
+                {group.intro ? (
+                  <p className="mt-3 max-w-prose text-lg text-primary/80">{group.intro}</p>
+                ) : null}
               </Reveal>
 
               <ul

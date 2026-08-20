@@ -7,7 +7,7 @@ type CaseStudyCardProps = {
 };
 
 export function CaseStudyCard({ study }: CaseStudyCardProps) {
-  const { title, tag, body, href, stats, image } = study;
+  const { title, body, href, stats, image } = study;
 
   return (
     <article className="group relative flex h-full flex-col gap-4 border-[0.5px] border-border bg-surface p-6 transition-all duration-200 ease-out-strong hover:-translate-y-1 hover:border-accent hover:shadow-[0_8px_32px_rgba(96,165,250,0.08)]">
@@ -43,8 +43,6 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
           />
         </div>
       ) : null}
-
-      <p className="text-xs uppercase tracking-wider text-muted">{tag}</p>
 
       <h3 className="font-display text-2xl font-bold leading-tight text-primary">
         {title}

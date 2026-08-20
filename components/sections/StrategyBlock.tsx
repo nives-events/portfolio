@@ -12,12 +12,9 @@ export function StrategyBlock() {
     <section aria-labelledby="strategy-heading" className="border-t border-border">
       <div className="container-page py-24">
         <Reveal>
-          <p className="text-xs font-medium uppercase tracking-widest text-muted">
-            {strategyProjects.eyebrow}
-          </p>
           <h2
             id="strategy-heading"
-            className="mt-4 font-display text-4xl font-bold tracking-tight text-primary sm:text-5xl"
+            className="font-display text-4xl font-bold tracking-tight text-primary sm:text-5xl"
           >
             {strategyProjects.heading}
           </h2>

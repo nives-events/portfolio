@@ -92,6 +92,8 @@ export type CaseSection = {
   beforeAfter?: { before: CaseImage; after: CaseImage; caption?: string };
   videos?: CaseVideo[];
   images?: CaseImage[];
+  /** External citation links (e.g. press coverage), rendered under the body copy. */
+  links?: { label: string; href: string }[];
 };
 
 export type CaseStudyDetail = {
@@ -127,6 +129,8 @@ export type Discipline = {
   label: string;
   /** One line of evidence, not a description of the discipline. */
   body: string;
+  /** Case study this brief's evidence is drawn from. */
+  href: string;
 };
 
 export type ToolGroup = {

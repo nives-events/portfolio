@@ -41,11 +41,7 @@ export const nav: NavItem[] = [
 
 export const hero = {
   eyebrow: "Marketing Executive · Brand, Growth, Content & Events",
-  headlineLines: [
-    "Brand, growth and events.",
-    "Run end to end.",
-    "467% return on the last campaign.",
-  ],
+  headlineLines: ["Meet Niall Awogboro", "the marketer with 5 hats"],
   positioning:
     "I run marketing end to end. The research, the positioning, the creative, the spend, and the reporting that says whether any of it worked.",
   supporting: [
@@ -53,10 +49,9 @@ export const hero = {
     "At Athlone's Finest, the consumer sports brand I founded in 2023, the last paid social campaign returned 467% on ad spend at €8.13 per qualified lead. I sold the sponsorships, hired the suppliers, and delivered the tournaments the campaign was selling.",
   ],
   stats: [
-    { value: "467%", label: "Return on ad spend (ROAS)" },
+    { value: "40%", label: "Follower growth" },
     { value: "€8.13", label: "Cost per qualified lead (CPL)" },
-    { value: "4.1", label: "CAC to CLTV ratio" },
-    { value: "1,900%", label: "Impressions growth in MedTech" },
+    { value: "400+", label: "Players engaged" },
   ] satisfies Stat[],
   primaryCta: { label: "See my work", href: "#work" },
   secondaryCta: { label: "Get in touch", href: "#contact" },
@@ -70,30 +65,33 @@ export const disciplines: Discipline[] = [
   {
     label: "Brand",
     body: "Contributed to a brand refresh at FeelTect and then applied it: brand guidelines, tone of voice and visual identity carried across digital, print, web and event collateral in InDesign, Affinity Designer and Canva. Built a consumer brand from nothing at Athlone's Finest and sold it to sponsors on commercial terms.",
+    href: "/work/athlones-finest",
   },
   {
     label: "Product marketing",
     body: "Wrote the marketing and go-to-market (GTM) strategy FeelTect approved and now runs on. Built buyer, investor and key opinion leader (KOL) personas from stakeholder interviews, and repositioned a drinks brand across 400+ retail outlets in a full GTM plan.",
+    href: "/work/feeltect-function",
   },
   {
     label: "Growth",
     body: "467% return on ad spend (ROAS) at €8.13 cost per lead (CPL) and a 4.1 CAC to CLTV ratio on Meta. Google Analytics 4 (GA4) and Google Tag Manager (GTM) implemented from scratch, plus a conversion rate optimisation (CRO) analysis across 61,000 users.",
+    href: "/work/athlones-finest",
   },
   {
     label: "Content",
     body: "A 15-episode video series filmed and edited in-house, and a content calendar running across TikTok, Instagram, Facebook, LinkedIn and YouTube. Video editing, graphic design and copywriting from the same person, with AI in the pipeline where it earns its place.",
+    href: "/work/feeltect-function",
   },
   {
     label: "Events",
     body: "An international clinical conference in Vienna with 20+ qualified leads, and a live tournament series delivered on budget with suppliers, contracts and sponsors attached. B2B and consumer, both with a commercial number on the end.",
+    href: "/work/ewma",
   },
 ];
 
 export const feeltect = {
   eyebrow: "B2B MedTech · 9 months · Marketing & Communications Lead",
   heading: "My work at FeelTect",
-  intro:
-    "Nine months on the marketing team at a wound care technology company, working across sales, clinical and leadership.",
   statsBefore: [
     { value: "1,900%", label: "Impressions growth" },
     { value: "40%", label: "Follower growth" },
@@ -145,10 +143,6 @@ export const feeltect = {
 export const athlonesFinest = {
   eyebrow: "Consumer sports brand · Founded 2023 · Still running",
   heading: "Athlone's Finest. Built it. Still running it.",
-  intro: [
-    "I founded Athlone's Finest in 2023 and still run it. It is a consumer sports brand for 16 to 25 year olds in the midlands, with a paid media budget, sponsors who expect a return, suppliers on contract, and tournaments that have to happen on the day they say they will.",
-    "It is also where I test things before I recommend them to anyone else. AI-assisted video, sequenced paid social, organic community building across TikTok, Instagram and Facebook. What works here on a small budget tells me what to do with a bigger one.",
-  ],
   cards: [
     {
       title: "467% ROAS on paid social",
@@ -532,15 +526,13 @@ export const workPage = {
     {
       eyebrow: feeltect.eyebrow,
       heading: "FeelTect",
-      intro:
-        "Nine months on the marketing team at a MedTech company. Strategy, web, content and events, delivered with sales, clinical and leadership stakeholders in the room.",
+      intro: undefined as string | undefined,
       cards: feeltect.cards,
     },
     {
       eyebrow: athlonesFinest.eyebrow,
       heading: "Athlone's Finest",
-      intro:
-        "The brand I founded and still run. Paid media, organic community building, sponsorship, and live events with real budgets attached.",
+      intro: undefined as string | undefined,
       cards: athlonesFinest.cards,
     },
     {

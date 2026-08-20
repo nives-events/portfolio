@@ -12,18 +12,12 @@ export function FeelTectBlock() {
     >
       <div className="container-page py-24">
         <Reveal>
-          <p className="text-xs font-medium uppercase tracking-widest text-muted">
-            {feeltect.eyebrow}
-          </p>
           <h2
             id="feeltect-heading"
-            className="mt-4 font-display text-4xl font-bold tracking-tight text-primary sm:text-5xl"
+            className="font-display text-4xl font-bold tracking-tight text-primary sm:text-5xl"
           >
             {feeltect.heading}
           </h2>
-          <p className="mt-3 max-w-prose text-lg text-primary/80">
-            {feeltect.intro}
-          </p>
         </Reveal>
 
         <Reveal delay={80} className="mt-10 border-t border-border pt-8">
