@@ -24,7 +24,7 @@ export function Experience() {
               <h3 className="font-display text-xl font-bold leading-tight text-primary">
                 {entry.role}
               </h3>
-              <p className="mt-1 text-base text-accent">{entry.company}</p>
+              <p className="mt-1 text-base text-primary">{entry.company}</p>
               <p className="mt-3 font-mono text-xs uppercase tracking-wider text-muted">
                 {entry.period}
               </p>
@@ -37,7 +37,7 @@ export function Experience() {
                 <ul className="mt-4 space-y-2">
                   {entry.achievements.map((achievement) => (
                     <li key={achievement} className="flex gap-3 text-sm leading-relaxed text-primary/80">
-                      <span aria-hidden="true" className="text-accent">
+                      <span aria-hidden="true" className="text-primary">
                         –
                       </span>
                       <span>{achievement}</span>

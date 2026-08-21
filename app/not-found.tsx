@@ -23,7 +23,7 @@ export default function NotFound() {
       aria-labelledby="not-found-heading"
       className="container-page flex min-h-[70vh] flex-col justify-center py-32"
     >
-      <p className="font-mono text-sm text-accent">404</p>
+      <p className="font-mono text-sm text-primary">404</p>
 
       <h1
         id="not-found-heading"

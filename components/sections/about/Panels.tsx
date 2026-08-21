@@ -23,7 +23,7 @@ export function Panels() {
                 : "md:border-r md:border-border md:pr-8"
             } ${index > 0 && index < last ? "md:px-8" : ""}`}
           >
-            <p className="text-xs font-medium uppercase tracking-widest text-accent">
+            <p className="text-xs font-medium uppercase tracking-widest text-primary">
               {panel.label}
             </p>
             <p className="mt-4 font-display text-xl font-bold leading-tight text-primary sm:text-2xl">

@@ -18,7 +18,7 @@ function ProjectCard({ project }: { project: Project }) {
 
       <div className="flex items-baseline justify-between gap-4">
         <p className="text-xs uppercase tracking-wider text-muted">{project.category}</p>
-        <p className="font-mono text-xs text-accent">{project.year}</p>
+        <p className="font-mono text-xs text-primary">{project.year}</p>
       </div>
 
       <h3 className="font-display text-2xl font-bold leading-tight text-primary transition-colors duration-200 group-hover:text-accent">

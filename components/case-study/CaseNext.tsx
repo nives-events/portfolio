@@ -24,7 +24,7 @@ export function CaseNext({ next }: { next: CaseStudyDetail }) {
           </div>
           <span
             aria-hidden="true"
-            className="shrink-0 font-display text-4xl text-accent transition-transform duration-200 ease-out-strong group-hover:translate-x-2 sm:text-5xl"
+            className="shrink-0 font-display text-4xl text-primary transition-transform duration-200 ease-out-strong group-hover:translate-x-2 sm:text-5xl"
           >
             →
           </span>

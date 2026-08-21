@@ -18,7 +18,7 @@ export function AboutSnippet() {
           </div>
           <Link
             href={about.link.href}
-            className="mt-8 inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-accent underline-offset-4 hover:underline"
+            className="mt-8 inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-primary underline-offset-4 hover:underline"
           >
             {about.link.label}
             <span aria-hidden="true">→</span>

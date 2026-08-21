@@ -91,7 +91,21 @@ export const caseStudies: CaseStudyDetail[] = [
         body: [
           "Clinicians needed to see the product used properly, and no written page does that job. The biggest single output was a 15-episode educational video series, filmed and edited in-house on a green screen I set up in the office, and published on the YouTube channel I created for it. The commercial team took it on as an ongoing client-facing sales enablement asset, and it has passed 1,000 partner views.",
           "Around it sat the repeatable pieces: social templates, testimonial cards and conference promos, plus a podcast episode to test whether longer-form content had an audience here. I shot, cut and captioned most of it, and briefed external contractors through Upwork when the work needed a second camera.",
+          "None of that holds together without a cadence, so the strategy fixed one. Each format got a frequency, a channel and a job to do, which is what turned publishing from a weekly scramble into something the team could plan against and I could report on.",
         ],
+        table: {
+          caption:
+            "The publishing cadence set out in the go-to-market strategy. Each format has a frequency, a channel and a commercial job.",
+          columns: ["Format", "Frequency", "Channel", "Goal"],
+          rows: [
+            ["Blog article or longform", "Bi-weekly", "Website, LinkedIn", "SEO, authority, lead generation"],
+            ["“Did You Know?” post", "Weekly", "LinkedIn, Twitter, Facebook", "Awareness, engagement"],
+            ["Educational video", "Monthly", "YouTube, LinkedIn, Facebook", "Education, demonstration"],
+            ["Newsletter", "Bimonthly", "Website, email", "Nurturing, retention"],
+            ["Client testimonial", "Per release", "Website, all social", "Trust, validation"],
+            ["Clinical evidence post", "Per release", "LinkedIn, website", "Credibility, KOL engagement"],
+          ],
+        },
         pullStat: { value: "15", label: "Episodes filmed and edited, brief to final cut" },
         videos: [
           {
@@ -160,7 +174,15 @@ export const caseStudies: CaseStudyDetail[] = [
     meta: {
       role: "Marketing & Communications Lead, working with sales, clinical and leadership",
       timeline: "September 2025 to June 2026",
-      scope: ["Information architecture", "UX", "Conversion rate optimisation", "WordPress", "Elementor"],
+      scope: [
+        "Information architecture",
+        "UX",
+        "Conversion rate optimisation",
+        "Copywriting",
+        "WordPress",
+        "Elementor",
+        "Google Search Console",
+      ],
     },
     heroImage: {
       src: "/work/feeltect-website/hero-new.png",
@@ -199,6 +221,7 @@ export const caseStudies: CaseStudyDetail[] = [
         body: [
           "I rebuilt the information architecture around the two audiences that mattered: clinicians who needed clinical evidence fast, and partners who needed to know where the company was showing up. The sales team sense-checked the order, because they were the ones fielding the questions the site was failing to answer.",
           "Conversion rate optimisation (CRO) here meant placing trust signals at the points in the scroll journey where people hesitated, rather than piling every proof point onto the homepage. I picked up Elementor in the first fortnight and shipped six pages on it, which is why there was no external development bill.",
+          "On-page SEO went in as I built rather than afterwards: heading hierarchy, metadata, image alt text and internal linking. Google Search Console is where I checked the work landed, watching what actually got indexed and which clinical search terms the pages started surfacing for.",
           "The same approach carried into standalone conversion work, like the peer-to-peer clinical immersion landing page below.",
         ],
         pullStat: { value: "€3,000", label: "External development costs avoided" },
@@ -214,7 +237,16 @@ export const caseStudies: CaseStudyDetail[] = [
         ],
       },
       {
-        kicker: "03 · The pages",
+        kicker: "03 · The copy",
+        heading: "Naming the problem before naming the product",
+        body: [
+          "Architecture only gets a visitor to the right block of text. The text still has to say something. Compression therapy has historically relied on experience-based assessment and assumption, and without objective insight the right pressure dose is difficult to hit and harder to hold. That is the problem a wound care nurse already recognises, so that is where the page opens rather than with a claim about the technology.",
+          "The line I wrote for it: you can't optimise what you can't see. Tight Alright is then introduced as what closes that gap, through live pressure tracking during application, continuous monitoring across the treatment cycle, and objective data to inform the clinical decision. The section signs off on see it, assess it, refine it, and on delivering better care through defined dosage rather than blind application.",
+          "The order is the argument. A clinical buyer evaluating new technology starts by recognising the problem in their own practice, and copy that leads with how innovative the product is asks them to skip that step. Every page in the rebuild follows the same sequence.",
+        ],
+      },
+      {
+        kicker: "04 · The pages",
         heading: "Walk through them yourself",
         body: [
           "Screenshots flatten a website. These are screen recordings of the pages as they shipped, so you can judge the scroll rhythm, the information order, and where the trust signals landed.",
@@ -414,6 +446,7 @@ export const caseStudies: CaseStudyDetail[] = [
         heading: "Twelve qualified leads, no room for waste",
         body: [
           "The target was 12 qualified team sign-ups for the tournament, on a budget that could not absorb a bad week. I built the Meta campaign as a sequence rather than a blast: awareness creative to a cold audience first, then paid spend retargeting only the people who had already watched the organic content, so the money went where intent already existed.",
+          "The cold audience was not a radius and an age bracket. I built the segments off interest, demographic and behavioural signals together, weighted toward people who behaved like someone who would actually turn up with a team rather than everyone in the catchment who liked football. On a budget this size, optimising for lead quality over lead volume is the only version that survives contact with the target, because 200 cheap clicks that never register a team cost more than they look like they do.",
           "The creative was split-tested from the start. AI-generated video through Google Veo on one side, found match footage I shot myself on the other. The two clips below are from the AI side, made to stop a 19-year-old mid-scroll rather than to win anything.",
         ],
         videos: [
@@ -445,7 +478,7 @@ export const caseStudies: CaseStudyDetail[] = [
         kicker: "04 · The organic side",
         heading: "Slower, and more interesting",
         body: [
-          "Building an audience in a regional market means the content has to mean something to the people watching it. Short-form video, Reels, on-camera pieces and match highlights travel; promotional posts do not. Community management is the unglamorous half of it, and it happens every day. TikTok is where it moves fastest, and the analytics below are from the 2025 tournament window: 52,000 post views, 2,018 likes, 419 shares and a 5,523% jump inside a month.",
+          "Building an audience in a regional market means the content has to mean something to the people watching it. Short-form video, Reels, on-camera pieces and match highlights travel; promotional posts do not. Community management is the unglamorous half of it, and it happens every day. TikTok is where it moves fastest, and the 2025 tournament window is the clearest read on it: 52,000 post views, 2,018 likes, 419 shares and a 5,523% jump inside a month.",
           "That is the same lesson the paid campaign taught, arriving from the other direction. The content people actually want is rarely the content that took longest to make.",
         ],
         images: [
@@ -470,22 +503,6 @@ export const caseStudies: CaseStudyDetail[] = [
         { value: "150,000+", label: "Paid views on Meta" },
         { value: "36,000+", label: "Monthly organic impressions" },
         { value: "400+", label: "Players across 4 years" },
-      ],
-      receipts: [
-        {
-          src: "/work/athlones-finest/tiktok-analytics.png",
-          alt: "TikTok analytics for July to August 2025: 52,000 post views up 5,523%, 3,005 profile views, 2,018 likes, 419 shares",
-          ratio: "aspect-[1170/2394]",
-          position: "top",
-          caption: "TikTok analytics from the 2025 tournament window: 52K views, 2,018 likes, 5,523% growth in a month.",
-        },
-        {
-          src: "/work/athlones-finest/facebook-insights.png",
-          alt: "Facebook insights for the campaign window: 84,000 views, 18 content interactions, 11 follows, 69 link clicks",
-          ratio: "aspect-[369/800]",
-          position: "top",
-          caption: "The Facebook side of the same window: 84,000 views, and the tournament poster the top post at 59.2K.",
-        },
       ],
     },
     nextSlug: "afe-tournament",

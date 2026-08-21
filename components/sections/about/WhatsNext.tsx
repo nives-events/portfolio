@@ -21,7 +21,7 @@ export function WhatsNext() {
               href={item.href}
               className="group flex h-full flex-col gap-4 border-[0.5px] border-border bg-surface p-6 transition-all duration-200 ease-out-strong hover:-translate-y-1 hover:border-accent hover:shadow-[0_8px_32px_rgba(96,165,250,0.08)] active:scale-[0.98]"
             >
-              <span aria-hidden="true" className="font-mono text-xs text-accent">
+              <span aria-hidden="true" className="font-mono text-xs text-primary">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className="font-display text-xl font-bold text-primary transition-colors duration-200 group-hover:text-accent">
@@ -30,7 +30,7 @@ export function WhatsNext() {
               <p className="text-sm leading-relaxed text-muted">{item.description}</p>
               <span
                 aria-hidden="true"
-                className="mt-auto text-lg text-accent transition-transform duration-200 ease-out-strong group-hover:translate-x-1"
+                className="mt-auto text-lg text-primary transition-transform duration-200 ease-out-strong group-hover:translate-x-1"
               >
                 →
               </span>

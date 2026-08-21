@@ -450,6 +450,7 @@ export const aboutPage = {
       tools: [
         "Google Analytics 4 (GA4)",
         "Google Tag Manager",
+        "Google Search Console",
         "Meta Ads Manager",
         "Meta Business Suite",
         "HubSpot CRM",
