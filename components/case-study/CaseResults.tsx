@@ -13,7 +13,7 @@ export function CaseResults({ study }: { study: CaseStudyDetail }) {
   return (
     <section aria-labelledby="results-heading" className="container-page py-20 md:py-24">
       <Reveal>
-        <p className="font-mono text-sm text-accent">{index} · {results.heading}</p>
+        <p className="font-mono text-sm text-primary">{index} · {results.heading}</p>
         <p className="mt-4 max-w-prose font-display text-2xl font-bold leading-snug text-primary sm:text-3xl">
           {results.summary}
         </p>

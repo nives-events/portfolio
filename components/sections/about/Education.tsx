@@ -25,7 +25,7 @@ export function Education() {
                 <h3 className="font-display text-xl font-bold leading-tight text-primary">
                   {entry.credential}
                 </h3>
-                <p className="mt-1 text-base text-accent">{entry.institution}</p>
+                <p className="mt-1 text-base text-primary">{entry.institution}</p>
                 <p className="mt-3 font-mono text-xs uppercase tracking-wider text-muted">
                   {entry.period} · {entry.grade}
                 </p>

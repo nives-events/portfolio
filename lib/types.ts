@@ -88,6 +88,13 @@ export type CaseSection = {
   body: string[];
   /** Optional oversized stat pulled out between paragraphs. */
   pullStat?: Stat;
+  /** Small reference table (e.g. a publishing cadence), rendered under the body copy. */
+  table?: {
+    caption: string;
+    columns: string[];
+    /** Each row must have the same length as `columns`. */
+    rows: string[][];
+  };
   /** Interactive old/new comparison slider, rendered above other media. */
   beforeAfter?: { before: CaseImage; after: CaseImage; caption?: string };
   videos?: CaseVideo[];

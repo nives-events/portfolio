@@ -53,7 +53,7 @@ export function BeforeAfter({ before, after, caption }: BeforeAfterProps) {
           className="pointer-events-none absolute inset-y-0 w-[2px] bg-accent"
           style={{ left: `${position}%` }}
         >
-          <span className="absolute left-1/2 top-1/2 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-bg/90 font-mono text-[10px] text-accent">
+          <span className="absolute left-1/2 top-1/2 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-bg/90 font-mono text-[10px] text-primary">
             ↔
           </span>
         </div>
@@ -62,7 +62,7 @@ export function BeforeAfter({ before, after, caption }: BeforeAfterProps) {
         <span className="pointer-events-none absolute left-3 top-3 rounded-[50px] bg-bg/80 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-primary/85 backdrop-blur-sm">
           Before
         </span>
-        <span className="pointer-events-none absolute right-3 top-3 rounded-[50px] bg-bg/80 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-accent backdrop-blur-sm">
+        <span className="pointer-events-none absolute right-3 top-3 rounded-[50px] bg-bg/80 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-primary backdrop-blur-sm">
           After
         </span>
 

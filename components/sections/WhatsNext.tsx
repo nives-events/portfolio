@@ -29,7 +29,7 @@ export function WhatsNext() {
               </p>
               <span
                 aria-hidden="true"
-                className="mt-auto text-lg text-accent transition-transform duration-200 ease-out-strong group-hover:translate-x-1"
+                className="mt-auto text-lg text-primary transition-transform duration-200 ease-out-strong group-hover:translate-x-1"
               >
                 →
               </span>

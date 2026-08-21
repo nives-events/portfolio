@@ -23,7 +23,7 @@ export function CaseHero({ study }: { study: CaseStudyDetail }) {
       </nav>
 
       <div className="hero-rise mt-10 flex items-baseline gap-4" style={riseDelay(100)}>
-        <span aria-hidden="true" className="font-mono text-sm text-accent">
+        <span aria-hidden="true" className="font-mono text-sm text-primary">
           {study.index}
         </span>
         <p className="text-xs font-medium uppercase tracking-widest text-muted">{study.tag}</p>

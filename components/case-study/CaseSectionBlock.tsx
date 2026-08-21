@@ -15,7 +15,7 @@ export function CaseSectionBlock({ section, banded }: { section: CaseSection; ba
       <div className="container-page grid gap-8 py-20 md:grid-cols-12 md:gap-12 md:py-24">
         <div className="md:col-span-4">
           <Reveal className="md:sticky md:top-28">
-            <p className="font-mono text-sm text-accent">{section.kicker}</p>
+            <p className="font-mono text-sm text-primary">{section.kicker}</p>
             <h2 className="mt-4 font-display text-2xl font-bold leading-tight text-primary sm:text-3xl">
               {section.heading}
             </h2>
@@ -42,6 +42,48 @@ export function CaseSectionBlock({ section, banded }: { section: CaseSection; ba
                   {link.label}
                 </a>
               ))}
+            </Reveal>
+          ) : null}
+
+          {section.table ? (
+            // Scrolls inside its own box on narrow screens so the page body never
+            // scrolls sideways.
+            <Reveal delay={140} className="mt-10">
+              <div className="overflow-x-auto border-[0.5px] border-border bg-surface">
+                <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
+                  <caption className="sr-only">{section.table.caption}</caption>
+                  <thead>
+                    <tr className="border-b border-border">
+                      {section.table.columns.map((column) => (
+                        <th
+                          key={column}
+                          scope="col"
+                          className="px-4 py-3 text-xs font-medium uppercase tracking-wider text-muted"
+                        >
+                          {column}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    {section.table.rows.map((row) => (
+                      <tr key={row[0]}>
+                        {row.map((cell, cellIndex) => (
+                          <td
+                            key={cell}
+                            className={`px-4 py-3 align-top leading-relaxed ${
+                              cellIndex === 0 ? "font-medium text-primary" : "text-primary/80"
+                            }`}
+                          >
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-3 text-xs leading-relaxed text-muted">{section.table.caption}</p>
             </Reveal>
           ) : null}
 
