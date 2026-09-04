@@ -126,7 +126,7 @@ export const feeltect = {
       href: "/work/ewma",
       body: "A conference campaign is three problems, not one. Before was the stand design, the bilingual English and German clinical materials, and the social campaign. During was the International Bandaging Competition. After was the lead tracking that made the trip worth the budget. Twenty-plus qualified leads, logged as they happened.",
       image: {
-        src: "/work/ewma/poster-front.svg",
+        src: "/work/ewma/poster-back.png",
         alt: "Bandaging Competition poster designed for the EWMA conference stand in Vienna",
         position: "top",
       },
@@ -195,12 +195,20 @@ export const strategyProjects = {
       tag: "Product marketing / GTM / Positioning",
       href: "/work/kombucha",
       body: "Distribution was not the constraint. The brand was in 400+ retail outlets and still growing slowly, because most shoppers did not understand what kombucha was for. I repositioned it from niche health product to everyday wellness drink, built the integrated GTM plan behind that, and designed a subscription model around customer lifetime value with a target of doubling subscription sales in six months.",
+      image: {
+        src: "/work/kombucha/positioning.svg",
+        alt: "Positioning diagram: kombucha repositioned from niche health product to everyday wellness drink",
+      },
     },
     {
       title: "Google Merchandise Store: where the revenue leaks",
       tag: "Growth / CRO / GA4",
       href: "/work/google-merch",
       body: "Desktop and mobile brought near-identical traffic across 61,000+ users. Desktop produced 95.4% of the revenue. Funnel analysis in Google Analytics 4 traced it to 70.3% mobile checkout abandonment and an engagement gap of 22% against 59%, and the output was a prioritised fix roadmap rather than a list of observations.",
+      image: {
+        src: "/work/google-merch/funnel.svg",
+        alt: "Funnel diagram: 70.3% mobile checkout abandonment against desktop revenue share",
+      },
     },
   ] satisfies CaseStudy[],
 } as const;
@@ -218,19 +226,11 @@ export const craft = {
   items: [
     {
       image: {
-        src: "/work/ewma/poster-front.svg",
-        alt: "Bandaging Competition poster, front: come test your skills, win daily prizes",
-        ratio: "aspect-[3508/4961]",
-      },
-      note: "Competition poster, front. Designed to stop a clinician walking past a stand in Vienna.",
-    },
-    {
-      image: {
         src: "/work/ewma/poster-back.png",
-        alt: "Bandaging Competition poster, back: how to play in three steps",
+        alt: "Bandaging Competition poster: how to play in three steps",
         ratio: "aspect-[565/800]",
       },
-      note: "Competition poster, back. The mechanic in three steps, in the same visual system.",
+      note: "Competition poster. The mechanic in three steps, in the stand's visual system.",
     },
     {
       image: {
@@ -301,6 +301,149 @@ export const about = {
 export const closing = {
   heading: "Open to new opportunities",
   body: "I take on brand, product marketing, growth, content and event briefs, in-house or freelance, across Europe and remote. FMCG, MedTech, SaaS and events are where I have shipped. If one of those is your problem, get in touch.",
+} as const;
+
+/**
+ * Homepage copy for the redesigned monochrome layout.
+ *
+ * Section order (see app/page.tsx): Hero, About, Key Stats, Interests, Work,
+ * Contact. The hero is deliberately sparse: photo, six discipline labels, one
+ * button. Everything else below carries the substance.
+ */
+export const homepage = {
+  hero: {
+    // Six labels floating around the headshot, top-left through bottom-right.
+    // Kept as data so the layout logic in the component stays declarative.
+    labels: ["Web Design", "Growth", "Events", "Content", "Brand", "Strategy"],
+    // Marquee chip above the performer. The component dresses it in stars.
+    marquee: "Live from Ireland",
+    cta: { label: "Learn more", href: "#about" },
+    headshot: {
+      src: "/headshot.png",
+      alt: "Niall Awogboro, marketing across brand, growth, content and events, based in Dublin",
+    },
+  },
+
+  about: {
+    // Comedy-set pacing: each section opens with a tiny mono "act" kicker.
+    kicker: "Act I · The one about me",
+    // Backstage print pinned beside the copy. Real photo, treated monochrome.
+    photo: {
+      src: "/work/feeltect-function/production-tablet-demo.jpg",
+      alt: "Filming a Tight Alright product demonstration behind the scenes at FeelTect",
+      caption: "backstage at FeelTect",
+    },
+    // Written in caps in the brief; rendered in sentence case per the site's
+    // heading conventions.
+    //
+    // FLAG (do not silently change): "3 years of marketing experience" is the
+    // figure supplied in the brief. Other pages describe experience differently
+    // (FeelTect is 9 months full-function, Sept 2025 to June 2026; Athlone's
+    // Finest is ongoing since May 2023). "3 years" only holds if AFE counts as
+    // marketing experience throughout. Confirm this is the number you want here.
+    heading:
+      "Who's Niall Awogboro: a 22 year old marketing lead with 3 years of marketing experience",
+    // Existing About narrative, unchanged. Single source stays `about.paragraphs`.
+    paragraphs: about.paragraphs,
+    link: about.link,
+  },
+
+  keyStats: {
+    kicker: "Act II · The receipts",
+    heading: "Key achievements",
+    // The comedy-club flourish, sitting to the right of the heading.
+    ovation: "Results that get a standing ovation",
+    /**
+     * Every figure below is reconciled against the canonical data:
+     *  - "400+ players": Athlone's Finest turnout across four years
+     *    (see lib/case-studies.ts, athlones-finest results copy).
+     *  - "467%": ROAS on the most recent Meta campaign (Athlone's Finest).
+     *  - "Westmeath Independent": real 2026 press feature, live URL in
+     *    case-studies.ts (athlones-finest).
+     *  - "40%": FeelTect follower growth over nine months. NOTE: Athlone's
+     *    Finest follower growth is reported separately as "doubled" (100%).
+     *    These are two different brands, not a stale duplicate. If you'd rather
+     *    headline the AFE "doubled" figure here instead, swap it in.
+     */
+    stats: [
+      {
+        value: "400+",
+        label: "Players hosted",
+        note: "Turned out for Athlone's Finest across four years of tournaments.",
+      },
+      {
+        value: "467%",
+        label: "Return on ad spend",
+        note: "On the last Meta campaign, at €8.13 per qualified lead.",
+      },
+      {
+        value: "Featured",
+        label: "Westmeath Independent",
+        note: "The 2026 six-a-side got picked up by the local paper.",
+      },
+      {
+        value: "40%",
+        label: "Follower growth",
+        note: "At FeelTect in nine months, alongside 1,900% impressions growth.",
+      },
+    ],
+  },
+
+  interests: {
+    kicker: "Intermission",
+    heading: "Away from the desktop",
+    // Text only. No stock photography, no captions to explain.
+    items: [
+      {
+        label: "Football",
+        body: "Manchester United fan, and I still play. Athlone's Finest started because local football deserved better coverage than it got.",
+      },
+      {
+        label: "Comedy",
+        body: "I watch a lot of stand-up. Good comedians read a room better than most marketers do.",
+      },
+      {
+        label: "Psychology",
+        body: "I read about how people make decisions, which is most of marketing anyway.",
+      },
+    ],
+  },
+
+  work: {
+    kicker: "Act III · The main set",
+    heading: "Recent work",
+    subheading: "Some of the case studies I've been working on lately.",
+    scrollHint: "Scroll to explore",
+    // Five strongest cards, drawn from the case study data above. Revealed one
+    // at a time on scroll; a "See all" link follows for the full set at /work.
+    // Indices are non-null: these arrays are defined literally above. The `!`
+    // satisfies noUncheckedIndexedAccess without widening the tuple types.
+    cards: [
+      athlonesFinest.cards[0]!,
+      feeltect.cards[0]!,
+      feeltect.cards[2]!,
+      athlonesFinest.cards[1]!,
+      feeltect.cards[1]!,
+    ] satisfies CaseStudy[],
+    seeAll: { label: "See all", href: "/work" },
+  },
+
+  contact: {
+    kicker: "Encore",
+    heading: "Interested in my work? Want to see this work done for you? Just want to say hi?",
+    emailCta: { label: "Email me", href: `mailto:${site.email}` },
+    // The Random button picks one of these at runtime, excluding the current
+    // path so it never feels broken. Client-side only.
+    randomRoutes: [
+      "/work",
+      "/about",
+      "/lab",
+      "/work/feeltect-function",
+      "/work/athlones-finest",
+      "/work/ewma",
+      "/work/kombucha",
+    ],
+  },
 } as const;
 
 export const whatsNext: WhatsNextLink[] = [

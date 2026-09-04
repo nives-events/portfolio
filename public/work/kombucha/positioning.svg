@@ -1,47 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Repositioning from niche health product to everyday wellness drink, with four go-to-market workstreams beneath">
-  <rect width="800" height="500" fill="#0d1b3e"/>
+  <rect width="800" height="500" fill="#ffffff"/>
 
   <text x="40" y="52" font-family="system-ui, sans-serif" font-size="13" letter-spacing="1.6" fill="rgba(232,240,255,0.45)">THE REPOSITIONING</text>
 
   <!-- FROM -->
-  <rect x="40" y="76" width="300" height="150" rx="10" fill="#0a0f1e" stroke="#1c2b56"/>
+  <rect x="40" y="76" width="300" height="150" rx="10" fill="#f5f5f5" stroke="#bdbdbd"/>
   <text x="64" y="110" font-family="system-ui, sans-serif" font-size="12" letter-spacing="1.4" fill="rgba(232,240,255,0.45)">FROM</text>
-  <text x="64" y="145" font-family="system-ui, sans-serif" font-size="21" font-weight="600" fill="#e8f0ff">Niche health product</text>
-  <text x="64" y="180" font-family="system-ui, sans-serif" font-size="14" fill="rgba(232,240,255,0.6)">Competes with supplements.</text>
-  <text x="64" y="202" font-family="system-ui, sans-serif" font-size="14" fill="rgba(232,240,255,0.6)">Asks for an opinion on fermentation.</text>
+  <text x="64" y="145" font-family="system-ui, sans-serif" font-size="21" font-weight="600" fill="#111111">Niche health product</text>
+  <text x="64" y="180" font-family="system-ui, sans-serif" font-size="14" fill="rgba(0,0,0,0.6)">Competes with supplements.</text>
+  <text x="64" y="202" font-family="system-ui, sans-serif" font-size="14" fill="rgba(0,0,0,0.6)">Asks for an opinion on fermentation.</text>
 
   <!-- arrow -->
-  <line x1="356" y1="151" x2="440" y2="151" stroke="#60a5fa" stroke-width="2"/>
-  <path d="M440 151 L428 144 L428 158 Z" fill="#60a5fa"/>
+  <line x1="356" y1="151" x2="440" y2="151" stroke="#000000" stroke-width="2"/>
+  <path d="M440 151 L428 144 L428 158 Z" fill="#000000"/>
 
   <!-- TO -->
-  <rect x="460" y="76" width="300" height="150" rx="10" fill="#0a0f1e" stroke="#60a5fa"/>
-  <text x="484" y="110" font-family="system-ui, sans-serif" font-size="12" letter-spacing="1.4" fill="#60a5fa">TO</text>
-  <text x="484" y="145" font-family="system-ui, sans-serif" font-size="21" font-weight="600" fill="#e8f0ff">Everyday wellness drink</text>
-  <text x="484" y="180" font-family="system-ui, sans-serif" font-size="14" fill="rgba(232,240,255,0.6)">Competes with a lunchtime soft drink.</text>
-  <text x="484" y="202" font-family="system-ui, sans-serif" font-size="14" fill="rgba(232,240,255,0.6)">Which one, not whether.</text>
+  <rect x="460" y="76" width="300" height="150" rx="10" fill="#f5f5f5" stroke="#000000"/>
+  <text x="484" y="110" font-family="system-ui, sans-serif" font-size="12" letter-spacing="1.4" fill="#000000">TO</text>
+  <text x="484" y="145" font-family="system-ui, sans-serif" font-size="21" font-weight="600" fill="#111111">Everyday wellness drink</text>
+  <text x="484" y="180" font-family="system-ui, sans-serif" font-size="14" fill="rgba(0,0,0,0.6)">Competes with a lunchtime soft drink.</text>
+  <text x="484" y="202" font-family="system-ui, sans-serif" font-size="14" fill="rgba(0,0,0,0.6)">Which one, not whether.</text>
 
   <!-- diagnosis strip -->
-  <line x1="40" y1="264" x2="760" y2="264" stroke="#1c2b56"/>
-  <text x="40" y="298" font-family="system-ui, sans-serif" font-size="15" fill="rgba(232,240,255,0.6)">Constraint diagnosed: comprehension, not distribution.</text>
-  <text x="40" y="324" font-family="system-ui, sans-serif" font-size="15" fill="rgba(232,240,255,0.6)">Already stocked in <tspan fill="#60a5fa" font-weight="600">400+ retail outlets</tspan> with a slow rate of sale.</text>
+  <line x1="40" y1="264" x2="760" y2="264" stroke="#bdbdbd"/>
+  <text x="40" y="298" font-family="system-ui, sans-serif" font-size="15" fill="rgba(0,0,0,0.6)">Constraint diagnosed: comprehension, not distribution.</text>
+  <text x="40" y="324" font-family="system-ui, sans-serif" font-size="15" fill="rgba(0,0,0,0.6)">Already stocked in <tspan fill="#000000" font-weight="600">400+ retail outlets</tspan> with a slow rate of sale.</text>
 
   <!-- workstreams -->
   <text x="40" y="368" font-family="system-ui, sans-serif" font-size="13" letter-spacing="1.6" fill="rgba(232,240,255,0.45)">THE GO-TO-MARKET PLAN</text>
 
-  <rect x="40" y="388" width="168" height="72" rx="10" fill="#0a0f1e" stroke="#1c2b56"/>
-  <text x="60" y="420" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8f0ff">Search &amp; content</text>
+  <rect x="40" y="388" width="168" height="72" rx="10" fill="#f5f5f5" stroke="#bdbdbd"/>
+  <text x="60" y="420" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#111111">Search &amp; content</text>
   <text x="60" y="442" font-family="system-ui, sans-serif" font-size="13" fill="rgba(232,240,255,0.55)">Answer the question</text>
 
-  <rect x="224" y="388" width="168" height="72" rx="10" fill="#0a0f1e" stroke="#1c2b56"/>
-  <text x="244" y="420" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8f0ff">Web &amp; conversion</text>
+  <rect x="224" y="388" width="168" height="72" rx="10" fill="#f5f5f5" stroke="#bdbdbd"/>
+  <text x="244" y="420" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#111111">Web &amp; conversion</text>
   <text x="244" y="442" font-family="system-ui, sans-serif" font-size="13" fill="rgba(232,240,255,0.55)">Make it easy to buy</text>
 
-  <rect x="408" y="388" width="168" height="72" rx="10" fill="#0a0f1e" stroke="#1c2b56"/>
-  <text x="428" y="420" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8f0ff">Events &amp; creators</text>
+  <rect x="408" y="388" width="168" height="72" rx="10" fill="#f5f5f5" stroke="#bdbdbd"/>
+  <text x="428" y="420" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#111111">Events &amp; creators</text>
   <text x="428" y="442" font-family="system-ui, sans-serif" font-size="13" fill="rgba(232,240,255,0.55)">Handle the taste</text>
 
-  <rect x="592" y="388" width="168" height="72" rx="10" fill="#0a0f1e" stroke="#60a5fa"/>
-  <text x="612" y="420" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8f0ff">Lifecycle &amp; CRM</text>
-  <text x="612" y="442" font-family="system-ui, sans-serif" font-size="13" fill="#60a5fa">Built on CLTV</text>
+  <rect x="592" y="388" width="168" height="72" rx="10" fill="#f5f5f5" stroke="#000000"/>
+  <text x="612" y="420" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#111111">Lifecycle &amp; CRM</text>
+  <text x="612" y="442" font-family="system-ui, sans-serif" font-size="13" fill="#000000">Built on CLTV</text>
 </svg>

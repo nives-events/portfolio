@@ -3,21 +3,55 @@
 @tailwind utilities;
 
 /* ------------------------------------------------------------------ */
-/* Design tokens (from brief v3). Single source for colours + motion.  */
+/* Design tokens. Monochrome, two themes. Every colour in the site     */
+/* resolves through these: no component ships a hardcoded hex.         */
+/*                                                                      */
+/* Light is the bare `:root` default; the no-FOUC script in <head>      */
+/* stamps data-theme="light|dark" on <html> before first paint, so the  */
+/* correct palette is live before any CSS renders.                      */
 /* ------------------------------------------------------------------ */
-:root {
-  --color-bg: #0a0f1e;
-  --color-surface: #0d1b3e;
-  --color-border: #1c2b56;
-  --color-text-primary: #e8f0ff;
-  --color-text-muted: rgba(232, 240, 255, 0.38);
-  --color-accent: #60a5fa;
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-border: #e0e0e0;
+  --color-text-primary: #000000;
+  --color-text-muted: rgba(0, 0, 0, 0.55);
+  /* Card lift shadow, kept neutral so it works in either theme. */
+  --shadow-card: rgba(0, 0, 0, 0.12);
+  /* Hero spotlight: a soft dark glow reads on a light ground. */
+  --spotlight: rgba(0, 0, 0, 0.16);
+  /* Photo prints are physical white objects: constant across themes. */
+  --photo-frame: #fbfbf9;
+  --photo-ink: #1c1c1c;
+  --photo-shadow: rgba(0, 0, 0, 0.28);
+  --grain-opacity: 0.05;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #000000;
+  --color-surface: #0f0f0f;
+  --color-border: #2a2a2a;
+  --color-text-primary: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.55);
+  --shadow-card: rgba(0, 0, 0, 0.5);
+  /* On black, a soft white glow does the spotlight work. */
+  --spotlight: rgba(255, 255, 255, 0.22);
+  --photo-frame: #f4f2ee;
+  --photo-ink: #1c1c1c;
+  --photo-shadow: rgba(0, 0, 0, 0.75);
+  --grain-opacity: 0.08;
 }
 
 @layer base {
   html {
     /* Offset in-page anchors so the fixed header never covers a heading. */
     scroll-padding-top: 96px;
+    /* Clip the axis here (the scroll container) as well as on body, so the
+       off-canvas drawer and parting curtains never open a horizontal scroll. */
+    overflow-x: hidden;
   }
 
   /* Smooth anchor scrolling is motion too: only for readers who allow it. */
@@ -33,17 +67,21 @@
     font-feature-settings: "ss01";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* The off-canvas mobile drawer and the parting curtains sit beyond the
+       right edge; clip the axis so they never create a horizontal scrollbar. */
+    overflow-x: hidden;
   }
 
-  /* Visible, consistent keyboard focus everywhere. */
+  /* Visible, consistent keyboard focus everywhere. Monochrome: the ring is
+     full-strength text colour, not an accent. */
   :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-text-primary);
     outline-offset: 4px;
     border-radius: 0;
   }
 
   ::selection {
-    background: var(--color-accent);
+    background: var(--color-text-primary);
     color: var(--color-bg);
   }
 }
@@ -56,7 +94,7 @@
 }
 
 /* ------------------------------------------------------------------ */
-/* Hero load stagger — CSS keyframes only, no JS on first paint.        */
+/* Hero load stagger: CSS keyframes only, no JS on first paint.        */
 /* Content renders server-side; animation is purely additive.          */
 /* ------------------------------------------------------------------ */
 @keyframes rise {
@@ -78,4 +116,556 @@
   }
 }
 
+/* ------------------------------------------------------------------ */
+/* Hero labels: scattered floating words + spotlight-on-hover.         */
+/* Three layers: .hero-label positions (centred on its point),          */
+/* .hero-label__float bobs on its own loop, .hero-label__rot tilts.     */
+/* Keeping them separate means position, float and tilt never fight     */
+/* over the transform property. Tilt/position/timing are set inline.    */
+/* ------------------------------------------------------------------ */
+.hero-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
 
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.hero-label__float {
+  display: block;
+  animation-name: hero-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* duration and delay are set inline so each word drifts out of phase. */
+}
+
+.hero-label__rot {
+  display: inline-grid;
+  place-items: center;
+  white-space: nowrap;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  /* Fluid so the six words shrink together on narrow screens and never
+     collide with the centred headshot or clip past the box. Pragati Narrow
+     is condensed, so these run slightly larger than the old face did. */
+  font-size: clamp(0.85rem, 3.4vw, 1.6rem);
+  /* The stage is dark in both themes, so labels are light. Dim at rest,
+     bright when the flashlight/hover picks them out. */
+  color: rgba(255, 255, 255, 0.42);
+  transition: color 180ms ease-out;
+}
+
+/* Stack the glow behind the word in the same grid cell. */
+.hero-label__glow,
+.hero-label__text {
+  grid-area: 1 / 1;
+}
+
+.hero-label__text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-label__glow {
+  /* Soft radial light, larger than the word so it reads as a spotlight
+     rather than a highlight box. Theme-aware: a dark glow on the light
+     ground, a white glow on black. */
+  position: absolute;
+  inset: -160% -70%;
+  background: radial-gradient(closest-side, rgba(255, 246, 228, 0.55), transparent 72%);
+  opacity: 0;
+  transition: opacity 180ms ease-out;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Only fine-pointer (mouse) devices get the hover spotlight. On touch the
+   word just sits at rest: no glow, per the cursor rules. */
+@media (hover: hover) and (pointer: fine) {
+  .hero-label:hover .hero-label__rot {
+    color: #ffffff;
+  }
+  .hero-label:hover .hero-label__glow {
+    opacity: 1;
+  }
+}
+
+/* Motion-sensitive readers: no drifting, no eased glow. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-label__float {
+    animation: none;
+  }
+  .hero-label__rot,
+  .hero-label__glow {
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* ScrollReveal: IntersectionObserver-driven entrance for the work wall.*/
+/* Hidden until [data-shown="true"], then fades and rises into place.   */
+/* ------------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: opacity, transform;
+}
+
+/* Directional entrances: prints slide in from the side, alternating. */
+.reveal[data-from="left"] {
+  transform: translateX(-72px);
+}
+.reveal[data-from="right"] {
+  transform: translateX(72px);
+}
+
+.reveal[data-shown="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Recent Work showreel. Editorial rows whose imagery scales and        */
+/* parallaxes as it moves through the viewport, driven by the scroll    */
+/* position (CSS scroll-timeline where supported; static otherwise).    */
+/* ------------------------------------------------------------------ */
+.reel-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #0d0d0d;
+}
+
+.reel-media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* The image lifts a touch under the cursor: discover, then explore. */
+@media (hover: hover) and (pointer: fine) {
+  a:hover .reel-media,
+  a:focus-visible .reel-media {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes reel-move {
+  from {
+    transform: translateY(24px) scale(1);
+  }
+  to {
+    transform: translateY(-24px) scale(1.05);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reel-media {
+      animation: reel-move linear both;
+      animation-timeline: view();
+      animation-range: entry 0% exit 100%;
+    }
+    /* Hover still wins: pause the scroll link so the lift reads. */
+    a:hover .reel-media,
+    a:focus-visible .reel-media {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Film grain. One fixed layer of SVG noise over the whole set: it     */
+/* reads as photographic texture, never as UI. Pointer-events off,     */
+/* under the header (z-50) so nothing interactive is covered.          */
+/* ------------------------------------------------------------------ */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Curtain reveal. Two red drapes cover the hero on load, then part to  */
+/* reveal the performer on stage. Pure CSS so it plays on first paint;  */
+/* red is a scene prop, not a UI accent. Works on light and dark.       */
+/* ------------------------------------------------------------------ */
+.curtain {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.curtain__panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 53%;
+  /* Deep-red velvet with vertical folds. */
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.32) 0,
+      rgba(120, 20, 26, 0) 14px,
+      rgba(255, 210, 180, 0.06) 26px,
+      rgba(0, 0, 0, 0.32) 40px
+    ),
+    linear-gradient(90deg, #3f090d, #7d1620 45%, #5a0d12);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.5) inset;
+}
+
+.curtain__panel--left {
+  left: 0;
+  transform-origin: left center;
+  animation: curtain-left 1.4s cubic-bezier(0.76, 0, 0.24, 1) 0.35s forwards;
+}
+
+.curtain__panel--right {
+  right: 0;
+  transform-origin: right center;
+  animation: curtain-right 1.4s cubic-bezier(0.76, 0, 0.24, 1) 0.35s forwards;
+}
+
+/* A short valance across the very top that stays, framing the stage. */
+.curtain__valance {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 46px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.3) 0,
+      rgba(120, 20, 26, 0) 12px,
+      rgba(255, 210, 180, 0.05) 22px,
+      rgba(0, 0, 0, 0.3) 34px
+    ),
+    linear-gradient(180deg, #5a0d12, #3f090d);
+  z-index: 31;
+}
+
+@keyframes curtain-left {
+  to {
+    transform: translateX(-101%);
+  }
+}
+@keyframes curtain-right {
+  to {
+    transform: translateX(101%);
+  }
+}
+
+/* Reduced motion: no reveal animation, curtains already parted. */
+@media (prefers-reduced-motion: reduce) {
+  .curtain__panel--left {
+    transform: translateX(-101%);
+    animation: none;
+  }
+  .curtain__panel--right {
+    transform: translateX(101%);
+    animation: none;
+  }
+  .curtain__valance {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* The stage. A brick wall held deep in shadow (same dark scene in      */
+/* both themes), lit by a fixed spotlight on the performer and a        */
+/* flashlight that follows the cursor. Text on the stage is always      */
+/* light because the stage is always dark.                              */
+/* ------------------------------------------------------------------ */
+.hero-stage {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(12, 7, 7, 0.82), rgba(6, 4, 4, 0.93)),
+    url("/hero/brick-wall.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Fixed spotlight, always on the performer (low centre). Warm white. */
+.hero-spot-fixed {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    40% 54% at 50% 60%,
+    rgba(255, 244, 224, 0.34) 0%,
+    rgba(255, 240, 214, 0.12) 40%,
+    transparent 72%
+  );
+  mix-blend-mode: screen;
+}
+
+/* Cursor flashlight: a pool of light following the pointer (--mx/--my set
+   in JS), lifting the brick and the words it passes over. */
+.hero-flashlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+  background: radial-gradient(
+    240px circle at var(--mx, 50%) var(--my, 40%),
+    rgba(255, 246, 228, 0.24) 0%,
+    rgba(255, 246, 228, 0.09) 42%,
+    transparent 68%
+  );
+  mix-blend-mode: screen;
+}
+.hero-flashlight[data-active="true"] {
+  opacity: 1;
+}
+
+/* Floor shadow grounds the performer on the boards. */
+.stage-floor {
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.7) 0%, transparent 72%);
+}
+
+/* Hand-drawn arrows from each label to the performer. Light on the stage. */
+.hero-arrow {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Photo prints. The core object of the whole design: a white physical */
+/* print with a digicam chrome layer, a handwritten caption, and an    */
+/* optional strip of tape. Constant colours across themes because a    */
+/* print is a physical object, not a UI surface.                       */
+/* ------------------------------------------------------------------ */
+.photo-print {
+  --tilt: 0deg;
+  display: block;
+  background: var(--photo-frame);
+  color: var(--photo-ink);
+  padding: clamp(6px, 1.2vw, 12px);
+  padding-bottom: clamp(10px, 1.6vw, 18px);
+  box-shadow:
+    0 18px 40px -18px var(--photo-shadow),
+    0 2px 8px rgba(0, 0, 0, 0.18);
+  transform: rotate(var(--tilt));
+  transition:
+    transform 200ms cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 200ms ease-out;
+}
+
+/* Prints straighten and lift slightly under the cursor, like being
+   picked off the wall for a closer look. Fine pointers only. */
+@media (hover: hover) and (pointer: fine) {
+  a.photo-print:hover,
+  a:hover > .photo-print,
+  a:focus-visible > .photo-print {
+    transform: rotate(0deg) translateY(-6px) scale(1.015);
+    box-shadow:
+      0 28px 60px -20px var(--photo-shadow),
+      0 4px 12px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.photo-print__img {
+  position: relative;
+  overflow: hidden;
+  background: #101010;
+}
+
+/* Environment photography is monochrome: the room is black and white,
+   the work stays in colour. */
+.bw-photo {
+  filter: grayscale(1) contrast(1.06);
+}
+
+/* ------------------------------------------------------------------ */
+/* Image skeleton: a wireframe placeholder shown until a photo has      */
+/* actually loaded (see components/ui/SmartImage.tsx), rather than      */
+/* assuming a blank frame is fine. Fades out as the real image fades in.*/
+/* ------------------------------------------------------------------ */
+.img-skeleton-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.img-skeleton-wrap .img-skeleton {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+.img-skeleton-wrap .img-skeleton svg {
+  width: 32%;
+  height: 32%;
+  color: var(--color-text-primary);
+  opacity: 0.16;
+}
+
+/* A slow sweep across the wireframe so a stalled load still reads as
+   "loading", not "broken". */
+.img-skeleton-wrap .img-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.12) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: img-skeleton-sweep 1.8s ease-in-out infinite;
+}
+
+@keyframes img-skeleton-sweep {
+  from {
+    background-position: 120% 0;
+  }
+  to {
+    background-position: -20% 0;
+  }
+}
+
+.img-skeleton-wrap .img-skeleton-media {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.img-skeleton-wrap[data-loaded="true"] .img-skeleton {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.img-skeleton-wrap[data-loaded="true"] .img-skeleton-media {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img-skeleton-wrap .img-skeleton::after {
+    animation: none;
+  }
+  .img-skeleton-wrap .img-skeleton,
+  .img-skeleton-wrap .img-skeleton-media {
+    transition: none;
+  }
+}
+
+/* Digicam chrome: tiny mono UI marks over the image. */
+.photo-chrome {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.rec-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: rec-blink 1.6s steps(1) infinite;
+}
+
+@keyframes rec-blink {
+  0%,
+  70% {
+    opacity: 1;
+  }
+  71%,
+  100% {
+    opacity: 0.25;
+  }
+}
+
+/* Handwritten caption under the image, like sharpie on the border. */
+.photo-caption {
+  font-family: var(--font-hand), cursive;
+  font-weight: 600;
+  color: var(--photo-ink);
+  line-height: 1.1;
+}
+
+/* A strip of tape pinning the print to the wall. */
+.photo-tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 84px;
+  height: 22px;
+  transform: translateX(-50%) rotate(-2deg);
+  background: rgba(200, 198, 190, 0.55);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Kickers: the tiny mono "act" labels that pace the set.              */
+/* ------------------------------------------------------------------ */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  /* Full-strength text at reduced opacity reads far better than the muted
+     token, which was too faint against both grounds. */
+  color: var(--color-text-primary);
+  opacity: 0.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rec-dot {
+    animation: none;
+  }
+  .photo-print {
+    transition: none;
+  }
+}

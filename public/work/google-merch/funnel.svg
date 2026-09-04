@@ -1,47 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Desktop and mobile take near-identical shares of 61,000 users, but desktop produces 95.4 percent of revenue, with 70.3 percent of mobile checkout sessions abandoned">
-  <rect width="800" height="500" fill="#0d1b3e"/>
+  <rect width="800" height="500" fill="#ffffff"/>
 
   <text x="40" y="52" font-family="system-ui, sans-serif" font-size="13" letter-spacing="1.6" fill="rgba(232,240,255,0.45)">61,000+ USERS · GOOGLE ANALYTICS 4</text>
 
   <!-- Traffic -->
-  <text x="40" y="94" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8f0ff">Traffic share</text>
-  <rect x="40" y="110" width="365" height="42" rx="6" fill="#1c2b56"/>
-  <rect x="413" y="110" width="347" height="42" rx="6" fill="#1c2b56"/>
-  <text x="58" y="137" font-family="system-ui, sans-serif" font-size="15" fill="#e8f0ff">Desktop 50.6%</text>
-  <text x="431" y="137" font-family="system-ui, sans-serif" font-size="15" fill="#e8f0ff">Mobile 48.6%</text>
+  <text x="40" y="94" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#111111">Traffic share</text>
+  <rect x="40" y="110" width="365" height="42" rx="6" fill="#bdbdbd"/>
+  <rect x="413" y="110" width="347" height="42" rx="6" fill="#bdbdbd"/>
+  <text x="58" y="137" font-family="system-ui, sans-serif" font-size="15" fill="#111111">Desktop 50.6%</text>
+  <text x="431" y="137" font-family="system-ui, sans-serif" font-size="15" fill="#111111">Mobile 48.6%</text>
 
   <!-- Revenue -->
-  <text x="40" y="204" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8f0ff">Revenue share</text>
-  <rect x="40" y="220" width="687" height="42" rx="6" fill="#60a5fa"/>
-  <rect x="735" y="220" width="25" height="42" rx="6" fill="#1c2b56"/>
-  <text x="58" y="247" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#0a0f1e">Desktop 95.4%</text>
+  <text x="40" y="204" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#111111">Revenue share</text>
+  <rect x="40" y="220" width="687" height="42" rx="6" fill="#000000"/>
+  <rect x="735" y="220" width="25" height="42" rx="6" fill="#bdbdbd"/>
+  <text x="58" y="247" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#f5f5f5">Desktop 95.4%</text>
   <text x="640" y="290" font-family="system-ui, sans-serif" font-size="13" fill="rgba(232,240,255,0.55)">Mobile 4.6%</text>
   <line x1="747" y1="268" x2="747" y2="278" stroke="rgba(232,240,255,0.35)"/>
 
   <!-- Divider -->
-  <line x1="40" y1="322" x2="760" y2="322" stroke="#1c2b56"/>
+  <line x1="40" y1="322" x2="760" y2="322" stroke="#bdbdbd"/>
 
   <!-- Where it goes -->
   <text x="40" y="356" font-family="system-ui, sans-serif" font-size="13" letter-spacing="1.6" fill="rgba(232,240,255,0.45)">WHERE THE MOBILE SESSIONS GO</text>
 
-  <rect x="40" y="376" width="220" height="84" rx="10" fill="#0a0f1e" stroke="#1c2b56"/>
-  <text x="62" y="412" font-family="system-ui, sans-serif" font-size="26" font-weight="600" fill="#e8f0ff">22%</text>
+  <rect x="40" y="376" width="220" height="84" rx="10" fill="#f5f5f5" stroke="#bdbdbd"/>
+  <text x="62" y="412" font-family="system-ui, sans-serif" font-size="26" font-weight="600" fill="#111111">22%</text>
   <text x="62" y="436" font-family="system-ui, sans-serif" font-size="13" fill="rgba(232,240,255,0.55)">Mobile engagement rate</text>
   <text x="62" y="454" font-family="system-ui, sans-serif" font-size="13" fill="rgba(232,240,255,0.55)">against 59% on desktop</text>
 
-  <line x1="276" y1="418" x2="326" y2="418" stroke="#1c2b56" stroke-width="2"/>
-  <path d="M326 418 L314 411 L314 425 Z" fill="#1c2b56"/>
+  <line x1="276" y1="418" x2="326" y2="418" stroke="#bdbdbd" stroke-width="2"/>
+  <path d="M326 418 L314 411 L314 425 Z" fill="#bdbdbd"/>
 
-  <rect x="342" y="376" width="220" height="84" rx="10" fill="#0a0f1e" stroke="#60a5fa"/>
-  <text x="364" y="412" font-family="system-ui, sans-serif" font-size="26" font-weight="600" fill="#60a5fa">70.3%</text>
+  <rect x="342" y="376" width="220" height="84" rx="10" fill="#f5f5f5" stroke="#000000"/>
+  <text x="364" y="412" font-family="system-ui, sans-serif" font-size="26" font-weight="600" fill="#000000">70.3%</text>
   <text x="364" y="436" font-family="system-ui, sans-serif" font-size="13" fill="rgba(232,240,255,0.55)">Of mobile sessions reaching</text>
   <text x="364" y="454" font-family="system-ui, sans-serif" font-size="13" fill="rgba(232,240,255,0.55)">checkout abandoned it</text>
 
-  <line x1="578" y1="418" x2="628" y2="418" stroke="#1c2b56" stroke-width="2"/>
-  <path d="M628 418 L616 411 L616 425 Z" fill="#1c2b56"/>
+  <line x1="578" y1="418" x2="628" y2="418" stroke="#bdbdbd" stroke-width="2"/>
+  <path d="M628 418 L616 411 L616 425 Z" fill="#bdbdbd"/>
 
-  <rect x="644" y="376" width="116" height="84" rx="10" fill="#0a0f1e" stroke="#1c2b56"/>
-  <text x="666" y="412" font-family="system-ui, sans-serif" font-size="26" font-weight="600" fill="#e8f0ff">4</text>
+  <rect x="644" y="376" width="116" height="84" rx="10" fill="#f5f5f5" stroke="#bdbdbd"/>
+  <text x="666" y="412" font-family="system-ui, sans-serif" font-size="26" font-weight="600" fill="#111111">4</text>
   <text x="666" y="436" font-family="system-ui, sans-serif" font-size="13" fill="rgba(232,240,255,0.55)">Prioritised</text>
   <text x="666" y="454" font-family="system-ui, sans-serif" font-size="13" fill="rgba(232,240,255,0.55)">fixes</text>
 </svg>

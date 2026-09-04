@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import { SmartImage } from "@/components/ui/SmartImage";
 import type { CaseVideo } from "@/lib/types";
 
 /**
@@ -20,7 +20,7 @@ import type { CaseVideo } from "@/lib/types";
 export function CaseVideoFigure({ video }: { video: CaseVideo }) {
   const [active, setActive] = useState(false);
   const ratio = video.ratio ?? "aspect-video";
-  const frame = `relative ${ratio} w-full overflow-hidden rounded-[12px] border border-border bg-black`;
+  const frame = `relative ${ratio} w-full overflow-hidden rounded-none border border-border bg-black`;
 
   return (
     <figure className={`w-full ${video.portrait ? "mx-auto max-w-[420px]" : ""}`}>
@@ -46,10 +46,9 @@ export function CaseVideoFigure({ video }: { video: CaseVideo }) {
           className={`${frame} group block cursor-pointer`}
         >
           {video.poster ? (
-            <Image
+            <SmartImage
               src={video.poster}
               alt=""
-              fill
               sizes="(min-width: 1024px) 900px, 100vw"
               className="object-contain"
             />
@@ -63,9 +62,9 @@ export function CaseVideoFigure({ video }: { video: CaseVideo }) {
 
           <span
             aria-hidden="true"
-            className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-bg/80 backdrop-blur-sm transition-transform duration-200 ease-out-strong group-hover:scale-110"
+            className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-primary bg-bg/80 backdrop-blur-sm transition-transform duration-200 ease-out-strong group-hover:scale-110"
           >
-            <svg viewBox="0 0 24 24" className="ml-1 h-6 w-6 fill-accent" focusable="false">
+            <svg viewBox="0 0 24 24" className="ml-1 h-6 w-6 fill-primary" focusable="false">
               <path d="M8 5v14l11-7z" />
             </svg>
           </span>

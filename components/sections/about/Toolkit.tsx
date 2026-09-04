@@ -25,7 +25,7 @@ export function Toolkit() {
               {group.tools.map((tool) => (
                 <li
                   key={tool}
-                  className="rounded-[50px] border border-border px-3 py-1 text-sm text-primary/75"
+                  className="rounded-none border border-border px-3 py-1 text-sm text-primary/75"
                 >
                   {tool}
                 </li>

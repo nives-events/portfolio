@@ -1,10 +1,11 @@
 import { Reveal } from "@/components/motion/Reveal";
-import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
+import { ReelRow } from "@/components/ui/ReelRow";
 import { workPage } from "@/lib/content";
 
 /**
- * All case studies, grouped by project. Groups alternate background bands so
- * each organisation reads as its own chapter, matching the homepage rhythm.
+ * All case studies, grouped by project, each group its own chapter with a mono
+ * kicker and a heading. Cards run as the editorial showreel (see ReelRow), so
+ * the index page moves the same way the homepage does.
  */
 export function CaseStudiesGrid() {
   return (
@@ -21,9 +22,10 @@ export function CaseStudiesGrid() {
           >
             <div className="container-page py-24">
               <Reveal>
+                <p className="kicker">{group.eyebrow}</p>
                 <h2
                   id={headingId}
-                  className="font-display text-3xl font-bold tracking-tight text-primary sm:text-4xl"
+                  className="mt-5 font-display text-4xl font-bold uppercase tracking-tight text-primary sm:text-5xl"
                 >
                   {group.heading}
                 </h2>
@@ -32,17 +34,17 @@ export function CaseStudiesGrid() {
                 ) : null}
               </Reveal>
 
-              <ul
-                className={`mt-12 grid gap-8 md:grid-cols-2 ${
-                  group.cards.length > 2 ? "lg:grid-cols-3" : ""
-                }`}
-              >
+              <div className="mt-16 flex flex-col gap-24 sm:gap-28">
                 {group.cards.map((study, index) => (
-                  <Reveal as="li" key={study.title} delay={index * 80} className="list-none">
-                    <CaseStudyCard study={study} />
-                  </Reveal>
+                  <ReelRow
+                    key={study.title}
+                    study={study}
+                    index={index}
+                    total={group.cards.length}
+                    flip={index % 2 === 1}
+                  />
                 ))}
-              </ul>
+              </div>
             </div>
           </section>
         );

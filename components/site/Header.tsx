@@ -1,12 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { ThemeToggle } from "@/components/site/ThemeToggle";
 import { nav, site } from "@/lib/content";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  // The homepage hero is a dark stage in both themes. While the header sits
+  // over it (top of the homepage, before the blur kicks in), its text is light.
+  const overHero = pathname === "/" && !scrolled;
   const drawerRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
@@ -79,7 +85,9 @@ export function Header() {
         <div className="container-page flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="inline-flex min-h-[44px] items-center text-base font-medium tracking-wide text-primary transition-opacity duration-200 hover:opacity-70"
+            className={`inline-flex min-h-[44px] items-center text-base font-medium tracking-wide transition-opacity duration-200 hover:opacity-70 ${
+              overHero ? "text-white" : "text-primary"
+            }`}
           >
             {site.name}
           </Link>
@@ -93,44 +101,67 @@ export function Header() {
                 // `before` is an invisible 44px hit area centred on the label, so
                 // tablet taps land without stretching the box and dragging the
                 // underline away from the text.
-                className="relative text-xs font-medium uppercase tracking-widest text-primary/60 transition-colors duration-200 hover:text-primary before:absolute before:inset-x-0 before:top-1/2 before:h-11 before:-translate-y-1/2 before:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:w-0 after:bg-accent after:transition-all after:duration-200 hover:after:w-full"
+                className={`relative text-xs font-medium uppercase tracking-widest transition-colors duration-200 before:absolute before:inset-x-0 before:top-1/2 before:h-11 before:-translate-y-1/2 before:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[1px] after:w-0 after:transition-all after:duration-200 hover:after:w-full ${
+                  overHero
+                    ? "text-white/75 hover:text-white after:bg-white"
+                    : "text-primary/60 hover:text-primary after:bg-primary"
+                }`}
               >
                 {item.label}
               </Link>
             ))}
 
-            {/* Let's Talk — mailto, rounded pill, fill sweep on hover */}
+            {/* Let's Talk: mailto, fill sweep on hover */}
             <a
               href={`mailto:${site.email}`}
               aria-label="Send Niall an email"
-              className="group relative inline-flex min-h-[44px] items-center overflow-hidden rounded-[50px] border border-accent px-5 py-2 text-xs font-medium uppercase tracking-widest text-accent transition-transform duration-100 active:scale-[0.96]"
+              className={`group relative inline-flex min-h-[44px] items-center overflow-hidden rounded-lg border px-5 py-2 text-xs font-medium uppercase tracking-widest transition-transform duration-100 active:scale-[0.96] ${
+                overHero ? "border-white text-white" : "border-primary text-primary"
+              }`}
             >
               <span
                 aria-hidden="true"
-                className="absolute inset-0 origin-left scale-x-0 bg-accent transition-transform duration-200 ease-out-strong group-hover:scale-x-100"
+                className={`absolute inset-0 origin-left scale-x-0 transition-transform duration-200 ease-out-strong group-hover:scale-x-100 ${
+                  overHero ? "bg-white" : "bg-primary"
+                }`}
               />
-              <span className="relative transition-colors duration-200 group-hover:text-bg">
+              <span
+                className={`relative transition-colors duration-200 ${
+                  overHero ? "group-hover:text-black" : "group-hover:text-bg"
+                }`}
+              >
                 Let&apos;s talk
               </span>
             </a>
+
+            {/* Theme toggle sits after the CTA so the two never collide. Colour
+                inherits from here, so it flips light over the hero. */}
+            <span className={overHero ? "text-white" : "text-primary"}>
+              <ThemeToggle />
+            </span>
           </nav>
 
-          {/* Mobile trigger */}
-          <button
-            ref={triggerRef}
-            type="button"
-            aria-label="Open menu"
-            aria-expanded={open}
-            aria-controls="mobile-drawer"
-            onClick={() => setOpen(true)}
-            className="-mr-2 flex h-11 w-11 items-center justify-center transition-opacity hover:opacity-70 md:hidden"
-          >
-            <span className="relative block h-4 w-6">
-              <span className="absolute left-0 top-0 h-[1.5px] w-6 bg-primary" />
-              <span className="absolute left-0 top-[7px] h-[1.5px] w-6 bg-primary" />
-              <span className="absolute bottom-0 left-0 h-[1.5px] w-6 bg-primary" />
-            </span>
-          </button>
+          {/* Mobile: theme toggle stays reachable without opening the drawer. */}
+          <div className={`flex items-center gap-1 md:hidden ${overHero ? "text-white" : "text-primary"}`}>
+            <ThemeToggle />
+
+            {/* Mobile trigger */}
+            <button
+              ref={triggerRef}
+              type="button"
+              aria-label="Open menu"
+              aria-expanded={open}
+              aria-controls="mobile-drawer"
+              onClick={() => setOpen(true)}
+              className="-mr-2 flex h-11 w-11 items-center justify-center transition-opacity hover:opacity-70"
+            >
+              <span className="relative block h-4 w-6">
+                <span className="absolute left-0 top-0 h-[1.5px] w-6 bg-current" />
+                <span className="absolute left-0 top-[7px] h-[1.5px] w-6 bg-current" />
+                <span className="absolute bottom-0 left-0 h-[1.5px] w-6 bg-current" />
+              </span>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -141,7 +172,7 @@ export function Header() {
           instead of the viewport, so the panel opened as a 64px sliver with no
           background under it. Kept outside, `fixed inset-0` means the viewport. */}
       <div
-        className={`fixed inset-0 z-50 md:hidden ${open ? "" : "pointer-events-none"}`}
+        className={`fixed inset-0 z-50 overflow-hidden md:hidden ${open ? "" : "pointer-events-none"}`}
         aria-hidden={!open}
       >
         <button
@@ -189,7 +220,7 @@ export function Header() {
             <a
               href={`mailto:${site.email}`}
               tabIndex={open ? 0 : -1}
-              className="mt-4 inline-flex min-h-[44px] w-fit items-center rounded-[50px] border border-accent px-5 py-2 text-xs font-medium uppercase tracking-widest text-accent"
+              className="mt-4 inline-flex min-h-[44px] w-fit items-center rounded-lg border border-primary px-5 py-2 text-xs font-medium uppercase tracking-widest text-primary"
             >
               Let&apos;s talk
             </a>

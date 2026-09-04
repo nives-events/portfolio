@@ -359,16 +359,10 @@ export const caseStudies: CaseStudyDetail[] = [
         pullStat: { value: "20+", label: "Qualified leads, tracked from stand to follow-up" },
         images: [
           {
-            src: "/work/ewma/poster-front.svg",
-            alt: "Bandaging Competition poster, front: come test your skills, win daily prizes",
-            ratio: "aspect-[3508/4961]",
-            caption: "Competition poster, front. The hook: test your skills, win daily prizes.",
-          },
-          {
             src: "/work/ewma/poster-back.png",
-            alt: "Bandaging Competition poster, back: how to play in three steps, guess, wrap, monitor",
+            alt: "Bandaging Competition poster: how to play in three steps, guess, wrap, monitor",
             ratio: "aspect-[565/800]",
-            caption: "Competition poster, back. The mechanic: guess your pressures, wrap, check.",
+            caption: "Competition poster. The mechanic: guess your pressures, wrap, check.",
           },
         ],
       },

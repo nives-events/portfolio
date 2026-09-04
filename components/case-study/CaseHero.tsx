@@ -44,7 +44,7 @@ export function CaseHero({ study }: { study: CaseStudyDetail }) {
         {study.intro}
       </p>
 
-      {/* Role / timeline / scope — the facts a hiring manager scans for first. */}
+      {/* Role / timeline / scope - the facts a hiring manager scans for first. */}
       <dl
         className="hero-rise mt-12 grid gap-6 border-y border-border py-8 sm:grid-cols-3"
         style={riseDelay(500)}
@@ -63,7 +63,7 @@ export function CaseHero({ study }: { study: CaseStudyDetail }) {
             {study.meta.scope.map((item) => (
               <span
                 key={item}
-                className="rounded-[50px] border border-border px-3 py-1 text-xs text-primary/75"
+                className="rounded-none border border-border px-3 py-1 text-xs text-primary/75"
               >
                 {item}
               </span>
@@ -89,7 +89,7 @@ export function CaseHero({ study }: { study: CaseStudyDetail }) {
           <div key={stat.label}>
             <dt className="sr-only">{stat.label}</dt>
             <dd>
-              <span className="block font-mono text-3xl text-accent sm:text-4xl">{stat.value}</span>
+              <span className="block font-mono text-3xl text-primary sm:text-4xl">{stat.value}</span>
               <span className="mt-1 block text-xs uppercase tracking-wider text-muted">
                 {stat.label}
               </span>

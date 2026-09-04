@@ -17,7 +17,7 @@ type RevealProps = {
 /**
  * Scroll-triggered reveal. Fires once when 20% of the element is in view.
  * Children are passed through untouched, so server components stay server
- * components — only this thin wrapper ships to the client.
+ * components - only this thin wrapper ships to the client.
  * Reduced motion is handled globally by MotionConfig.
  */
 export function Reveal({ children, delay = 0, className, as = "div" }: RevealProps) {

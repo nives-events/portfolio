@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SmartImage } from "@/components/ui/SmartImage";
 import type { CaseImage } from "@/lib/types";
 
 type CaseFigureProps = {
@@ -11,7 +11,7 @@ type CaseFigureProps = {
 
 /**
  * Renders a case study visual, or a labelled dashed placeholder while the
- * asset is pending (empty `src`). SVGs render via a plain <img> — they're
+ * asset is pending (empty `src`). SVGs render via a plain <img> - they're
  * resolution-independent, so next/image adds nothing but config friction.
  */
 export function CaseFigure({
@@ -29,7 +29,7 @@ export function CaseFigure({
   return (
     <figure className="w-full">
       {image.src ? (
-        <div className={`relative ${frame} w-full overflow-hidden rounded-[12px] border border-border bg-surface`}>
+        <div className={`relative ${frame} w-full overflow-hidden rounded-none border border-border bg-surface`}>
           {isSvg ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -38,21 +38,14 @@ export function CaseFigure({
               className={`absolute inset-0 h-full w-full ${fit}`}
             />
           ) : (
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes={sizes}
-              priority={priority}
-              className={fit}
-            />
+            <SmartImage src={image.src} alt={image.alt} sizes={sizes} priority={priority} className={fit} />
           )}
         </div>
       ) : (
         <div
           role="img"
           aria-label={image.alt}
-          className={`flex ${frame} w-full items-center justify-center rounded-[12px] border border-dashed border-border bg-surface`}
+          className={`flex ${frame} w-full items-center justify-center rounded-none border border-dashed border-border bg-surface`}
         >
           <span className="max-w-[80%] text-center font-mono text-xs uppercase tracking-wider text-muted">
             {image.alt}

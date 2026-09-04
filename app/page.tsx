@@ -1,23 +1,19 @@
-import { AboutSnippet } from "@/components/sections/AboutSnippet";
-import { AthlonesFinestBlock } from "@/components/sections/AthlonesFinestBlock";
-import { ClosingCTA } from "@/components/sections/ClosingCTA";
-import { Disciplines } from "@/components/sections/Disciplines";
-import { FeelTectBlock } from "@/components/sections/FeelTectBlock";
-import { Hero } from "@/components/sections/Hero";
-import { StrategyBlock } from "@/components/sections/StrategyBlock";
-import { WhatsNext } from "@/components/sections/WhatsNext";
+import { Contact } from "@/components/sections/Contact";
+import { HomeAbout } from "@/components/sections/HomeAbout";
+import { HomeHero } from "@/components/sections/HomeHero";
+import { HomeWork } from "@/components/sections/HomeWork";
+import { Interests } from "@/components/sections/Interests";
+import { KeyStats } from "@/components/sections/KeyStats";
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <Disciplines />
-      <FeelTectBlock />
-      <AthlonesFinestBlock />
-      <StrategyBlock />
-      <AboutSnippet />
-      <WhatsNext />
-      <ClosingCTA />
+      <HomeHero />
+      <HomeAbout />
+      <KeyStats />
+      <Interests />
+      <HomeWork />
+      <Contact />
     </>
   );
 }

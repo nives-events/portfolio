@@ -3,8 +3,8 @@ import { Reveal } from "@/components/motion/Reveal";
 import type { CaseStudyDetail } from "@/lib/types";
 
 /**
- * The payoff. Stats as a bordered grid of cells — each cell lifts and takes
- * the accent border on hover, echoing the card language used site-wide.
+ * The payoff. Stats as a bordered grid of cells - each cell lifts and takes
+ * a full-strength border on hover, echoing the card language used site-wide.
  */
 export function CaseResults({ study }: { study: CaseStudyDetail }) {
   const { results } = study;
@@ -22,10 +22,10 @@ export function CaseResults({ study }: { study: CaseStudyDetail }) {
       <dl className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {results.stats.map((stat, index) => (
           <Reveal key={stat.label} delay={index * 60}>
-            <div className="group h-full border-[0.5px] border-border bg-surface p-6 transition-all duration-200 ease-out-strong hover:-translate-y-1 hover:border-accent hover:shadow-[0_8px_32px_rgba(96,165,250,0.08)]">
+            <div className="group h-full border-[0.5px] border-border bg-surface p-6 transition-all duration-200 ease-out-strong hover:-translate-y-1 hover:border-primary hover:shadow-[0_8px_32px_var(--shadow-card)]">
               <dt className="sr-only">{stat.label}</dt>
               <dd>
-                <span className="block font-mono text-3xl text-accent sm:text-4xl">
+                <span className="block font-mono text-3xl text-primary sm:text-4xl">
                   {stat.value}
                 </span>
                 <span className="mt-2 block text-xs uppercase tracking-wider text-muted">

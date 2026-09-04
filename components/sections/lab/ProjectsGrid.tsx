@@ -13,7 +13,7 @@ const ease = [0.23, 1, 0.32, 1] as const;
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group flex h-full flex-col gap-4 border-[0.5px] border-border bg-surface p-6 transition-all duration-200 ease-out-strong hover:-translate-y-1 hover:border-accent hover:shadow-[0_8px_32px_rgba(96,165,250,0.08)]">
+    <article className="group flex h-full flex-col gap-4 border-[0.5px] border-border bg-surface p-6 transition-all duration-200 ease-out-strong hover:-translate-y-1 hover:border-primary hover:shadow-[0_8px_32px_var(--shadow-card)]">
       <CaseFigure image={project.image} ratio="aspect-[16/10]" />
 
       <div className="flex items-baseline justify-between gap-4">
@@ -21,7 +21,7 @@ function ProjectCard({ project }: { project: Project }) {
         <p className="font-mono text-xs text-primary">{project.year}</p>
       </div>
 
-      <h3 className="font-display text-2xl font-bold leading-tight text-primary transition-colors duration-200 group-hover:text-accent">
+      <h3 className="font-display text-2xl font-bold leading-tight text-primary transition-colors duration-200 group-hover:text-primary">
         {project.title}
       </h3>
 
@@ -31,7 +31,7 @@ function ProjectCard({ project }: { project: Project }) {
         {project.stack.map((tech) => (
           <li
             key={tech}
-            className="rounded-[50px] border border-border px-3 py-1 text-xs text-primary/70"
+            className="rounded-none border border-border px-3 py-1 text-xs text-primary/70"
           >
             {tech}
           </li>
@@ -43,7 +43,7 @@ function ProjectCard({ project }: { project: Project }) {
           {project.links.map((link) => {
             const internal = link.href.startsWith("/") && !/\.[a-z0-9]+$/i.test(link.href);
             const className =
-              "inline-flex min-h-[44px] items-center gap-1 text-sm font-medium text-primary underline decoration-primary/30 underline-offset-4 transition-colors duration-150 hover:text-accent hover:decoration-accent";
+              "inline-flex min-h-[44px] items-center gap-1 text-sm font-medium text-primary underline decoration-primary/30 underline-offset-4 transition-colors duration-150 hover:text-primary hover:decoration-primary";
 
             return internal ? (
               <Link key={link.label} href={link.href} className={className}>
@@ -102,10 +102,10 @@ export function ProjectsGrid() {
               type="button"
               aria-pressed={active}
               onClick={() => setFilter(option)}
-              className={`inline-flex items-center gap-2 rounded-[50px] border px-5 py-2 text-xs font-medium uppercase tracking-widest transition-all duration-200 active:scale-[0.96] ${
+              className={`inline-flex items-center gap-2 rounded-lg border px-5 py-2 text-xs font-medium uppercase tracking-widest transition-all duration-200 active:scale-[0.96] ${
                 active
-                  ? "border-accent bg-accent text-bg"
-                  : "border-primary/30 text-primary/70 hover:border-accent hover:text-accent"
+                  ? "border-primary bg-primary text-bg"
+                  : "border-primary/30 text-primary/70 hover:border-primary hover:text-primary"
               }`}
             >
               {option}

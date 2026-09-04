@@ -4,7 +4,7 @@ export function Opening() {
   return (
     <section aria-labelledby="lab-heading" className="container-page pb-16 pt-32 md:pb-20 md:pt-40">
       <Reveal>
-        <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted">Lab</p>
+        <p className="kicker">Off the clock</p>
         <h1
           id="lab-heading"
           className="mt-6 max-w-4xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-primary sm:text-5xl lg:text-6xl"

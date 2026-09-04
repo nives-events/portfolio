@@ -41,9 +41,9 @@ export default function NotFound() {
           <li key={route.href} className="list-none">
             <Link
               href={route.href}
-              className="group flex h-full flex-col gap-2 border-[0.5px] border-border bg-surface p-6 transition-all duration-200 ease-out-strong hover:-translate-y-1 hover:border-accent"
+              className="group flex h-full flex-col gap-2 border-[0.5px] border-border bg-surface p-6 transition-all duration-200 ease-out-strong hover:-translate-y-1 hover:border-primary"
             >
-              <span className="font-display text-xl font-bold text-primary transition-colors duration-200 group-hover:text-accent">
+              <span className="font-display text-xl font-bold text-primary transition-colors duration-200 group-hover:text-primary">
                 {route.label}
               </span>
               <span className="text-sm leading-relaxed text-muted">{route.note}</span>

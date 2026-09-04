@@ -11,11 +11,11 @@ type ButtonProps = {
 } & Pick<AnchorHTMLAttributes<HTMLAnchorElement>, "aria-label" | "download">;
 
 const base =
-  "group relative inline-flex items-center justify-center overflow-hidden px-7 py-3 text-sm font-medium tracking-wide rounded-[50px] transition-transform duration-100 active:scale-[0.96] focus-visible:outline-offset-4";
+  "group relative inline-flex items-center justify-center overflow-hidden px-7 py-3 text-sm font-medium tracking-wide rounded-lg transition-transform duration-100 active:scale-[0.96] focus-visible:outline-offset-4";
 
 /** Both variants share the fill-sweep hover; only the palette differs. */
 const variants: Record<Variant, { border: string; fill: string }> = {
-  primary: { border: "border border-accent text-accent", fill: "bg-accent" },
+  primary: { border: "border border-primary text-primary", fill: "bg-primary" },
   ghost: { border: "border border-primary/30 text-primary/70", fill: "bg-primary" },
 };
 
@@ -43,7 +43,7 @@ export function Button({
     <>
       <span
         aria-hidden="true"
-        className={`absolute inset-0 origin-left scale-x-0 rounded-[50px] ${fill} transition-transform duration-200 ease-out-strong group-hover:scale-x-100`}
+        className={`absolute inset-0 origin-left scale-x-0 rounded-lg ${fill} transition-transform duration-200 ease-out-strong group-hover:scale-x-100`}
       />
       <span className="relative transition-colors duration-200 group-hover:text-bg">
         {children}

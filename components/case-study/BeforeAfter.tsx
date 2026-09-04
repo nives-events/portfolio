@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useId, useState } from "react";
+import { SmartImage } from "@/components/ui/SmartImage";
 import type { CaseImage } from "@/lib/types";
 
 type BeforeAfterProps = {
@@ -22,26 +22,24 @@ export function BeforeAfter({ before, after, caption }: BeforeAfterProps) {
   return (
     <figure className="w-full">
       {/* Both source screenshots are 1890x784, so the frame matches them exactly. */}
-      <div className="relative aspect-[12/5] w-full overflow-hidden rounded-[12px] border border-border bg-surface">
-        {/* AFTER — full layer underneath */}
-        <Image
+      <div className="relative aspect-[12/5] w-full overflow-hidden rounded-none border border-border bg-surface">
+        {/* AFTER - full layer underneath */}
+        <SmartImage
           src={after.src}
           alt={after.alt}
-          fill
           sizes="(min-width: 1024px) 900px, 100vw"
           className="object-cover object-top"
         />
 
-        {/* BEFORE — clipped to the left of the handle */}
+        {/* BEFORE - clipped to the left of the handle */}
         <div
           aria-hidden="true"
           className="absolute inset-0"
           style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         >
-          <Image
+          <SmartImage
             src={before.src}
             alt=""
-            fill
             sizes="(min-width: 1024px) 900px, 100vw"
             className="object-cover object-top"
           />
@@ -50,19 +48,19 @@ export function BeforeAfter({ before, after, caption }: BeforeAfterProps) {
         {/* Divider + handle */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 w-[2px] bg-accent"
+          className="pointer-events-none absolute inset-y-0 w-[2px] bg-primary"
           style={{ left: `${position}%` }}
         >
-          <span className="absolute left-1/2 top-1/2 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-bg/90 font-mono text-[10px] text-primary">
+          <span className="absolute left-1/2 top-1/2 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-primary bg-bg/90 font-mono text-[10px] text-primary">
             ↔
           </span>
         </div>
 
         {/* Corner tags */}
-        <span className="pointer-events-none absolute left-3 top-3 rounded-[50px] bg-bg/80 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-primary/85 backdrop-blur-sm">
+        <span className="pointer-events-none absolute left-3 top-3 rounded-none bg-bg/80 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-primary/85 backdrop-blur-sm">
           Before
         </span>
-        <span className="pointer-events-none absolute right-3 top-3 rounded-[50px] bg-bg/80 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-primary backdrop-blur-sm">
+        <span className="pointer-events-none absolute right-3 top-3 rounded-none bg-bg/80 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-primary backdrop-blur-sm">
           After
         </span>
 

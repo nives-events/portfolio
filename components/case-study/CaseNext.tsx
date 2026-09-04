@@ -17,7 +17,7 @@ export function CaseNext({ next }: { next: CaseStudyDetail }) {
             <p className="text-xs font-medium uppercase tracking-widest text-muted">
               Next case study
             </p>
-            <p className="mt-4 font-display text-3xl font-bold leading-tight tracking-tight text-primary transition-colors duration-200 group-hover:text-accent sm:text-4xl lg:text-5xl">
+            <p className="mt-4 font-display text-3xl font-bold leading-tight tracking-tight text-primary transition-colors duration-200 group-hover:text-primary sm:text-4xl lg:text-5xl">
               {next.title}
             </p>
             <p className="mt-3 text-sm uppercase tracking-widest text-muted">{next.tag}</p>

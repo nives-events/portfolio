@@ -7,7 +7,7 @@ import type { CaseSection } from "@/lib/types";
 /**
  * One numbered chapter of the case study narrative. The kicker column goes
  * sticky on desktop so the reader always knows where they are in the story.
- * Media order: comparison slider, then videos, then stills — motion first.
+ * Media order: comparison slider, then videos, then stills - motion first.
  */
 export function CaseSectionBlock({ section, banded }: { section: CaseSection; banded: boolean }) {
   return (
@@ -37,7 +37,7 @@ export function CaseSectionBlock({ section, banded }: { section: CaseSection; ba
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm font-medium text-primary underline decoration-primary/30 underline-offset-4 transition-colors duration-150 hover:text-accent hover:decoration-accent"
+                  className="inline-flex items-center text-sm font-medium text-primary underline decoration-primary/30 underline-offset-4 transition-colors duration-150 hover:text-primary hover:decoration-primary"
                 >
                   {link.label}
                 </a>
@@ -88,8 +88,8 @@ export function CaseSectionBlock({ section, banded }: { section: CaseSection; ba
           ) : null}
 
           {section.pullStat ? (
-            <Reveal delay={160} className="mt-10 border-l-2 border-accent pl-6">
-              <p className="font-mono text-4xl text-accent sm:text-5xl">{section.pullStat.value}</p>
+            <Reveal delay={160} className="mt-10 border-l-2 border-primary pl-6">
+              <p className="font-mono text-4xl text-primary sm:text-5xl">{section.pullStat.value}</p>
               <p className="mt-2 text-sm uppercase tracking-wider text-muted">
                 {section.pullStat.label}
               </p>
@@ -114,7 +114,7 @@ export function CaseSectionBlock({ section, banded }: { section: CaseSection; ba
                 <Reveal
                   key={video.src}
                   delay={index * 80}
-                  // With an odd count, the lead video goes full width — hero of the group.
+                  // With an odd count, the lead video goes full width - hero of the group.
                   className={
                     section.videos!.length % 2 === 1 && index === 0 ? "sm:col-span-2" : ""
                   }

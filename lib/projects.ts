@@ -1,7 +1,7 @@
 import type { Project, ProjectCategory } from "./types";
 
 /**
- * Personal projects for the /lab page — work that is NOT tied to FeelTect or
+ * Personal projects for the /lab page - work that is NOT tied to FeelTect or
  * Athlone's Finest case studies (those live under /work).
  *
  * Images are optional: CaseFigure renders a labelled frame when `src` is

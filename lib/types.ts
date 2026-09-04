@@ -61,14 +61,14 @@ export type CaseImage = {
   position?: "top" | "center";
   /**
    * How the image fills its frame. `cover` (default) crops to fill. `contain`
-   * fits the whole asset inside the frame — used where cropping would cut copy
+   * fits the whole asset inside the frame - used where cropping would cut copy
    * off a finished design.
    */
   fit?: "cover" | "contain";
 };
 
 export type CaseVideo = {
-  /** Public path to an mp4. Loaded lazily (preload="none") — nothing downloads until play. */
+  /** Public path to an mp4. Loaded lazily (preload="none") - nothing downloads until play. */
   src: string;
   /** Optional poster image shown before playback. */
   poster?: string;

@@ -18,7 +18,7 @@ export function StatStrip({ stats, label }: StatStripProps) {
         <div key={stat.label} className="flex items-baseline gap-2">
           <dt className="sr-only">{stat.label}</dt>
           <dd className="flex items-baseline gap-2">
-            <span className="font-mono text-lg text-accent">{stat.value}</span>
+            <span className="font-mono text-lg text-primary">{stat.value}</span>
             <span className="text-xs uppercase tracking-wider text-muted">
               {stat.label}
             </span>
