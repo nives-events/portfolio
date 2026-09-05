@@ -32,6 +32,12 @@ const csp = [
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  async redirects() {
+    return [
+      { source: "/work/athlones-finest", destination: "/work/afe-2025", permanent: true },
+      { source: "/work/afe-tournament", destination: "/work/afe-2024", permanent: true },
+    ];
+  },
   // Security headers applied to every route.
   async headers() {
     return [

@@ -45,6 +45,18 @@
   --grain-opacity: 0.08;
 }
 
+/* Warm accent for Athlone's Finest sections. Applied via data-brand="afe"
+   on a container; children inherit the tokens. Works in both themes. */
+[data-brand="afe"] {
+  --color-warm-accent: #C8A96E;
+  --color-surface: #0F0A05;
+  --color-border: #2a2216;
+  --color-text-primary: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.55);
+  --shadow-card: rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
 @layer base {
   html {
     /* Offset in-page anchors so the fixed header never covers a heading. */
@@ -158,10 +170,10 @@
   /* Fluid so the six words shrink together on narrow screens and never
      collide with the centred headshot or clip past the box. Pragati Narrow
      is condensed, so these run slightly larger than the old face did. */
-  font-size: clamp(0.85rem, 3.4vw, 1.6rem);
+  font-size: clamp(1rem, 3.8vw, 1.6rem);
   /* The stage is dark in both themes, so labels are light. Dim at rest,
      bright when the flashlight/hover picks them out. */
-  color: rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.55);
   transition: color 180ms ease-out;
 }
 
@@ -655,10 +667,21 @@
   font-size: 0.6875rem;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  /* Full-strength text at reduced opacity reads far better than the muted
-     token, which was too faint against both grounds. */
   color: var(--color-text-primary);
   opacity: 0.7;
+}
+
+[data-brand="afe"] .kicker {
+  color: var(--color-warm-accent);
+  opacity: 1;
+}
+
+[data-brand="afe"] h2 {
+  letter-spacing: -0.01em;
+}
+
+[data-brand="afe"] a:hover {
+  --color-border: var(--color-warm-accent);
 }
 
 @media (prefers-reduced-motion: reduce) {

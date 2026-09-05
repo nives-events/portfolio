@@ -20,7 +20,7 @@ export const projects: Project[] = [
     stack: ["Claude Code", "GA4", "Google Tag Manager"],
     links: [
       { label: "Visit the site", href: "https://athlonesfinest.com" },
-      { label: "Read the case study", href: "/work/athlones-finest" },
+      { label: "Read the case study", href: "/work/afe-2025" },
     ],
     image: { src: "", alt: "Screenshot: athlonesfinest.com homepage" },
   },
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     description:
       "A production test: how much of a paid social creative set can be generated rather than filmed, and does the audience care. Google Veo for the absurd concepts, Higgsfield for motion, CapCut and DaVinci Resolve for the cut. The clips ran live in the Meta campaign and the honest answer came back in the data: AI got attention, found match footage converted better, so the budget moved.",
     stack: ["Google Veo", "Higgsfield", "CapCut", "DaVinci Resolve"],
-    links: [{ label: "See the clips in the case study", href: "/work/athlones-finest" }],
+    links: [{ label: "See the clips in the case study", href: "/work/afe-2025" }],
     image: { src: "", alt: "Still: AI-generated clip from the Meta campaign" },
   },
 ];

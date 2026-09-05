@@ -47,14 +47,14 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description:
-    "Marketing across brand, product marketing, growth, content and events. 467% ROAS on paid social, 1,900% impressions growth in MedTech, a go-to-market strategy adopted by the business, and an international conference delivered end to end.",
+    "Marketing across brand, product marketing, growth, content and events. 467% ROAS on paid social, 1,900% impressions growth in MedTech, a Marketing and Communications Plan adopted by the business, and an international conference delivered end to end.",
   keywords: [
     "Brand Marketing",
     "Product Marketing",
     "Growth Marketing",
     "Content Marketing",
     "Event Marketing",
-    "Go-to-market",
+    "Marketing Strategy",
     "Paid Social",
     "Dublin",
     "Niall Awogboro",
@@ -68,14 +68,14 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} · Brand, Growth & Event Marketing`,
     description:
-      "467% ROAS on paid social. 1,900% impressions growth in MedTech. A go-to-market strategy a business adopted, and a clinical conference delivered end to end.",
+      "467% ROAS on paid social. 1,900% impressions growth in MedTech. A marketing strategy a business adopted, and a clinical conference delivered end to end.",
     images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} · Brand, Growth & Event Marketing`,
     description:
-      "Strategy, creative and the numbers afterwards. 467% ROAS, a go-to-market plan adopted by the business, and events delivered end to end.",
+      "Strategy, creative and the numbers afterwards. 467% ROAS, a marketing plan adopted by the business, and events delivered end to end.",
     images: ["/og.png"],
   },
   robots: { index: true, follow: true },
@@ -90,7 +90,7 @@ const personLd = {
   knowsAbout: [
     "Brand marketing",
     "Product marketing",
-    "Go-to-market strategy",
+    "Marketing strategy",
     "Growth marketing",
     "Paid social",
     "Content production",

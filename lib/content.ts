@@ -20,6 +20,7 @@ import type {
  *   - Title at FeelTect: Marketing & Communications Lead.
  *   - 467% ROAS, €8.13 CPL, 4.1 CAC to CLTV, 150,000+ paid views.
  *   - FeelTect growth: 1,900% impressions, 40% followers, 200% engagement lift.
+ *   - EWMA: 50+ qualified leads, 20+ stakeholder meetings.
  *   - Athlone's Finest organic: 36,000+ monthly impressions, followers doubled.
  *   - Both degrees are 2.1. No Google Ads, Excel or CRO certification is claimed.
  */
@@ -45,7 +46,7 @@ export const hero = {
   positioning:
     "I run marketing end to end. The research, the positioning, the creative, the spend, and the reporting that says whether any of it worked.",
   supporting: [
-    "At FeelTect, a MedTech company in Galway, I work inside the marketing team alongside sales, clinical and leadership. Nine months in: 1,900% impressions growth, 40% follower growth, a go-to-market strategy the business adopted as its operating reference, and 20+ qualified leads out of the Vienna clinical conference.",
+    "At FeelTect, a MedTech company in Galway, I work inside the marketing team alongside sales, clinical and leadership. Nine months in: 1,900% impressions growth, 40% follower growth, a Marketing and Communications Plan the business adopted as its operating reference, and 50+ qualified leads out of the Vienna clinical conference.",
     "At Athlone's Finest, the consumer sports brand I founded in 2023, the last paid social campaign returned 467% on ad spend at €8.13 per qualified lead. I sold the sponsorships, hired the suppliers, and delivered the tournaments the campaign was selling.",
   ],
   stats: [
@@ -65,17 +66,17 @@ export const disciplines: Discipline[] = [
   {
     label: "Brand",
     body: "Contributed to a brand refresh at FeelTect and then applied it: brand guidelines, tone of voice and visual identity carried across digital, print, web and event collateral in InDesign, Affinity Designer and Canva. Built a consumer brand from nothing at Athlone's Finest and sold it to sponsors on commercial terms.",
-    href: "/work/athlones-finest",
+    href: "/work/afe-2025",
   },
   {
     label: "Product marketing",
-    body: "Wrote the marketing and go-to-market (GTM) strategy FeelTect approved and now runs on. Built buyer, investor and key opinion leader (KOL) personas from stakeholder interviews, and repositioned a drinks brand across 400+ retail outlets in a full GTM plan.",
+    body: "Wrote the Marketing and Communications Plan that FeelTect approved and now runs on. Built buyer, investor and key opinion leader (KOL) personas from stakeholder interviews, and repositioned a drinks brand across 400+ retail outlets in an integrated marketing plan.",
     href: "/work/feeltect-function",
   },
   {
     label: "Growth",
-    body: "467% return on ad spend (ROAS) at €8.13 cost per lead (CPL) and a 4.1 CAC to CLTV ratio on Meta. Google Analytics 4 (GA4) and Google Tag Manager (GTM) implemented from scratch, plus a conversion rate optimisation (CRO) analysis across 61,000 users.",
-    href: "/work/athlones-finest",
+    body: "467% return on ad spend (ROAS) at €8.13 cost per lead (CPL) and a 4.1 CAC to CLTV ratio on Meta. Google Analytics 4 (GA4) and Google Tag Manager implemented from scratch, plus a conversion rate optimisation (CRO) analysis across 61,000 users.",
+    href: "/work/afe-2025",
   },
   {
     label: "Content",
@@ -84,7 +85,7 @@ export const disciplines: Discipline[] = [
   },
   {
     label: "Events",
-    body: "An international clinical conference in Vienna with 20+ qualified leads, and a live tournament series delivered on budget with suppliers, contracts and sponsors attached. B2B and consumer, both with a commercial number on the end.",
+    body: "An international clinical conference in Vienna with 50+ qualified leads and 20+ stakeholder meetings, and a live tournament series delivered on budget with suppliers, contracts and sponsors attached. B2B and consumer, both with a commercial number on the end.",
     href: "/work/ewma",
   },
 ];
@@ -96,21 +97,21 @@ export const feeltect = {
     { value: "1,900%", label: "Impressions growth" },
     { value: "40%", label: "Follower growth" },
     { value: "200%", label: "Digital engagement lift" },
-    { value: "20+", label: "Qualified leads, Vienna conference" },
+    { value: "50+", label: "Qualified leads, Vienna conference" },
   ] satisfies Stat[],
   cards: [
     {
-      title: "The plan the business runs on",
-      tag: "Product marketing / GTM / Insight",
+      title: "First marketing hire, full strategy shipped",
+      tag: "Product marketing / Strategy / Insight",
       href: "/work/feeltect-function",
-      body: "Before anything shipped, I ran a competitor benchmark that surfaced three positioning gaps, and built buyer, investor and clinical KOL personas from secondary research and stakeholder interviews. Those fed the marketing and go-to-market strategy document, which leadership approved and adopted as the operating reference for the business. Then I built the analytics and the content engine to deliver against it.",
+      body: "Before anything shipped, I ran a competitor benchmark that surfaced three positioning gaps, and built buyer, investor and clinical KOL personas from secondary research and stakeholder interviews. Those fed the Marketing and Communications Plan, which leadership approved and adopted as the operating reference for the business. Then I built the analytics and the content engine to deliver against it.",
       image: {
         src: "/work/feeltect-function/production-tablet-demo.jpg",
         alt: "Filming a Tight Alright product demonstration for the educational video series",
       },
     },
     {
-      title: "Website rebuild",
+      title: "Six pages shipped, no external developer",
       tag: "Web / CRO / UX",
       href: "/work/feeltect-website",
       body: "The site was structured around the company rather than the people trying to use it. A clinician looking for evidence of clinical outcomes had to dig for it. A partner looking for where FeelTect was presenting had no way to find it. I rebuilt the information architecture with the commercial team, introduced trust signals at the right points in the scroll journey, and shipped six pages without an external developer.",
@@ -121,10 +122,20 @@ export const feeltect = {
       },
     },
     {
-      title: "EWMA Vienna: conference marketing",
+      title: "1,000+ partner views on a series I filmed myself",
+      tag: "Content / Video / Sales enablement",
+      href: "/work/feeltect-video",
+      body: "Clinicians needed to see the product used properly. I built a 15-episode educational video series from script to final cut, set up the studio in the office, and delivered it as a sales enablement asset the commercial team still uses. Over 1,000 partner views.",
+      image: {
+        src: "/work/feeltect-function/production-green-screen.jpg",
+        alt: "Green screen studio set up in the FeelTect office for the video series",
+      },
+    },
+    {
+      title: "50+ qualified leads from one conference",
       tag: "Events / Brand activation / ABM",
       href: "/work/ewma",
-      body: "A conference campaign is three problems, not one. Before was the stand design, the bilingual English and German clinical materials, and the social campaign. During was the International Bandaging Competition. After was the lead tracking that made the trip worth the budget. Twenty-plus qualified leads, logged as they happened.",
+      body: "A conference campaign is three problems, not one. Before was the stand design, the bilingual English and German clinical materials, and the social campaign. During was the International Bandaging Competition. After was the lead tracking that made the trip worth the budget. Fifty-plus qualified leads and twenty-plus stakeholder meetings, logged as they happened.",
       image: {
         src: "/work/ewma/poster-back.png",
         alt: "Bandaging Competition poster designed for the EWMA conference stand in Vienna",
@@ -145,63 +156,76 @@ export const athlonesFinest = {
   heading: "Athlone's Finest. Built it. Still running it.",
   cards: [
     {
-      title: "467% ROAS on paid social",
-      tag: "Growth / Paid media / Creative testing",
-      href: "/work/athlones-finest",
-      body: "Twelve qualified leads was the target, on a budget with no room for waste. I sequenced the Meta campaign so paid spend only hit people who had already seen the organic content, tested AI-generated video against footage I shot myself, then moved budget onto the format the engagement data preferred. Return on ad spend came in at 467%.",
+      title: "Built the brand from a blank page",
+      tag: "2023 · Brand / Identity / Content",
+      href: "/work/afe-2023",
+      body: "Founded Athlone's Finest because local football in the midlands had an audience and nobody covering it. Built the brand identity, launched the social channels, and put out the first content inside a month.",
       image: {
         src: "/work/athlones-finest/hero-match.jpg",
-        alt: "Athlone's Finest players in yellow kit competing for the ball during a match",
+        alt: "Athlone's Finest players in yellow kit in the first season",
       },
-      stats: [
-        { value: "467%", label: "Return on ad spend" },
-        { value: "€8.13", label: "Cost per qualified lead" },
-        { value: "4.1", label: "CAC to CLTV ratio" },
-        { value: "150,000+", label: "Paid views on Meta" },
-      ],
     },
     {
-      title: "Tournament delivery and sponsorship",
-      tag: "Events / Partnerships / Operations",
-      href: "/work/afe-tournament",
-      body: "Live football tournaments delivered end to end: budget, suppliers, timelines, venue, referees, prizes and on-site logistics, with the whole thing pointed at a charity total. The sponsorships came from walking into local businesses with audience data and a proposal built around what they wanted out of it, then negotiating terms and taking the odd no.",
+      title: "First tournament, delivered on budget",
+      tag: "2024 · Events / Partnerships / Operations",
+      href: "/work/afe-2024",
+      body: "Live football tournament delivered end to end: budget, suppliers, timelines, venue, referees, prizes and on-site logistics, with the whole thing pointed at a charity total.",
+      image: {
+        src: "/work/athlones-finest/poster-5ives-2024.jpg",
+        alt: "Poster for the 2024 5IVES seven-aside tournament at Pioneer's FC, Athlone",
+        position: "top",
+      },
+    },
+    {
+      title: "467% ROAS on paid social",
+      tag: "2025 · Growth / Paid media / Creative testing",
+      href: "/work/afe-2025",
+      body: "Twelve qualified leads was the target, on a budget with no room for waste. Sequenced the Meta campaign so paid spend only hit people who had already seen the organic content, then moved budget onto the format the data preferred. Return on ad spend came in at 467%.",
       image: {
         src: "/work/athlones-finest/poster-6-aside.jpg",
         alt: "Poster for the 2025 six-aside charity tournament at Willow Park FC Stadium",
         position: "top",
       },
       stats: [
-        { value: "40,000+", label: "Build-up campaign views" },
-        { value: "3", label: "Local sponsors secured" },
-        { value: "0", label: "Budget overruns" },
-        { value: "2", label: "Charities supported" },
+        { value: "467%", label: "Return on ad spend" },
+        { value: "€8.13", label: "Cost per qualified lead" },
       ],
+    },
+    {
+      title: "Year four, still running",
+      tag: "2026 · Growth / Content / Events",
+      href: "/work/afe-2026",
+      body: "Local press coverage in the Westmeath Independent, a growing audience, and a tournament calendar being planned. Four years from blank page to newsprint.",
+      image: {
+        src: "/work/athlones-finest/hero-match.jpg",
+        alt: "Athlone's Finest match action in 2026",
+      },
     },
   ] satisfies CaseStudy[],
 } as const;
 
 /**
- * MSc applied projects. Kept in their own group so the go-to-market and
+ * MSc applied projects. Kept in their own group so the strategy and
  * analytics work reads as commercial thinking rather than coursework.
  */
 export const strategyProjects = {
   eyebrow: "Applied strategy · MSc Marketing Practice · University of Galway",
   heading: "Strategy and analytics projects",
   intro:
-    "Two commercial briefs run to a deliverable: a go-to-market plan for a drinks brand losing to its own category, and a conversion analysis of an ecommerce store leaking revenue on mobile.",
+    "Two commercial briefs run to a deliverable: a marketing strategy for a drinks brand losing to its own category, and a conversion analysis of an ecommerce store leaking revenue on mobile.",
   cards: [
     {
-      title: "All About Kombucha: go-to-market",
-      tag: "Product marketing / GTM / Positioning",
+      title: "400+ stockists and nobody knew what it was for",
+      tag: "Product marketing / Strategy / Positioning",
       href: "/work/kombucha",
-      body: "Distribution was not the constraint. The brand was in 400+ retail outlets and still growing slowly, because most shoppers did not understand what kombucha was for. I repositioned it from niche health product to everyday wellness drink, built the integrated GTM plan behind that, and designed a subscription model around customer lifetime value with a target of doubling subscription sales in six months.",
+      body: "Distribution was not the constraint. The brand was in 400+ retail outlets and still growing slowly, because most shoppers did not understand what kombucha was for. I repositioned it from niche health product to everyday wellness drink, built the integrated marketing plan behind that, and designed a subscription model around customer lifetime value with a target of doubling subscription sales in six months.",
       image: {
         src: "/work/kombucha/positioning.svg",
         alt: "Positioning diagram: kombucha repositioned from niche health product to everyday wellness drink",
       },
     },
     {
-      title: "Google Merchandise Store: where the revenue leaks",
+      title: "95% of revenue from one device, and why",
       tag: "Growth / CRO / GA4",
       href: "/work/google-merch",
       body: "Desktop and mobile brought near-identical traffic across 61,000+ users. Desktop produced 95.4% of the revenue. Funnel analysis in Google Analytics 4 traced it to 70.3% mobile checkout abandonment and an engagement gap of 22% against 59%, and the output was a prioritised fix roadmap rather than a list of observations.",
@@ -290,7 +314,7 @@ export const about = {
     "MSc Marketing Practice at University of Galway, after a 2.1 in Commerce and an Erasmus at Kedge in Paris. Real Impact Undergraduate of the Year finalist and a LIFT Ireland facilitator. Based between Galway and Dublin.",
   ],
   credentials: [
-    "Marketing and GTM strategy adopted by FeelTect leadership",
+    "Marketing and Communications Plan adopted by FeelTect leadership",
     "467% ROAS, €8.13 CPL, 4.1 CAC to CLTV",
     "MSc Marketing Practice, University of Galway",
     "Finalist, Real Impact Undergraduate of the Year 2025",
@@ -419,11 +443,16 @@ export const homepage = {
     // Indices are non-null: these arrays are defined literally above. The `!`
     // satisfies noUncheckedIndexedAccess without widening the tuple types.
     cards: [
-      athlonesFinest.cards[0]!,
+      athlonesFinest.cards[2]!,
       feeltect.cards[0]!,
-      feeltect.cards[2]!,
+      feeltect.cards[3]!,
       athlonesFinest.cards[1]!,
       feeltect.cards[1]!,
+      feeltect.cards[2]!,
+      athlonesFinest.cards[0]!,
+      athlonesFinest.cards[3]!,
+      strategyProjects.cards[0]!,
+      strategyProjects.cards[1]!,
     ] satisfies CaseStudy[],
     seeAll: { label: "See all", href: "/work" },
   },
@@ -439,9 +468,10 @@ export const homepage = {
       "/about",
       "/lab",
       "/work/feeltect-function",
-      "/work/athlones-finest",
+      "/work/afe-2025",
       "/work/ewma",
       "/work/kombucha",
+      "/work/feeltect-video",
     ],
   },
 } as const;
@@ -450,7 +480,7 @@ export const whatsNext: WhatsNextLink[] = [
   {
     title: "See the case studies",
     description:
-      "Seven write-ups covering the brief, the decision, the delivery and the number on the end of it.",
+      "Ten write-ups covering the brief, the decision, the delivery and the number on the end of it.",
     href: "/work",
   },
   {
@@ -472,14 +502,14 @@ export const whatsNext: WhatsNextLink[] = [
 export const aboutPage = {
   headline: "I own the outcome, usually with other people's deadlines attached.",
   opening: [
-    "A lot of the work I am proudest of started as a blank page. At FeelTect I joined the marketing team at a MedTech company and spent nine months building the system it runs on: stakeholder interviews with clinical and commercial leads, a competitor benchmark, personas, and a go-to-market strategy leadership approved. Then the delivery, which is the part most plans do not survive.",
+    "A lot of the work I am proudest of started as a blank page. At FeelTect I joined as the first marketing hire with no handover and no documented strategy. I spent nine months building the system it runs on: stakeholder interviews with clinical and commercial leads, a competitor benchmark, personas, and a Marketing and Communications Plan leadership approved. Then the delivery, which is the part most plans do not survive.",
     "At Athlone's Finest I turned an idea about local football into a brand with a paid media budget, three sponsors and a supplier list. Both jobs taught me the same thing: strategy is cheap until someone has to stand behind a stall at eight in the morning and make it happen.",
   ],
 
   panels: [
     {
       label: "Strategist",
-      body: "Competitor benchmark, personas, positioning, and a go-to-market plan FeelTect approved and now runs on.",
+      body: "Competitor benchmark, personas, positioning, and a Marketing and Communications Plan FeelTect approved and now runs on.",
     },
     {
       label: "Builder",
@@ -502,7 +532,7 @@ export const aboutPage = {
     },
     {
       heading: "I have written the plan and delivered it",
-      body: "At FeelTect there were mornings writing the marketing and go-to-market strategy and afternoons building pages in Elementor. It made the plan better, because I was one of the people who had to deliver it, and because the commercial team told me quickly when something would not work in front of a customer.",
+      body: "At FeelTect there were mornings writing the Marketing and Communications Plan and afternoons building pages in Elementor. It made the plan better, because I was one of the people who had to deliver it, and because the commercial team told me quickly when something would not work in front of a customer.",
     },
     {
       heading: "I work fine without structure, and better with people in the room",
@@ -526,14 +556,14 @@ export const aboutPage = {
       summary:
         "Nine-month placement on the marketing team at a MedTech company. Cross-functional collaboration with sales, clinical and leadership across strategy, brand, content, events and vendor management.",
       achievements: [
-        "Wrote the marketing and go-to-market strategy that leadership approved and adopted as the operating reference for the business",
+        "Wrote the Marketing and Communications Plan that leadership approved and adopted as the operating reference for the business",
         "Built buyer, investor and KOL personas from secondary research and stakeholder interviews, and ran a competitor benchmark that surfaced three positioning gaps",
         "Grew impressions 1,900%, followers 40% and digital engagement 200% in nine months through integrated B2B demand generation, organic social and content marketing",
         "Set up YouTube, Google Business Profile, LinkedIn, Google Analytics 4 and Google Tag Manager as the channel and measurement infrastructure. Campaign attribution, KPI tracking and funnel reporting all run on it",
         "Filmed and edited a 15-episode short-form video series in DaVinci Resolve, adopted by the commercial team as an ongoing client-facing sales enablement asset, 1,000+ partner views",
         "Contributed to a brand refresh, applying updated tone of voice and visual guidelines across digital and print collateral in InDesign, Affinity Designer and Canva",
-        "Built six WordPress and Elementor pages including the homepage, jobs page and testimonials, saving €3,000 in external development costs",
-        "Delivered the event marketing programme for the EWMA International Bandaging Competition in Vienna, with 20+ qualified leads tracked from stand to follow-up in HubSpot CRM",
+        "Built six WordPress and Elementor pages including the homepage, jobs page and testimonials, without an external developer",
+        "Delivered the event marketing programme for the EWMA International Bandaging Competition in Vienna, with 50+ qualified leads and 20+ stakeholder meetings tracked from stand to follow-up in HubSpot CRM",
         "Sourced and managed external video contractors through Upwork, introduced written contracts with delivery milestones, and resolved a commercial dispute with a vendor",
         "Presented a six-month digital performance report with competitor benchmarking at leadership level. Leadership agreed the next set of planning priorities off the back of it",
       ],
@@ -574,7 +604,7 @@ export const aboutPage = {
       grade: "Grade: 2.1",
       modules:
         "Key modules: Customer Engagement and Analytics via Digital Platform (74%), Marketing Practice for Sustainable Value (70%), Digital Sales and Marketing Alignment (68%), Applied Marketing Practice (68%), Inbound Marketing Strategy (67%).",
-      note: "Applied projects: the All About Kombucha go-to-market plan and the Google Merchandise Store conversion analysis. Both are written up in the work section.",
+      note: "Applied projects: the All About Kombucha marketing strategy and the Google Merchandise Store conversion analysis. Both are written up in the work section.",
     },
     {
       credential: "Bachelor of Commerce, Marketing",
@@ -640,7 +670,7 @@ export const aboutPage = {
   whatsNext: [
     {
       title: "View my projects",
-      description: "Seven case studies with the brief, the decision, and the number on the end.",
+      description: "Ten case studies with the brief, the decision, and the number on the end.",
       href: "/work",
     },
     {
@@ -664,7 +694,7 @@ export const workPage = {
   eyebrow: "Work",
   headline: "Projects I've shipped.",
   intro:
-    "Seven case studies across brand, product marketing, growth, content and events. Each one covers the brief, the decision I made, who I made it with, and what happened after.",
+    "Ten case studies across brand, product marketing, growth, content and events. Each one covers the brief, the decision I made, who I made it with, and what happened after.",
 
   groups: [
     {
@@ -672,18 +702,21 @@ export const workPage = {
       heading: "FeelTect",
       intro: undefined as string | undefined,
       cards: feeltect.cards,
+      brand: undefined as string | undefined,
     },
     {
       eyebrow: athlonesFinest.eyebrow,
       heading: "Athlone's Finest",
       intro: undefined as string | undefined,
       cards: athlonesFinest.cards,
+      brand: "afe" as string | undefined,
     },
     {
       eyebrow: strategyProjects.eyebrow,
       heading: strategyProjects.heading,
       intro: strategyProjects.intro,
       cards: strategyProjects.cards,
+      brand: undefined as string | undefined,
     },
   ],
 
@@ -694,3 +727,43 @@ export const workPage = {
     secondaryCta: { label: "More about me", href: "/about" },
   },
 } as const;
+
+export const testimonials = [
+  {
+    quote: "Your testimonial here.",
+    author: "",
+    role: "",
+  },
+  {
+    quote: "Your testimonial here.",
+    author: "",
+    role: "",
+  },
+  {
+    quote: "Your testimonial here.",
+    author: "",
+    role: "",
+  },
+];
+
+export const faqItems = [
+  {
+    question: "What types of marketing work do you do?",
+    answer:
+      "Brand, product marketing, growth, content and events, from strategy through to delivery.",
+  },
+  {
+    question: "What industries have you worked in?",
+    answer:
+      "MedTech, consumer sports, FMCG and ecommerce.",
+  },
+  {
+    question: "Do you work freelance or full-time?",
+    answer:
+      "Open to both, happy to have a conversation about what fits.",
+  },
+  {
+    question: "What is the best way to discuss a project?",
+    answer: `Drop me an email at ${site.email} with the brief and timeline.`,
+  },
+];

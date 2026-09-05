@@ -40,7 +40,7 @@ export function ReelRow({
                   src={study.image.src}
                   alt={study.image.alt}
                   sizes="(min-width: 768px) 58vw, 92vw"
-                  className="reel-media"
+                  className={`reel-media ${study.image.position === "top" ? "object-top" : ""}`}
                 />
               )
             ) : (

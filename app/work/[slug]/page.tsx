@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CaseCTA } from "@/components/case-study/CaseCTA";
+import { CaseAtAGlance } from "@/components/case-study/CaseAtAGlance";
 import { CaseHero } from "@/components/case-study/CaseHero";
-import { CaseNext } from "@/components/case-study/CaseNext";
 import { CaseResults } from "@/components/case-study/CaseResults";
 import { CaseSectionBlock } from "@/components/case-study/CaseSectionBlock";
+import { CaseWhatILearned } from "@/components/case-study/CaseWhatILearned";
+import { CaseWhatsNext } from "@/components/case-study/CaseWhatsNext";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";
 import { openGraphFor } from "@/lib/seo";
 
@@ -41,12 +42,13 @@ export default function CaseStudyPage({ params }: PageProps) {
   return (
     <>
       <CaseHero study={study} />
+      {study.atAGlance ? <CaseAtAGlance data={study.atAGlance} /> : null}
       {study.sections.map((section, index) => (
         <CaseSectionBlock key={section.kicker} section={section} banded={index % 2 === 0} />
       ))}
       <CaseResults study={study} />
-      <CaseCTA />
-      {next ? <CaseNext next={next} /> : null}
+      {study.whatILearned ? <CaseWhatILearned paragraphs={study.whatILearned} /> : null}
+      <CaseWhatsNext next={next} />
     </>
   );
 }

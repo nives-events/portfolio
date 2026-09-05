@@ -12,14 +12,31 @@ export const caseStudies: CaseStudyDetail[] = [
     slug: "feeltect-function",
     index: "01",
     tag: "Product marketing / Brand / Content",
-    title: "The strategy a MedTech company now runs on",
+    title: "First marketing hire, full strategy shipped",
     intro:
-      "FeelTect had a product, a clinical audience and no marketing system. Nine months later the go-to-market strategy I wrote is the document the business operates from, and the channels to deliver it exist.",
+      "I joined FeelTect as the first marketing hire with no handover and no documented strategy. Nine months later the Marketing and Communications Plan I wrote is the document the business operates from, and the channels to deliver it exist.",
     meta: {
       role: "Marketing & Communications Lead, working with sales, clinical and leadership",
       timeline: "September 2025 to June 2026",
-      scope: ["Market research", "Personas", "Positioning", "Go-to-market", "Brand", "Content", "Analytics"],
+      scope: ["Market research", "Personas", "Positioning", "Strategy", "Brand", "Content", "Analytics"],
     },
+    atAGlance: {
+      project: "Built the marketing function for a MedTech company from first hire to operating system in nine months.",
+      role: "Marketing & Communications Lead, sole marketing hire, working across sales, clinical and leadership.",
+      outputs: [
+        "Marketing and Communications Plan adopted as the business operating reference",
+        "Buyer, investor and KOL personas from stakeholder interviews",
+        "15-episode educational video series",
+        "Brand refresh applied across digital, print, web and events",
+        "GA4 and Google Tag Manager measurement infrastructure",
+      ],
+      primaryResult: "1,900% impressions growth",
+    },
+    whatILearned: [
+      "The research phase is the easiest thing to cut from a timeline and the most expensive thing to skip. Every positioning gap the competitor benchmark surfaced became a piece of content or a campaign angle that worked. The ones I would have guessed at without the research were wrong in ways I would not have noticed until the numbers came back flat.",
+      "Running everything alone taught me that prioritisation is the real skill. When there is no team to delegate to, the decision about what not to do this week matters more than the decision about what to do.",
+      "The best content brief I wrote started from what the audience needed to know and in what order. Scripting the testimonial video for a clinical audience taught me that: the clinician watching it needed to see the problem recognised before they would accept the product as the answer.",
+    ],
     heroImage: {
       src: "/work/feeltect-function/production-tablet-demo.jpg",
       alt: "Filming a Tight Alright product demonstration for the educational video series",
@@ -34,9 +51,9 @@ export const caseStudies: CaseStudyDetail[] = [
     sections: [
       {
         kicker: "01 · The context",
-        heading: "A company with a product and no marketing",
+        heading: "A company with a product and no marketing strategy",
         body: [
-          "FeelTect makes Tight Alright, a wound care technology that tells a clinician how much pressure they are actually applying. The clinical case was strong. There was no marketing function around it: no positioning, no measurement, no content, and nobody whose job it was to decide what the company sounded like.",
+          "FeelTect makes Tight Alright, a wound care technology that tells a clinician how much pressure they are actually applying. The clinical case was strong. I joined as the first marketing hire with no handover and no documented strategy: no positioning, no measurement, no content, and nobody whose job it was to decide what the company sounded like.",
           "The tempting move was to start publishing and look busy. I spent the first weeks on research instead, because a start-up that guesses its positioning pays for it twice.",
         ],
       },
@@ -51,9 +68,9 @@ export const caseStudies: CaseStudyDetail[] = [
       },
       {
         kicker: "03 · The plan",
-        heading: "A go-to-market document the business adopted",
+        heading: "A plan the business adopted and still runs on",
         body: [
-          "The output was a marketing and go-to-market (GTM) strategy: category positioning, messaging by audience, channel plan, campaign calendar and the commercial targets attached to each. Leadership reviewed it, approved it, and adopted it as the operating reference for the business. It is what new activity gets checked against now, including work I have nothing to do with.",
+          "The output was the Marketing and Communications Plan: category positioning, messaging by audience, channel plan, campaign calendar and the commercial targets attached to each. Leadership reviewed it, approved it, and adopted it as the operating reference for the business. It is what new activity gets checked against now, including work I have nothing to do with.",
           "That is the part I would point at first. Plenty of people can write a strategy document. The test is whether anyone opens it again, and this one is the thing other people plan from.",
         ],
       },
@@ -95,7 +112,7 @@ export const caseStudies: CaseStudyDetail[] = [
         ],
         table: {
           caption:
-            "The publishing cadence set out in the go-to-market strategy. Each format has a frequency, a channel and a commercial job.",
+            "The publishing cadence set out in the Marketing and Communications Plan. Each format has a frequency, a channel and a commercial job.",
           columns: ["Format", "Frequency", "Channel", "Goal"],
           rows: [
             ["Blog article or longform", "Bi-weekly", "Website, LinkedIn", "SEO, authority, lead generation"],
@@ -162,13 +179,130 @@ export const caseStudies: CaseStudyDetail[] = [
         },
       ],
     },
+    nextSlug: "feeltect-video",
+  },
+  {
+    slug: "feeltect-video",
+    index: "02",
+    tag: "Content / Video / Sales enablement",
+    title: "1,000+ partner views on a series I filmed myself",
+    intro:
+      "Clinicians needed to see the product used properly, and no written page does that job. I built a 15-episode educational video series from script to final cut, set up the studio in the office, and delivered it as a sales enablement asset the commercial team still uses.",
+    meta: {
+      role: "Marketing & Communications Lead, working with sales and clinical",
+      timeline: "Produced during the FeelTect placement, September 2025 to June 2026",
+      scope: ["Video production", "Content strategy", "DaVinci Resolve", "YouTube", "Sales enablement", "Vendor management"],
+    },
+    atAGlance: {
+      project: "A 15-episode educational video series for a clinical audience, produced entirely in-house.",
+      role: "Marketing & Communications Lead. Scripting, filming, editing, publishing and vendor coordination.",
+      outputs: [
+        "15-episode educational video series on YouTube",
+        "In-house green screen studio setup",
+        "Podcast pilot episode",
+        "Publishing cadence integrated into the content calendar",
+        "External video contractors sourced and managed via Upwork",
+      ],
+      primaryResult: "1,000+ partner views",
+    },
+    whatILearned: [
+      "The best content brief I wrote started from what the audience needed to know and in what order, not from what we wanted to say. Scripting the testimonial video for a clinical audience taught me that: the clinician watching it needed to see the problem recognised before they would accept the product as the answer.",
+    ],
+    heroImage: {
+      src: "/work/feeltect-function/production-green-screen.jpg",
+      alt: "Green screen studio set up in the FeelTect office for the video series",
+      ratio: "aspect-[3/2]",
+    },
+    heroStats: [
+      { value: "15", label: "Episodes filmed and edited" },
+      { value: "1,000+", label: "Partner views on the series" },
+    ],
+    sections: [
+      {
+        kicker: "01 · The context",
+        heading: "A clinical product that needed to be seen, not described",
+        body: [
+          "Tight Alright is easier to understand when you watch someone use it. The clinical value is in the real-time pressure reading, and that only lands when a nurse sees it happen on screen. Written copy and static images were not closing that gap.",
+          "There was no video content, no YouTube channel, and no production setup. I built all three.",
+        ],
+      },
+      {
+        kicker: "02 · The production",
+        heading: "Green screen, DaVinci Resolve, and learning on the job",
+        body: [
+          "I set up a green screen studio in the FeelTect office with the lighting and camera equipment the budget could carry, then taught myself DaVinci Resolve well enough to cut broadcast-quality educational content from it. Each episode followed the same structure: a clinical use case, a product demonstration, and a clear takeaway the viewer could apply immediately.",
+          "Around the series sat the repeatable pieces: social templates, testimonial cards and conference promos, plus a podcast episode to test whether longer-form content had an audience here. I shot, cut and captioned most of it, and briefed external contractors through Upwork when the work needed a second camera.",
+        ],
+        pullStat: { value: "15", label: "Episodes filmed and edited, brief to final cut" },
+        videos: [
+          {
+            src: "/work/feeltect-function/video-how-to-episode.mp4",
+            poster: "/work/feeltect-function/poster-how-to-episode.png",
+            label: "Episode from the educational series: how to optimise compression therapy with Tight Alright",
+            caption: "An episode from the series, exactly as it shipped. Shot in the office studio, cut in DaVinci Resolve.",
+          },
+          {
+            src: "/work/feeltect-function/podcast-episode-1.mp4",
+            poster: "/work/feeltect-function/podcast-episode-1-poster.jpg",
+            label: "Podcast episode one, produced during the placement",
+            caption: "Episode one of the podcast. Recorded, edited and published in-house.",
+          },
+        ],
+        images: [
+          {
+            src: "/work/feeltect-function/production-green-screen.jpg",
+            alt: "Green screen studio set up in the FeelTect office for the video series",
+            ratio: "aspect-[1600/1388]",
+            caption:
+              "The in-house studio. Green screen, lighting and camera set up in the office, then DaVinci Resolve learned to edit what came out of it.",
+          },
+        ],
+      },
+      {
+        kicker: "03 · The cadence",
+        heading: "A publishing rhythm the team could plan against",
+        body: [
+          "None of the content holds together without a cadence. The Marketing and Communications Plan fixed one. Each format got a frequency, a channel and a job to do, which is what turned publishing from a weekly scramble into something the team could plan against and I could report on.",
+        ],
+        table: {
+          caption:
+            "The publishing cadence set out in the Marketing and Communications Plan. Each format has a frequency, a channel and a commercial job.",
+          columns: ["Format", "Frequency", "Channel", "Goal"],
+          rows: [
+            ["Blog article or longform", "Bi-weekly", "Website, LinkedIn", "SEO, authority, lead generation"],
+            ["“Did You Know?” post", "Weekly", "LinkedIn, Twitter, Facebook", "Awareness, engagement"],
+            ["Educational video", "Monthly", "YouTube, LinkedIn, Facebook", "Education, demonstration"],
+            ["Newsletter", "Bimonthly", "Website, email", "Nurturing, retention"],
+            ["Client testimonial", "Per release", "Website, all social", "Trust, validation"],
+            ["Clinical evidence post", "Per release", "LinkedIn, website", "Credibility, KOL engagement"],
+          ],
+        },
+      },
+      {
+        kicker: "04 · The vendor work",
+        heading: "External contractors, managed properly",
+        body: [
+          "When the work needed a second camera or a specialist edit, I sourced and managed external video contractors through Upwork. After the first engagement showed me what happens without written terms, I introduced contracts with delivery milestones for every subsequent brief. When one vendor engagement went wrong commercially, I managed the dispute through to resolution rather than escalating it and losing the delivery date.",
+        ],
+      },
+    ],
+    results: {
+      heading: "What it produced",
+      summary:
+        "A content engine the commercial team adopted as an ongoing sales enablement asset, with a production setup that could keep making it.",
+      stats: [
+        { value: "15", label: "Episodes filmed and edited" },
+        { value: "1,000+", label: "Partner views on the series" },
+        { value: "1", label: "Podcast pilot produced" },
+      ],
+    },
     nextSlug: "feeltect-website",
   },
   {
     slug: "feeltect-website",
-    index: "02",
+    index: "03",
     tag: "Web / CRO / UX",
-    title: "Rebuilding the website around the people using it",
+    title: "Six pages shipped, no external developer",
     intro:
       "The site was structured around the company rather than its visitors. I rebuilt the information architecture with the commercial team and shipped six pages without an external developer.",
     meta: {
@@ -184,6 +318,20 @@ export const caseStudies: CaseStudyDetail[] = [
         "Google Search Console",
       ],
     },
+    atAGlance: {
+      project: "Rebuilt the FeelTect website around the audiences that mattered, without an external developer.",
+      role: "Marketing & Communications Lead. UX audit, content architecture, build and CRO.",
+      outputs: [
+        "Six pages built in WordPress and Elementor",
+        "Information architecture restructured around clinician and partner audiences",
+        "Trust signal placement informed by CRO principles",
+        "Conversion tracking and on-page SEO implemented from scratch",
+      ],
+      primaryResult: "88% increase in social channel visitors",
+    },
+    whatILearned: [
+      "Most underperforming websites are structure problems, not design problems. The FeelTect site looked professional before I touched it. The issue was that the information was ordered around the company's org chart rather than the questions a visitor arrived with. Fixing the architecture moved the numbers more than any visual change could have.",
+    ],
     heroImage: {
       src: "/work/feeltect-website/hero-new.png",
       alt: "The rebuilt FeelTect homepage hero: Tight Alright brand illustration with a clear value proposition",
@@ -192,7 +340,7 @@ export const caseStudies: CaseStudyDetail[] = [
     },
     heroStats: [
       { value: "6", label: "Pages built and shipped" },
-      { value: "€3,000", label: "Saved in external costs" },
+      { value: "88%", label: "Increase in social channel visitors" },
     ],
     sections: [
       {
@@ -224,7 +372,7 @@ export const caseStudies: CaseStudyDetail[] = [
           "On-page SEO went in as I built rather than afterwards: heading hierarchy, metadata, image alt text and internal linking. Google Search Console is where I checked the work landed, watching what actually got indexed and which clinical search terms the pages started surfacing for.",
           "The same approach carried into standalone conversion work, like the peer-to-peer clinical immersion landing page below.",
         ],
-        pullStat: { value: "€3,000", label: "External development costs avoided" },
+        pullStat: { value: "6", label: "Pages built without an external developer" },
         images: [
           {
             src: "/work/feeltect-website/landing-page.png",
@@ -296,7 +444,6 @@ export const caseStudies: CaseStudyDetail[] = [
         "Six pages shipped without a developer, tracked in GA4 from day one, and a site that answers the questions clinicians and partners actually arrive with.",
       stats: [
         { value: "6", label: "Pages built across the placement" },
-        { value: "€3,000", label: "Saved in external costs" },
         { value: "88%", label: "Increase in social channel visitors" },
       ],
     },
@@ -304,18 +451,34 @@ export const caseStudies: CaseStudyDetail[] = [
   },
   {
     slug: "ewma",
-    index: "03",
+    index: "04",
     tag: "Events / Brand activation / ABM",
-    title: "EWMA Vienna: an international conference as three problems",
+    title: "50+ qualified leads from one conference",
     intro:
-      "A conference campaign is really three campaigns: before, during and after. Treating them separately is what turned a stand in Vienna into 20+ qualified leads that were still warm a fortnight later.",
+      "A conference campaign is really three campaigns: before, during and after. Treating them separately is what turned a stand in Vienna into 50+ qualified leads and 20+ stakeholder meetings that were still warm a fortnight later.",
     meta: {
       role: "Marketing & Communications Lead, working with sales, clinical and leadership",
       timeline: "Delivered during the FeelTect placement",
       scope: ["Event marketing", "Stand design", "Bilingual campaign assets", "Vendor management", "Lead tracking"],
     },
+    atAGlance: {
+      project: "Full-cycle event marketing for an international wound care conference in Vienna.",
+      role: "Marketing & Communications Lead. Campaign strategy, stand design, bilingual materials, lead tracking.",
+      outputs: [
+        "Exhibition stand design and creative",
+        "Bilingual clinical materials (English and German)",
+        "FeelTect International Bandaging Competition",
+        "Social campaign targeting wound care professionals",
+        "HubSpot CRM lead capture and follow-up system",
+      ],
+      primaryResult: "50+ qualified leads",
+    },
+    whatILearned: [
+      "Events are won in the preparation, not on the day. Every lead we logged at the stand started with a social post, a clinical PDF or a competition poster that someone saw before they walked past us. The pre-event work created the conversations. The stand just gave them a place to happen.",
+    ],
     heroStats: [
-      { value: "20+", label: "Qualified leads from the conference" },
+      { value: "50+", label: "Qualified leads from the conference" },
+      { value: "20+", label: "Stakeholder meetings secured" },
       { value: "2", label: "Languages of clinical materials" },
     ],
     sections: [
@@ -356,7 +519,7 @@ export const caseStudies: CaseStudyDetail[] = [
           "The centrepiece was a competition that turned a passive stand into something with a queue: guess the pressure you are applying, wrap, then see the real number on the device. It gave every visitor a reason to stop, and it gave us a natural qualifying conversation with each of them.",
           "The two-sided poster below is the actual creative. The front pulled people in, the back explained the game in three steps. I designed both, and ran the competition on the floor across the days of the conference alongside the clinical team, who handled the technique demonstrations.",
         ],
-        pullStat: { value: "20+", label: "Qualified leads, tracked from stand to follow-up" },
+        pullStat: { value: "50+", label: "Qualified leads, tracked from stand to follow-up" },
         images: [
           {
             src: "/work/ewma/poster-back.png",
@@ -371,7 +534,7 @@ export const caseStudies: CaseStudyDetail[] = [
         heading: "Leads logged as they happened, not reconstructed later",
         body: [
           "Lead capture and follow-up were set up before we left Galway. Leads were logged and qualified at the stand in HubSpot CRM, with the context of the conversation attached, then routed to the commercial team on an agreed follow-up schedule. Nobody had to reconstruct a business card pile from memory a week later, which is the usual way conference leads quietly die.",
-          "Twenty-plus qualified leads came out of it, and the partner conversations that started in Vienna carried on afterwards because there was a system holding them.",
+          "Fifty-plus qualified leads and twenty-plus stakeholder meetings came out of it, and the partner conversations that started in Vienna carried on afterwards because there was a system holding them.",
         ],
       },
       {
@@ -386,19 +549,20 @@ export const caseStudies: CaseStudyDetail[] = [
     results: {
       heading: "What happened",
       summary:
-        "A full B2B event cycle with a commercial number on the end: 20+ qualified leads, a stand that held a queue, and suppliers who delivered on the dates in their contracts.",
+        "A full B2B event cycle with a commercial number on the end: 50+ qualified leads, 20+ stakeholder meetings, a stand that held a queue, and suppliers who delivered on the dates in their contracts.",
       stats: [
-        { value: "20+", label: "Qualified leads at EWMA Vienna" },
+        { value: "50+", label: "Qualified leads at EWMA Vienna" },
+        { value: "20+", label: "Stakeholder meetings secured" },
         { value: "2", label: "Languages of clinical materials produced" },
         { value: "3", label: "Campaign phases planned and delivered" },
         { value: "0", label: "Budget overruns on procurement" },
       ],
     },
-    nextSlug: "athlones-finest",
+    nextSlug: "afe-2025",
   },
   {
-    slug: "athlones-finest",
-    index: "04",
+    slug: "afe-2025",
+    index: "05",
     tag: "Growth / Paid media / Brand",
     title: "467% return on ad spend, and the brand behind it",
     intro:
@@ -408,6 +572,22 @@ export const caseStudies: CaseStudyDetail[] = [
       timeline: "May 2023 to present",
       scope: ["Brand identity", "Paid social", "Creative testing", "Organic social", "GA4 and GTM"],
     },
+    atAGlance: {
+      project: "A consumer sports brand I founded in 2023, with paid media, organic content and live events.",
+      role: "Founder and Marketing Lead. Strategy, creative, paid media, organic content, sponsorship, event delivery.",
+      outputs: [
+        "Meta campaign returning 467% ROAS at €8.13 per qualified lead",
+        "Organic audience of 36,000+ monthly impressions with followers doubled",
+        "Cross-platform content calendar across TikTok, Instagram and Facebook",
+        "Live tournament delivery with sponsors and charity partnerships",
+        "athlonesfinest.com with GA4 and Google Tag Manager",
+      ],
+      primaryResult: "467% return on ad spend",
+    },
+    whatILearned: [
+      "Organic content is the foundation paid campaigns run on. The retargeting pool that made the €8.13 cost per lead possible existed because I had spent months building an audience that already knew the brand. Paid spend on a cold audience at this budget would have been expensive and slow. Paid spend on people who had already watched the organic content converted at a rate the budget could survive.",
+      "The content that performed best was rarely the content that took longest to make. Found match footage on a phone held attention longer than polished promotional creative. Production quality still matters, but the data gets to decide what quality means in each context.",
+    ],
     heroImage: {
       src: "/work/athlones-finest/hero-match.jpg",
       alt: "Athlone's Finest players in yellow kit taking on a defender in front of the watching crowd",
@@ -499,13 +679,13 @@ export const caseStudies: CaseStudyDetail[] = [
         { value: "400+", label: "Players across 4 years" },
       ],
     },
-    nextSlug: "afe-tournament",
+    nextSlug: "afe-2024",
   },
   {
-    slug: "afe-tournament",
-    index: "05",
+    slug: "afe-2024",
+    index: "06",
     tag: "Events / Partnerships / Operations",
-    title: "A live tournament, delivered end to end",
+    title: "Live tournament, three sponsors, zero overruns",
     intro:
       "Consumer event marketing with everything attached: a budget, suppliers, a venue, sponsors expecting a return, two charities expecting a cheque, and a date that could not move.",
     meta: {
@@ -513,6 +693,20 @@ export const caseStudies: CaseStudyDetail[] = [
       timeline: "2024 and 2025 editions",
       scope: ["Live event delivery", "Budget management", "Supplier coordination", "Sponsorship", "Campaign"],
     },
+    atAGlance: {
+      project: "Live charity football tournaments delivered end to end across two editions.",
+      role: "Founder and Marketing Lead. Budget, suppliers, venue, sponsors, logistics, campaign.",
+      outputs: [
+        "Two tournament editions delivered on budget",
+        "Three local sponsors secured through audience-data proposals",
+        "Build-up campaign reaching 40,000+ views",
+        "Charity partnerships with ASIAM and AUTSIM",
+      ],
+      primaryResult: "0 budget overruns",
+    },
+    whatILearned: [
+      "Event delivery is project management under a deadline you cannot move, with stakeholders who all want something different on the same day. The skill is not planning the day. The skill is building enough structure that the day survives the first thing that goes wrong.",
+    ],
     heroImage: {
       src: "/work/athlones-finest/trophy-celebration.jpg",
       alt: "Winning team celebrating with the trophy after the six-aside tournament",
@@ -609,20 +803,152 @@ export const caseStudies: CaseStudyDetail[] = [
         { value: "0", label: "Budget overruns" },
       ],
     },
+    nextSlug: "afe-2023",
+  },
+  {
+    slug: "afe-2023",
+    index: "07",
+    tag: "Brand / Identity / Content",
+    title: "Building a brand from a blank page",
+    intro:
+      "I founded Athlone's Finest in May 2023 because local football in the midlands had an audience and nobody covering it. I built the brand identity, launched the social channels, and put out the first content inside a month.",
+    meta: {
+      role: "Founder and Marketing Lead",
+      timeline: "May 2023 to December 2023",
+      scope: ["Brand identity", "Social media launch", "Content strategy", "Community building"],
+    },
+    atAGlance: {
+      project: "A consumer sports brand for 16-to-25-year-olds in the Irish midlands, built from nothing.",
+      role: "Founder. Brand identity, social channels, content calendar, community management.",
+      outputs: [
+        "Brand identity: name, logo, colour palette, tone of voice",
+        "Social presence launched across Instagram, TikTok and Facebook",
+        "First 100 players registered for inaugural events",
+        "Content calendar running weekly from month one",
+      ],
+      primaryResult: "Brand launched and first audience built",
+    },
+    whatILearned: [
+      "Starting a brand from zero teaches you which parts of marketing theory survive contact with a real audience. Most of the early work was wrong. The audience told me what they actually wanted by ignoring the things I thought would work and engaging with content I almost did not publish.",
+    ],
+    heroImage: {
+      src: "/work/athlones-finest/hero-match.jpg",
+      alt: "Athlone's Finest players in the first season, yellow kit, competing for the ball",
+      ratio: "aspect-[16/9]",
+    },
+    heroStats: [
+      { value: "2023", label: "Year founded" },
+      { value: "3", label: "Social channels launched" },
+    ],
+    sections: [
+      {
+        kicker: "01 · The start",
+        heading: "A page, a name, and a reason to follow",
+        body: [
+          "Local football in the midlands had an audience and no coverage worth the name. I saw that gap and built Athlone's Finest to fill it: a consumer sports brand for 16-to-25-year-olds with its own visual language, its own tone, and content that made local football feel like it mattered.",
+          "The first month was brand identity: the name, the logo, the colour palette, the tone of voice. Then the social channels launched across Instagram, TikTok and Facebook, with a content calendar running weekly from month one.",
+        ],
+      },
+    ],
+    results: {
+      heading: "What happened",
+      summary:
+        "A brand launched from nothing, with social channels live and an audience forming around content that covered local football the way nobody else was.",
+      stats: [
+        { value: "2023", label: "Year founded" },
+        { value: "3", label: "Social channels launched" },
+        { value: "100+", label: "Players in the first year" },
+      ],
+    },
+    nextSlug: "afe-2026",
+  },
+  {
+    slug: "afe-2026",
+    index: "08",
+    tag: "Growth / Content / Events",
+    title: "Year four, still running",
+    intro:
+      "The 2026 edition of Athlone's Finest is live. Westmeath Independent coverage, a growing paid subscriber base, and a tournament calendar being planned now.",
+    meta: {
+      role: "Founder and Marketing Lead",
+      timeline: "January 2026 to present",
+      scope: ["Brand growth", "Press coverage", "Event planning", "Content strategy"],
+    },
+    atAGlance: {
+      project: "Year four of a consumer sports brand, now with press coverage and a maturing audience.",
+      role: "Founder. Strategy, content, event planning, press.",
+      outputs: [
+        "Westmeath Independent press coverage secured",
+        "Tournament calendar for 2026 in planning",
+        "Continued organic growth across social channels",
+      ],
+      primaryResult: "Local press coverage",
+    },
+    whatILearned: [
+      "A brand that runs for four years is a different thing from a brand that launches. The problems change. Early on, the constraint is attention. Later, the constraint is consistency and making sure the audience you built still has a reason to follow.",
+    ],
+    heroImage: {
+      src: "/work/athlones-finest/hero-match.jpg",
+      alt: "Athlone's Finest match action in 2026",
+      ratio: "aspect-[16/9]",
+    },
+    heroStats: [
+      { value: "4", label: "Years running" },
+      { value: "400+", label: "Players to date" },
+    ],
+    sections: [
+      {
+        kicker: "01 · Still running",
+        heading: "From a page to press coverage",
+        body: [
+          "The 2026 six-a-side edition was covered by the Westmeath Independent, local press picking up a story that started as a social media page with no coverage worth the name. That is four years from blank page to newsprint.",
+          "The audience is maturing. The people who followed in 2023 are still there, and the content calendar has evolved from match highlights to tournament build-ups, sponsor integrations, and community-driven content.",
+        ],
+        links: [
+          {
+            label: "Read the coverage in the Westmeath Independent",
+            href: "https://www.westmeathindependent.ie/2026/08/05/athlones-finest-six-a-side-returns/",
+          },
+        ],
+      },
+    ],
+    results: {
+      heading: "What happened",
+      summary:
+        "Four years in, a consumer brand with local press coverage, 400+ players across its history, and a tournament calendar still growing.",
+      stats: [
+        { value: "4", label: "Years running" },
+        { value: "400+", label: "Players to date" },
+      ],
+    },
     nextSlug: "kombucha",
   },
   {
     slug: "kombucha",
-    index: "06",
-    tag: "Product marketing / GTM / Positioning",
-    title: "The Booch Reboot: repositioning a drink nobody could explain",
+    index: "09",
+    tag: "Product marketing / Strategy / Positioning",
+    title: "400+ stockists and nobody knew what it was for",
     intro:
       "Ireland's kombucha problem was comprehension, not demand. All About Kombucha had a strong product, a distinctive brand and national distribution in 400+ outlets, and shoppers still couldn't say what it was for.",
     meta: {
       role: "Marketing strategy lead on the project team",
       timeline: "MSc Marketing Practice, University of Galway",
-      scope: ["Market research", "Positioning", "Go-to-market", "Lifecycle", "CLTV modelling"],
+      scope: ["Market research", "Positioning", "Marketing strategy", "Lifecycle", "CLTV modelling"],
     },
+    atAGlance: {
+      project: "MSc Marketing Practice module project: a marketing strategy for a kombucha brand with national distribution but low comprehension.",
+      role: "Marketing strategy lead on the project team.",
+      outputs: [
+        "Consumer research and positioning diagnosis",
+        "Three personas built from primary and secondary research",
+        "Integrated marketing plan with four workstreams",
+        "CLTV-based subscription model with phased roadmap",
+      ],
+      primaryResult: "2x subscription sales target in six months",
+    },
+    whatILearned: [
+      "The brief you are given is rarely the brief you should solve. The obvious ask was more distribution. The evidence said the barrier was comprehension. Reframing the problem before building the plan is the step that changes the quality of everything that follows.",
+    ],
     heroStats: [
       { value: "400+", label: "Retail outlets already stocked" },
       { value: "3", label: "Core personas built from research" },
@@ -647,14 +973,14 @@ export const caseStudies: CaseStudyDetail[] = [
         images: [
           {
             src: "/work/kombucha/positioning.svg",
-            alt: "Diagram: repositioning from niche health product competing with supplements, to everyday wellness drink competing with soft drinks, with the four go-to-market workstreams beneath",
+            alt: "Diagram: repositioning from niche health product competing with supplements, to everyday wellness drink competing with soft drinks, with the four marketing workstreams beneath",
             ratio: "aspect-[16/10]",
             caption: "The repositioning argument, and the workstreams built underneath it.",
           },
         ],
       },
       {
-        kicker: "03 · The go-to-market plan",
+        kicker: "03 · The marketing plan",
         heading: "Four fixes, then scale",
         body: [
           "Before scale, I fixed the foundation. Messaging simplified to three pillars: gut health, low-sugar alternative, daily wellness habit. Brand alignment across the kombucha cans and the prebiotic sodas, which currently read as two different brands, into one visual identity and one voice. Website optimisation, with a kombucha education hub answering the questions people were already searching, and a structured SEO funnel: awareness keywords like 'what is kombucha' at the top, consideration keywords like 'kombucha after workout' in the middle, conversion keywords like 'kombucha subscription Ireland' at the bottom.",
@@ -682,7 +1008,7 @@ export const caseStudies: CaseStudyDetail[] = [
     results: {
       heading: "What it produced",
       summary:
-        "A positioning argument built on evidence, three personas grounding an integrated GTM plan, and a subscription model with a commercial target and a phased roadmap attached.",
+        "A positioning argument built on evidence, three personas grounding an integrated marketing plan, and a subscription model with a commercial target and a phased roadmap attached.",
       stats: [
         { value: "400+", label: "Retail outlets analysed" },
         { value: "3", label: "Core personas built from research" },
@@ -694,9 +1020,9 @@ export const caseStudies: CaseStudyDetail[] = [
   },
   {
     slug: "google-merch",
-    index: "07",
+    index: "10",
     tag: "Growth / CRO / Analytics",
-    title: "Google Merchandise Store: finding where the revenue leaks",
+    title: "95% of revenue from one device, and why",
     intro:
       "Desktop and mobile brought almost identical traffic. Desktop produced 95.4% of the revenue. The whole analysis is about closing the gap between those two sentences.",
     meta: {
@@ -704,6 +1030,20 @@ export const caseStudies: CaseStudyDetail[] = [
       timeline: "MSc Marketing Practice, University of Galway",
       scope: ["Google Analytics 4", "Funnel analysis", "Conversion rate optimisation", "Roadmap"],
     },
+    atAGlance: {
+      project: "MSc Marketing Practice module project: a conversion rate optimisation analysis of an ecommerce store with a mobile revenue leak.",
+      role: "Analyst on the project team.",
+      outputs: [
+        "GA4 funnel analysis across 61,000+ users",
+        "Mobile checkout abandonment diagnosis",
+        "Retention gap analysis (19% returning vs 81% new)",
+        "Prioritised CRO fix roadmap ordered by impact vs effort",
+      ],
+      primaryResult: "70.3% mobile checkout abandonment identified",
+    },
+    whatILearned: [
+      "Prioritising is what makes an analysis usable. Anyone can produce twelve recommendations. The value is in saying which two to do first and what you expect to happen when you do. The CRO roadmap I delivered was ordered by expected impact against effort, not by how interesting the finding was.",
+    ],
     heroStats: [
       { value: "61,000+", label: "Users analysed in GA4" },
       { value: "70.3%", label: "Mobile checkout abandonment" },

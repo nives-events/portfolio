@@ -18,7 +18,8 @@ export function CaseStudiesGrid() {
           <section
             key={group.heading}
             aria-labelledby={headingId}
-            className={banded ? "bg-surface" : undefined}
+            className={group.brand ? "bg-[var(--color-surface)]" : banded ? "bg-surface" : undefined}
+            data-brand={group.brand ?? undefined}
           >
             <div className="container-page py-24">
               <Reveal>

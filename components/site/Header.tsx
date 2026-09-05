@@ -9,6 +9,7 @@ import { nav, site } from "@/lib/content";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   // The homepage hero is a dark stage in both themes. While the header sits
   // over it (top of the homepage, before the blur kicks in), its text is light.
@@ -17,6 +18,7 @@ export function Header() {
   const triggerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    setMounted(true);
     const onScroll = () => setScrolled(window.scrollY > 80);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -174,6 +176,7 @@ export function Header() {
       <div
         className={`fixed inset-0 z-50 overflow-hidden md:hidden ${open ? "" : "pointer-events-none"}`}
         aria-hidden={!open}
+        style={!mounted && !open ? { visibility: "hidden" } : undefined}
       >
         <button
           type="button"

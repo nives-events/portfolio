@@ -1,5 +1,5 @@
 export type Stat = {
-  /** Rendered in DM Mono. Numbers and short tokens only (e.g. "700%+", "€3.75"). */
+  /** Rendered in DM Mono. Numbers and short tokens only (e.g. "700%+", "€8.13"). */
   value: string;
   /** Plain-language label rendered in the body face. */
   label: string;
@@ -103,6 +103,13 @@ export type CaseSection = {
   links?: { label: string; href: string }[];
 };
 
+export type AtAGlance = {
+  project: string;
+  role: string;
+  outputs: string[];
+  primaryResult: string;
+};
+
 export type CaseStudyDetail = {
   slug: string;
   /** Mono index shown in the hero, e.g. "01". */
@@ -115,6 +122,8 @@ export type CaseStudyDetail = {
     timeline: string;
     scope: string[];
   };
+  atAGlance?: AtAGlance;
+  whatILearned?: string[];
   /** Video takes precedence over the image when both are set. */
   heroVideo?: CaseVideo;
   heroImage?: CaseImage;

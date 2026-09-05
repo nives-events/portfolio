@@ -6,7 +6,7 @@ import { Opening } from "@/components/sections/work/Opening";
 import { openGraphFor } from "@/lib/seo";
 
 const description =
-  "Seven case studies: a go-to-market strategy adopted by a MedTech business, 467% ROAS on paid social, an international conference in Vienna, a website rebuild, live event delivery, and a GA4 conversion analysis.";
+  "Ten case studies: a marketing strategy for a MedTech business, 467% ROAS on paid social, four years of a consumer sports brand, an international conference, a website rebuild, a video series, and a GA4 conversion analysis.";
 
 export const metadata: Metadata = {
   title: "Work",

@@ -10,6 +10,7 @@ const config: Config = {
         border: "var(--color-border)",
         primary: "var(--color-text-primary)",
         muted: "var(--color-text-muted)",
+        "warm-accent": "var(--color-warm-accent, currentColor)",
       },
       fontFamily: {
         display: ["var(--font-display)", "system-ui", "sans-serif"],

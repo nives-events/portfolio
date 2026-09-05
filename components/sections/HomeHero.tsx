@@ -70,7 +70,7 @@ export function HomeHero() {
       aria-labelledby="hero-heading"
       onPointerMove={onMove}
       onPointerLeave={onLeave}
-      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden pb-14 pt-24"
+      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden pb-8 pt-20 sm:pb-14 sm:pt-24"
     >
       {/* The dark brick stage and its lights. */}
       <div aria-hidden="true" className="hero-stage" />
@@ -83,7 +83,7 @@ export function HomeHero() {
 
       {/* Marquee chip: tonight's billing. Light, since the stage is dark. */}
       <p
-        className="hero-rise relative z-10 rounded-full border border-white/25 bg-black/40 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.24em] text-white/85 backdrop-blur-sm"
+        className="hero-rise relative z-10 mb-4 rounded-full border border-white/25 bg-black/40 px-5 py-2 font-mono text-xs uppercase tracking-[0.3em] text-white/85 backdrop-blur-sm sm:mb-0 sm:px-4 sm:py-1.5 sm:text-[11px] sm:tracking-[0.24em]"
         style={rise(0)}
       >
         <span aria-hidden="true">* </span>
@@ -96,7 +96,7 @@ export function HomeHero() {
         className="hero-rise relative z-10 mx-auto flex w-full max-w-[900px] items-center justify-center px-4"
         style={rise(150)}
       >
-        <div className="relative aspect-[16/11] w-full sm:aspect-[16/10]">
+        <div className="relative aspect-[3/4] w-full sm:aspect-[16/10]">
           {labels.map((label, i) => {
             const pos = LAYOUT[i] ?? LAYOUT[0];
             const angle = (Math.atan2(CENTER.y - pos.top, CENTER.x - pos.left) * 180) / Math.PI;
