@@ -753,11 +753,6 @@ export const faqItems = [
       "Brand, product marketing, growth, content and events, from strategy through to delivery.",
   },
   {
-    question: "What industries have you worked in?",
-    answer:
-      "MedTech, consumer sports, FMCG and ecommerce.",
-  },
-  {
     question: "Do you work freelance or full-time?",
     answer:
       "Open to both, happy to have a conversation about what fits.",
