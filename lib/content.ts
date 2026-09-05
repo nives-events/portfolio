@@ -132,7 +132,7 @@ export const feeltect = {
       },
     },
     {
-      title: "50+ qualified leads from one conference",
+      title: "An international conference campaign",
       tag: "Events / Brand activation / ABM",
       href: "/work/ewma",
       body: "A conference campaign is three problems, not one. Before was the stand design, the bilingual English and German clinical materials, and the social campaign. During was the International Bandaging Competition. After was the lead tracking that made the trip worth the budget. Fifty-plus qualified leads and twenty-plus stakeholder meetings, logged as they happened.",

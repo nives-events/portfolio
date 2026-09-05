@@ -453,7 +453,7 @@ export const caseStudies: CaseStudyDetail[] = [
     slug: "ewma",
     index: "04",
     tag: "Events / Brand activation / ABM",
-    title: "50+ qualified leads from one conference",
+    title: "An international conference campaign",
     intro:
       "A conference campaign is really three campaigns: before, during and after. Treating them separately is what turned a stand in Vienna into 50+ qualified leads and 20+ stakeholder meetings that were still warm a fortnight later.",
     meta: {

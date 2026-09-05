@@ -80,69 +80,59 @@ export function GalleryWall({ cards }: { cards: CaseStudy[] }) {
             className="absolute inset-x-0 top-0 overflow-hidden"
             style={{ y: pinY, height: "100vh" }}
           >
-            <div
-              className="relative h-full"
-              style={{
-                maskImage:
-                  "linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent)",
-                WebkitMaskImage:
-                  "linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent)",
-              }}
+            <m.div
+              className="relative h-full will-change-transform"
+              style={{ x: scrollX }}
             >
-              <m.div
-                className="relative h-full will-change-transform"
-                style={{ x: scrollX }}
-              >
-                {cards.map((study, i) => (
-                  <div
-                    key={study.title}
-                    className="absolute"
-                    style={{
-                      left: MARGIN + i * (CARD_W + GAP),
-                      top: Y_OFFSETS[i % Y_OFFSETS.length]!,
-                      width: CARD_W,
-                    }}
-                  >
-                    <Link
-                      href={study.href ?? "/work"}
-                      aria-label={`${study.title}. ${study.tag}.`}
-                      className="block focus-visible:outline-offset-8"
-                    >
-                      <PhotoPrint
-                        image={study.image ?? { src: "", alt: study.title }}
-                        caption={study.title}
-                        tilt={TILTS[i % TILTS.length]!}
-                        tape
-                        ratio="aspect-[4/3]"
-                        sizes="(min-width: 1024px) 30vw, 70vw"
-                        rec={i % 3 === 0}
-                        camera={i % 3 === 1}
-                      />
-                    </Link>
-                  </div>
-                ))}
-
-                <m.div
-                  className="absolute flex items-center justify-center"
+              {cards.map((study, i) => (
+                <div
+                  key={study.title}
+                  className="absolute"
                   style={{
-                    left: MARGIN + cards.length * (CARD_W + GAP),
-                    top: "50%",
-                    translateY: "-50%",
+                    left: MARGIN + i * (CARD_W + GAP),
+                    top: Y_OFFSETS[i % Y_OFFSETS.length]!,
                     width: CARD_W,
-                    opacity: ctaOpacity,
                   }}
                 >
-                  <div className="rounded-2xl bg-surface/80 px-12 py-10 text-center backdrop-blur-sm">
-                    <p className="mb-6 font-display text-3xl font-bold uppercase tracking-tight text-primary">
-                      Seen enough?
-                    </p>
-                    <Button href="mailto:niallawo@gmail.com" variant="primary">
-                      Contact me
-                    </Button>
-                  </div>
-                </m.div>
+                  <Link
+                    href={study.href ?? "/work"}
+                    aria-label={`${study.title}. ${study.tag}.`}
+                    className="block focus-visible:outline-offset-8"
+                  >
+                    <PhotoPrint
+                      image={study.image ?? { src: "", alt: study.title }}
+                      caption={study.title}
+                      tilt={TILTS[i % TILTS.length]!}
+                      tape
+                      ratio="aspect-[4/3]"
+                      sizes="(min-width: 1024px) 30vw, 70vw"
+                      rec={i % 3 === 0}
+                      camera={i % 3 === 1}
+                    />
+                  </Link>
+                </div>
+              ))}
+
+              <m.div
+                className="absolute flex items-center justify-center"
+                style={{
+                  left: MARGIN + cards.length * (CARD_W + GAP),
+                  top: "50%",
+                  translateY: "-50%",
+                  width: CARD_W,
+                  opacity: ctaOpacity,
+                }}
+              >
+                <div className="rounded-2xl bg-surface/80 px-12 py-10 text-center backdrop-blur-sm">
+                  <p className="mb-6 font-display text-3xl font-bold uppercase tracking-tight text-primary">
+                    Seen enough?
+                  </p>
+                  <Button href="mailto:niallawo@gmail.com" variant="primary">
+                    Contact me
+                  </Button>
+                </div>
               </m.div>
-            </div>
+            </m.div>
           </m.div>
         )}
       </div>
