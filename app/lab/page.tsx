@@ -4,7 +4,7 @@ import { ProjectsGrid } from "@/components/sections/lab/ProjectsGrid";
 import { openGraphFor } from "@/lib/seo";
 
 const description =
-  "Personal projects outside of work: website designs and production experiments, including athlonesfinest.com and an AI video pipeline that ran in a live Meta campaign.";
+  "Personal projects outside of work: website designs and builds, including athlonesfinest.com and this portfolio.";
 
 export const metadata: Metadata = {
   title: "Lab",

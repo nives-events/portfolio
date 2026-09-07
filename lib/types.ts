@@ -124,6 +124,8 @@ export type CaseStudyDetail = {
     timeline: string;
     scope: string[];
   };
+  /** Tools actually used in this case study, rendered as chips near the top of the page. */
+  tools?: readonly string[];
   atAGlance?: AtAGlance;
   whatILearned?: string[];
   /** Video takes precedence over the image when both are set. */

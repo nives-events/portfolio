@@ -394,6 +394,16 @@ export const aboutPage = {
         body: "My best ideas come from conversations with people who think differently. Travel, food and catching up with friends keep the perspective honest.",
         image: { src: "/about/friends.jpg", alt: "Niall out with a friend" },
       },
+      {
+        label: "Graduation",
+        body: "Bachelor of Commerce from the University of Galway, with an Erasmus exchange at Kedge Business School in Paris. Now finishing the MSc.",
+        image: { src: "/about/graduation.jpg", alt: "Niall at graduation in academic dress" },
+      },
+      {
+        label: "University of Galway",
+        body: "Featured on the University of Galway website. The years in Galway shaped how I think about marketing, community and getting things done.",
+        image: { src: "/about/university-promo.jpg", alt: "Niall featured on the University of Galway website" },
+      },
     ],
   },
 

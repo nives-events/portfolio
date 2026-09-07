@@ -44,7 +44,7 @@ export default function CaseStudyPage({ params }: PageProps) {
     <>
       <CaseHero study={study} />
       {study.atAGlance ? <CaseAtAGlance data={study.atAGlance} /> : null}
-      <TechStack id={`case-${study.slug}-tech`} />
+      {study.tools ? <TechStack id={`case-${study.slug}-tech`} tools={study.tools} /> : null}
       {study.sections.map((section, index) => (
         <CaseSectionBlock key={section.kicker} section={section} banded={index % 2 === 0} />
       ))}

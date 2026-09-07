@@ -8,7 +8,7 @@ import type { Project, ProjectCategory } from "./types";
  * empty, so a card without a screenshot still reads as finished. Drop real
  * screenshots into /public/lab/ when you have them.
  */
-export const projectCategories: ProjectCategory[] = ["Web design", "Experiments"];
+export const projectCategories: ProjectCategory[] = ["Web design"];
 
 export const projects: Project[] = [
   {
@@ -33,15 +33,5 @@ export const projects: Project[] = [
     stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion"],
     links: [{ label: "You are looking at it", href: "/" }],
     image: { src: "/og.png", alt: "Screenshot: portfolio homepage hero" },
-  },
-  {
-    title: "AI video pipeline for paid social",
-    category: "Experiments",
-    year: "2025",
-    description:
-      "A production test: how much of a paid social creative set can be generated rather than filmed, and does the audience care. Google Veo for the absurd concepts, Higgsfield for motion, CapCut and DaVinci Resolve for the cut. The clips ran live in the Meta campaign and the honest answer came back in the data: AI got attention, found match footage converted better, so the budget moved.",
-    stack: ["Google Veo", "Higgsfield", "CapCut", "DaVinci Resolve"],
-    links: [{ label: "See the clips in the case study", href: "/work/athlones-finest" }],
-    image: { src: "/work/athlones-finest/poster-2026.jpg", alt: "Poster from the 2026 Athlone's Finest campaign used in the AI video pipeline" },
   },
 ];

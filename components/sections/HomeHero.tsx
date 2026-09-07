@@ -1,27 +1,48 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { CSSProperties, PointerEvent } from "react";
 import { PhotoPrint } from "@/components/ui/PhotoPrint";
 import { homepage } from "@/lib/content";
 
-/**
- * The opener. Red curtains part on load to reveal a brick-wall comedy stage.
- * A fixed spotlight holds the centre; a flashlight follows the cursor and
- * lifts the brick it passes over. The stage is dark in both themes, so its
- * text is light. The headshot hangs as a photo print in the same digicam
- * frame the work section uses, per the September 2026 revision.
- */
-
 const rise = (ms: number) => ({ "--rise-delay": `${ms}ms` }) as CSSProperties;
+
+let hasPlayedSound = false;
+
+function useTypewriter(text: string, speed = 65) {
+  const [displayed, setDisplayed] = useState("");
+  const [done, setDone] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      if (i < text.length) {
+        setDisplayed(text.slice(0, i + 1));
+        if (!hasPlayedSound && audioRef.current) {
+          audioRef.current.currentTime = 0;
+          audioRef.current.volume = 0.3;
+          audioRef.current.play().catch(() => {});
+        }
+        i++;
+      } else {
+        clearInterval(interval);
+        setDone(true);
+        hasPlayedSound = true;
+      }
+    }, speed);
+    return () => clearInterval(interval);
+  }, [text, speed]);
+
+  return { displayed, done, audioRef };
+}
 
 export function HomeHero() {
   const { headline, supporting, marquee, cta, headshot } = homepage.hero;
   const flashRef = useRef<HTMLDivElement>(null);
+  const { displayed, done, audioRef } = useTypewriter(headline, 60);
 
-  // Move the flashlight to the pointer. Written straight to the DOM so it
-  // tracks smoothly without re-rendering the whole hero.
   const onMove = (e: PointerEvent<HTMLElement>) => {
     const flash = flashRef.current;
     if (!flash || e.pointerType !== "mouse") return;
@@ -42,12 +63,13 @@ export function HomeHero() {
       onPointerLeave={onLeave}
       className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-4 pb-12 pt-24 sm:pb-16"
     >
-      {/* The dark brick stage and its lights. */}
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      <audio ref={audioRef} src="/typewriter-key.wav" preload="auto" />
+
       <div aria-hidden="true" className="hero-stage" />
       <div aria-hidden="true" className="hero-spot-fixed" />
       <div ref={flashRef} aria-hidden="true" className="hero-flashlight" data-active="false" />
 
-      {/* Marquee chip: tonight's billing. Light, since the stage is dark. */}
       <p
         className="hero-rise relative z-10 mb-6 rounded-full border border-white/25 bg-black/40 px-5 py-2 font-mono text-xs uppercase tracking-[0.3em] text-white/85 backdrop-blur-sm sm:px-4 sm:py-1.5 sm:text-[11px] sm:tracking-[0.24em]"
         style={rise(0)}
@@ -61,19 +83,22 @@ export function HomeHero() {
         id="hero-heading"
         className="hero-rise relative z-10 max-w-3xl text-center font-display text-5xl font-bold leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl"
         style={rise(120)}
+        aria-label={headline}
       >
-        {headline}
+        {displayed}
+        {!done && (
+          <span className="inline-block w-[3px] translate-y-[2px] animate-pulse bg-white" style={{ height: "0.85em" }} />
+        )}
       </h1>
 
       <p
-        className="hero-rise relative z-10 mt-4 max-w-xl text-center text-lg leading-relaxed text-white/85 sm:text-xl"
+        className={`hero-rise relative z-10 mt-4 max-w-xl text-center text-lg leading-relaxed text-white/85 transition-opacity duration-500 sm:text-xl ${done ? "opacity-100" : "opacity-0"}`}
         style={rise(220)}
       >
         {supporting}
       </p>
 
-      {/* The headshot as a photo print: same digicam frame as the work wall. */}
-      <div className="hero-rise relative z-10 mt-10 w-[240px] sm:w-[280px]" style={rise(320)}>
+      <div className={`hero-rise relative z-10 mt-10 w-[240px] transition-opacity duration-500 sm:w-[280px] ${done ? "opacity-100" : "opacity-0"}`} style={rise(320)}>
         <PhotoPrint
           image={{ src: headshot.src, alt: headshot.alt }}
           caption="Niall Awogboro"
@@ -89,7 +114,7 @@ export function HomeHero() {
         <div aria-hidden="true" className="stage-floor left-1/2 top-full h-[30px] w-[80%] -translate-x-1/2 opacity-70" />
       </div>
 
-      <div className="hero-rise relative z-10 mt-10" style={rise(420)}>
+      <div className={`hero-rise relative z-10 mt-10 transition-opacity duration-500 ${done ? "opacity-100" : "opacity-0"}`} style={rise(420)}>
         <Link
           href={cta.href}
           className="group relative inline-flex min-h-[44px] items-center justify-center overflow-hidden rounded-lg border border-white/70 px-8 py-3 text-sm font-medium uppercase tracking-widest text-white transition-transform duration-100 active:scale-[0.97]"
@@ -104,7 +129,6 @@ export function HomeHero() {
         </Link>
       </div>
 
-      {/* The curtains, on top until they part. */}
       <div aria-hidden="true" className="curtain">
         <span className="curtain__valance" />
         <span className="curtain__panel curtain__panel--left" />

@@ -2,7 +2,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { PhotoPrint } from "@/components/ui/PhotoPrint";
 import { aboutPage } from "@/lib/content";
 
-const TILTS = [-2.5, 2, -1.5, 2.5];
+const TILTS = [-2.5, 2, -1.5, 2.5, -2, 1.5];
 
 /**
  * "Away from the desktop": a personal, editorial photo section using the same
@@ -25,7 +25,7 @@ export function AwayFromDesk() {
         <p className="mt-3 max-w-prose text-lg text-primary/80">{intro}</p>
       </Reveal>
 
-      <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item, i) => (
           <Reveal key={item.label} delay={(i % 4) * 90}>
             {item.image.src ? (
@@ -37,7 +37,7 @@ export function AwayFromDesk() {
                 camera={i % 2 === 1}
                 rec={i % 2 === 0}
                 ratio="aspect-[4/5]"
-                sizes="(min-width: 1024px) 24vw, (min-width: 640px) 44vw, 90vw"
+                sizes="(min-width: 1024px) 30vw, (min-width: 640px) 44vw, 90vw"
               />
             ) : (
               // Placeholder print: same physical object, waiting for the photo.

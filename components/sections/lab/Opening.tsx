@@ -15,9 +15,8 @@ export function Opening() {
 
       <Reveal delay={120}>
         <p className="mt-8 max-w-prose text-lg leading-relaxed text-primary/85">
-          Builds and production experiments outside client work, including athlonesfinest.com and
-          the AI video pipeline that ended up running in a live Meta campaign. This is where I push
-          a tool until I know whether it belongs in real work.
+          Side projects and builds outside client work, including athlonesfinest.com and this
+          portfolio. This is where I push a tool until I know whether it belongs in real work.
         </p>
       </Reveal>
     </section>

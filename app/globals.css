@@ -26,6 +26,7 @@
   --photo-frame: #fbfbf9;
   --photo-ink: #1c1c1c;
   --photo-shadow: rgba(0, 0, 0, 0.28);
+  --header-bg: rgba(255, 255, 255, 0.92);
   --grain-opacity: 0.05;
 }
 
@@ -42,18 +43,22 @@
   --photo-frame: #f4f2ee;
   --photo-ink: #1c1c1c;
   --photo-shadow: rgba(0, 0, 0, 0.75);
+  --header-bg: rgba(0, 0, 0, 0.92);
   --grain-opacity: 0.08;
 }
 
-/* Warm accent for Athlone's Finest sections. Applied via data-brand="afe"
-   on a container; children inherit the tokens. Works in both themes. */
+/* Athlone's Finest brand section. Applied via data-brand="afe"
+   on a container; children inherit the tokens. Works in both themes.
+   Brand palette: dark navy (#0B1D3A), white text, light blue accent. */
 [data-brand="afe"] {
-  --color-warm-accent: #C8A96E;
-  --color-surface: #0F0A05;
-  --color-border: #2a2216;
+  --color-warm-accent: #5B9BD5;
+  --color-surface: #0B1D3A;
+  --color-bg: #0B1D3A;
+  --color-border: #1a3358;
   --color-text-primary: #ffffff;
-  --color-text-muted: rgba(255, 255, 255, 0.55);
-  --shadow-card: rgba(0, 0, 0, 0.5);
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --shadow-card: rgba(11, 29, 58, 0.5);
+  color: #ffffff;
   color-scheme: dark;
 }
 

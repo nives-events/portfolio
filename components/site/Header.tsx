@@ -11,8 +11,6 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
-  // The homepage hero is a dark stage in both themes. While the header sits
-  // over it (top of the homepage, before the blur kicks in), its text is light.
   const overHero = pathname === "/" && !scrolled;
   const drawerRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -81,7 +79,7 @@ export function Header() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-          scrolled ? "bg-bg/[0.72] backdrop-blur-md" : "bg-transparent"
+          scrolled ? "backdrop-blur-md [background:var(--header-bg)]" : "bg-transparent"
         }`}
       >
         <div className="container-page flex h-16 items-center justify-between">

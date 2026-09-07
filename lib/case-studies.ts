@@ -27,6 +27,20 @@ export const caseStudies: CaseStudyDetail[] = [
     title: "Solo marketer at FeelTect",
     intro:
       "FeelTect develops Tight Alright, a connected wound care technology that shows clinicians the pressure applied during compression therapy. As the solo marketing lead, I connected strategy, content and digital growth in a complex MedTech environment.",
+    tools: [
+      "Google Analytics 4",
+      "Google Tag Manager",
+      "Google Search Console",
+      "LinkedIn",
+      "YouTube",
+      "Google Business Profile",
+      "WordPress",
+      "Elementor Pro",
+      "DaVinci Resolve",
+      "Affinity Designer",
+      "Adobe InDesign",
+      "Canva",
+    ],
     meta: {
       role: "Solo Marketing Lead, working with founders, CEO, clinical and engineering teams",
       timeline: "September 2025 to June 2026",
@@ -272,6 +286,7 @@ export const caseStudies: CaseStudyDetail[] = [
     title: "Rebuilding a MedTech website for its first commercial markets",
     intro:
       "Tight Alright became commercially available in Switzerland in October 2025 and in the USA in March 2026. I rebuilt the FeelTect website around the audiences who now needed to understand, trust and act on a complex MedTech proposition.",
+    tools: ["WordPress", "Elementor Pro", "Google Analytics 4", "Google Search Console"],
     meta: {
       role: "Marketing & Communications Lead, working across marketing, clinical and leadership stakeholders",
       timeline: "September 2025 to June 2026",
@@ -295,6 +310,7 @@ export const caseStudies: CaseStudyDetail[] = [
         "Trust signals integrated at the right points in the journey",
         "Clearer calls to action and conversion pathways",
         "On-page SEO implemented during the build",
+        "Cookie consent implemented for GDPR compliance",
         "GA4 and Google Search Console supporting measurement and monitoring",
       ],
       primaryResult: "88% increase in social channel visitors",
@@ -377,7 +393,7 @@ export const caseStudies: CaseStudyDetail[] = [
         heading: "Turning strategy into a functioning website",
         body: [
           "There was no external developer building the pages, so I translated the marketing strategy, UX structure and content requirements into a functioning website myself: WordPress as the CMS, Elementor Pro for layouts and reusable components, GA4 for measurement and Google Search Console for indexing and search visibility.",
-          "I developed my Elementor capability early in the placement and used it to build and ship six pages, moving through the complete chain from marketing objective and audience need to UX structure, content, UI execution, build and measurement.",
+          "I developed my Elementor capability early in the placement and used it to build and ship six pages, moving through the complete chain from marketing objective and audience need to UX structure, content, UI execution, build and measurement. I also implemented cookie consent to ensure the website met GDPR requirements before analytics tracking went live.",
         ],
         pullStat: { value: "6", label: "Pages built and shipped without an external developer" },
       },
@@ -501,6 +517,7 @@ export const caseStudies: CaseStudyDetail[] = [
     title: "FeelTect at EWMA",
     intro:
       "EWMA put FeelTect in front of a highly relevant clinical audience. My job was to turn the conference from a standalone event into a connected marketing campaign spanning pre-event awareness, on-site brand activation and post-event content.",
+    tools: ["Adobe InDesign", "Affinity Designer", "Canva", "LinkedIn", "YouTube"],
     meta: {
       role: "Marketing & Communications Lead, coordinating activity across the FeelTect team",
       timeline: "Delivered during the FeelTect placement",
@@ -663,6 +680,16 @@ export const caseStudies: CaseStudyDetail[] = [
     title: "Athlone's Finest: a consumer sports brand from a blank page",
     intro:
       "I founded Athlone's Finest in 2023 because I had waited years for a summer football tournament in Athlone for people my age, and it never came back. So I built it. Four years later it is a recognised local sports property with 400+ players, 12 teams, six sponsors, 467% ROAS on paid acquisition and coverage in the Westmeath Independent.",
+    tools: [
+      "Meta Ads Manager",
+      "Meta Business Suite",
+      "Instagram Insights",
+      "Google Analytics 4",
+      "Google Tag Manager",
+      "Claude Code",
+      "DaVinci Resolve",
+      "CapCut",
+    ],
     meta: {
       role: "Founder & Marketing Lead",
       timeline: "May 2023 to present",
@@ -757,6 +784,12 @@ export const caseStudies: CaseStudyDetail[] = [
             position: "top",
             caption: "The 2024 edition poster. Murphy's law year: everything that could go wrong did, and the show still went on.",
           },
+          {
+            src: "/work/athlones-finest/trophy-celebration.jpg",
+            alt: "Winning team celebrating with the trophy after the six-aside tournament",
+            ratio: "aspect-[3/4]",
+            caption: "The trophy lift: the moment the whole campaign is selling.",
+          },
         ],
       },
       {
@@ -770,6 +803,14 @@ export const caseStudies: CaseStudyDetail[] = [
         pullStat: { value: "€8.13", label: "Cost per lead on the 2025 five-a-side campaign" },
         videos: [
           {
+            src: "/work/athlones-finest/video-tournament.mp4",
+            poster: "/work/athlones-finest/video-tournament-poster.jpg",
+            label: "Promotional film for the 2025 six-aside charity tournament",
+            caption: "The tournament film, cut for a vertical-first build-up campaign that passed 40,000 views.",
+            ratio: "aspect-[9/16]",
+            portrait: true,
+          },
+          {
             src: "/work/athlones-finest/video-veo-gorilla.mp4",
             poster: "/work/athlones-finest/video-veo-gorilla-poster.jpg",
             label: "AI-generated gorilla video made with Google Veo 3 for the Meta campaign",
@@ -780,6 +821,14 @@ export const caseStudies: CaseStudyDetail[] = [
             poster: "/work/athlones-finest/video-veo-rte-poster.jpg",
             label: "AI-generated news-bulletin style video made with Google Veo 3",
             caption: "Veo 3 clip two. A fake news-bulletin format that made the tournament feel like an event.",
+          },
+        ],
+        images: [
+          {
+            src: "/work/athlones-finest/winners-2025.jpg",
+            alt: "2025 tournament winners with medals and trophy",
+            ratio: "aspect-[16/10]",
+            caption: "2025 winners. The format proved itself; the brand made them want to come back.",
           },
         ],
       },
@@ -835,14 +884,6 @@ export const caseStudies: CaseStudyDetail[] = [
             label: "Short creative cut for the 2026 campaign",
             caption: "The short cut, built for feed placement and paid distribution.",
           },
-          {
-            src: "/work/athlones-finest/video-tournament.mp4",
-            poster: "/work/athlones-finest/video-tournament-poster.jpg",
-            label: "Promotional film for the six-aside charity tournament",
-            caption: "The tournament film, cut for a vertical-first build-up campaign that passed 40,000 views.",
-            ratio: "aspect-[9/16]",
-            portrait: true,
-          },
         ],
         images: [
           {
@@ -853,11 +894,22 @@ export const caseStudies: CaseStudyDetail[] = [
             caption: "The 2026 poster. ATL Entertainment partnership, bigger prize, bigger ambition.",
           },
           {
-            src: "/work/athlones-finest/poster-6-aside.jpg",
-            alt: "Poster for the six-aside charity tournament at Willow Park FC Stadium",
-            ratio: "aspect-[1400/2164]",
-            position: "top",
-            caption: "The six-a-side tournament poster. Consumer event print with one job: get people to turn up.",
+            src: "/work/athlones-finest/winners-2026.jpg",
+            alt: "2026 tournament winners holding the cup and giant cheque",
+            ratio: "aspect-[16/10]",
+            caption: "2026 winners. Cup, cheque, and the brand they registered for on a screen three weeks earlier.",
+          },
+          {
+            src: "/work/athlones-finest/best-player.jpg",
+            alt: "Best player award presentation at the 2026 tournament",
+            ratio: "aspect-[3/4]",
+            caption: "Best player. Individual recognition built into the event format.",
+          },
+          {
+            src: "/work/athlones-finest/sponsor-presentation.jpg",
+            alt: "Niall presenting a prize to the player of the tournament",
+            ratio: "aspect-[3/4]",
+            caption: "Player of the tournament, with the prize envelope and the brand behind it.",
           },
         ],
       },
@@ -898,40 +950,17 @@ export const caseStudies: CaseStudyDetail[] = [
         ],
         images: [
           {
-            src: "/work/athlones-finest/winners-2026.jpg",
-            alt: "2026 tournament winners holding the cup and giant cheque",
-            ratio: "aspect-[16/10]",
-            caption: "2026 winners. Cup, cheque, and the brand they registered for on a screen three weeks earlier.",
-          },
-          {
-            src: "/work/athlones-finest/best-player.jpg",
-            alt: "Best player award presentation at the tournament",
-            ratio: "aspect-[3/4]",
-            caption: "Best player. Individual recognition built into the event format from 2025.",
-          },
-          {
-            src: "/work/athlones-finest/sponsor-presentation.jpg",
-            alt: "Niall presenting a prize to the player of the tournament",
-            ratio: "aspect-[3/4]",
-            caption: "Player of the tournament, with the prize envelope and the brand behind it.",
-          },
-          {
             src: "/work/athlones-finest/sponsor-coffee.jpg",
             alt: "Grind & Dose coffee cart serving at an Athlone's Finest event",
             ratio: "aspect-[1047/1600]",
             caption: "Sponsorship made visible: Grind & Dose pouring at the tournament.",
           },
           {
-            src: "/work/athlones-finest/trophy-celebration.jpg",
-            alt: "Winning team celebrating with the trophy after the six-aside tournament",
-            ratio: "aspect-[3/4]",
-            caption: "The product being delivered: the trophy lift that the whole campaign was selling.",
-          },
-          {
-            src: "/work/athlones-finest/winners-2025.jpg",
-            alt: "2025 tournament winners with medals and trophy",
-            ratio: "aspect-[16/10]",
-            caption: "2025 winners. The format proved itself; the brand made them want to come back.",
+            src: "/work/athlones-finest/poster-6-aside.jpg",
+            alt: "Poster for the six-aside charity tournament at Willow Park FC Stadium",
+            ratio: "aspect-[1400/2164]",
+            position: "top",
+            caption: "Consumer event print with one job: get people to turn up.",
           },
         ],
       },
@@ -978,6 +1007,7 @@ export const caseStudies: CaseStudyDetail[] = [
     title: "400+ stockists and nobody knew what it was for",
     intro:
       "An MSc Marketing Practice module project: the targets in it are proposed objectives, not measured outcomes. All About Kombucha had a strong product, a distinctive brand and national distribution in 400+ outlets, and shoppers still could not say what it was for.",
+    tools: ["Google Analytics 4"],
     meta: {
       role: "Marketing strategy lead on the project team",
       timeline: "MSc Marketing Practice, University of Galway",
@@ -1074,6 +1104,7 @@ export const caseStudies: CaseStudyDetail[] = [
     title: "95% of revenue from one device, and why",
     intro:
       "An MSc Marketing Practice module project analysing the Google Merchandise Store in GA4. Desktop and mobile brought almost identical traffic. Desktop produced 95.4% of the revenue. The whole analysis is about closing the gap between those two sentences.",
+    tools: ["Google Analytics 4"],
     meta: {
       role: "Analyst on the project team",
       timeline: "MSc Marketing Practice, University of Galway",
