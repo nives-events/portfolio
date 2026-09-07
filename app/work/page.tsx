@@ -7,7 +7,7 @@ import { Opening } from "@/components/sections/work/Opening";
 import { openGraphFor } from "@/lib/seo";
 
 const description =
-  "Seven case studies: solo marketing lead at a MedTech company, a website rebuilt for first commercial markets, an international conference campaign, four years of a consumer sports brand with 467% ROAS, and two applied strategy projects.";
+  "Six case studies: solo marketing lead at a MedTech company, a website rebuilt for first commercial markets, an international conference campaign, four years of a consumer sports brand with 467% ROAS, and two applied strategy projects.";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -21,9 +21,9 @@ export default function WorkPage() {
   return (
     <>
       <Opening />
+      <TechStack id="work-tech-stack" />
       <CaseStudiesGrid />
       <Craft />
-      <TechStack id="work-tech-stack" />
       <Closing />
     </>
   );

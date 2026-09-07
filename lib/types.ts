@@ -98,6 +98,8 @@ export type CaseSection = {
   /** Interactive old/new comparison slider, rendered above other media. */
   beforeAfter?: { before: CaseImage; after: CaseImage; caption?: string };
   videos?: CaseVideo[];
+  /** Force all videos to display full-width instead of the default 2-column grid. */
+  fullWidthVideos?: boolean;
   images?: CaseImage[];
   /** External citation links (e.g. press coverage), rendered under the body copy. */
   links?: { label: string; href: string }[];

@@ -108,15 +108,18 @@ export function CaseSectionBlock({ section, banded }: { section: CaseSection; ba
 
           {section.videos && section.videos.length > 0 ? (
             <div
-              className={`mt-10 grid gap-6 ${section.videos.length > 1 ? "sm:grid-cols-2" : ""}`}
+              className={`mt-10 grid gap-6 ${
+                !section.fullWidthVideos && section.videos.length > 1 ? "sm:grid-cols-2" : ""
+              }`}
             >
               {section.videos.map((video, index) => (
                 <Reveal
                   key={video.src}
                   delay={index * 80}
-                  // With an odd count, the lead video goes full width - hero of the group.
                   className={
-                    section.videos!.length % 2 === 1 && index === 0 ? "sm:col-span-2" : ""
+                    !section.fullWidthVideos && section.videos!.length % 2 === 1 && index === 0
+                      ? "sm:col-span-2"
+                      : ""
                   }
                 >
                   <CaseVideoFigure video={video} />

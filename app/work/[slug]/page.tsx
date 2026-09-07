@@ -6,6 +6,7 @@ import { CaseResults } from "@/components/case-study/CaseResults";
 import { CaseSectionBlock } from "@/components/case-study/CaseSectionBlock";
 import { CaseWhatILearned } from "@/components/case-study/CaseWhatILearned";
 import { CaseWhatsNext } from "@/components/case-study/CaseWhatsNext";
+import { TechStack } from "@/components/sections/about/TechStack";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";
 import { openGraphFor } from "@/lib/seo";
 
@@ -43,6 +44,7 @@ export default function CaseStudyPage({ params }: PageProps) {
     <>
       <CaseHero study={study} />
       {study.atAGlance ? <CaseAtAGlance data={study.atAGlance} /> : null}
+      <TechStack id={`case-${study.slug}-tech`} />
       {study.sections.map((section, index) => (
         <CaseSectionBlock key={section.kicker} section={section} banded={index % 2 === 0} />
       ))}

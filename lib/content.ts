@@ -73,16 +73,6 @@ export const feeltect = {
       },
     },
     {
-      title: "1,000+ partner views on a series I filmed myself",
-      tag: "Content / Video / Education",
-      href: "/work/feeltect-video",
-      body: "Clinicians needed to see the product used properly. I built a 15-episode educational video series from script to final cut, set up the studio in the office, and published it on the YouTube channel I created for it. Over 1,000 YouTube views from partners.",
-      image: {
-        src: "/work/feeltect-function/production-green-screen.jpg",
-        alt: "Green screen studio set up in the FeelTect office for the video series",
-      },
-    },
-    {
       title: "FeelTect at EWMA",
       tag: "Event marketing / Brand activation / Content",
       href: "/work/ewma",
@@ -254,14 +244,11 @@ export const homepage = {
       alt: "Filming a Tight Alright product demonstration behind the scenes at FeelTect",
       caption: "backstage at FeelTect",
     },
-    heading:
-      "Who's Niall Awogboro: a 22 year old marketing lead with 3 years of marketing experience",
+    heading: "Commercially minded. Clinically aware. Built to execute.",
     paragraphs: [
-      "I'm a commercially minded marketer combining strategy, creative execution and digital growth to turn audience attention into measurable results. I have been doing it since 2023.",
-      "I have been the solo marketer inside a MedTech company and built a consumer sports brand from nothing. One taught me how to work through clinical, engineering and leadership stakeholders who all read information differently. The other taught me what happens when the budget is yours.",
-      "MSc Marketing Practice at University of Galway, after a 2.1 in Commerce and an Erasmus at Kedge in Paris. Based between Galway and Dublin.",
+      "I combine marketing strategy with hands-on creative and digital execution, and I understand how to communicate in clinical and technical environments where the audience reads information differently.",
     ],
-    link: { label: "More about me", href: "/about" },
+    link: { label: "Learn more about me", href: "/about" },
   },
 
   keyStats: {
@@ -327,7 +314,7 @@ export const homepage = {
       feeltect.cards[0]!,
       athlonesFinest.cards[0]!,
       feeltect.cards[1]!,
-      feeltect.cards[3]!,
+      feeltect.cards[2]!,
     ] satisfies CaseStudy[],
     seeAll: { label: "See more", href: "/work" },
   },
@@ -346,7 +333,6 @@ export const homepage = {
       "/work/athlones-finest",
       "/work/ewma",
       "/work/kombucha",
-      "/work/feeltect-video",
     ],
   },
 } as const;
@@ -391,22 +377,22 @@ export const aboutPage = {
       {
         label: "Football",
         body: "Manchester United fan, and I still play. I turned out for the University of Galway team in the Harding Cup, and Athlone's Finest exists because I wanted local football to have something worth showing up for.",
-        image: { src: "", alt: "Niall playing football" },
+        image: { src: "/work/athlones-finest/winners-2025.jpg", alt: "Tournament winners celebrating with the cup" },
       },
       {
         label: "Building Athlone's Finest",
         body: "Part hobby, part second job. Running a real brand with my own money on the line is the best marketing education I have found.",
-        image: { src: "", alt: "Niall at an Athlone's Finest tournament" },
+        image: { src: "/work/athlones-finest/sponsor-presentation.jpg", alt: "Niall presenting an award at an Athlone's Finest tournament" },
       },
       {
-        label: "Comedy and psychology",
-        body: "I watch a lot of stand-up and read about how people make decisions. Good comedians read a room better than most marketers do, and the decision science is most of marketing anyway.",
-        image: { src: "", alt: "Niall away from work" },
+        label: "Boxing for charity",
+        body: "I fought in a charity boxing night at university. Training camp taught me that preparation is preparation, whether the deadline is a fight card or a campaign launch.",
+        image: { src: "/about/boxing.jpg", alt: "Niall boxing in a charity fight night" },
       },
       {
-        label: "New tools",
-        body: "I push new tools until they break, from AI video to no-code builds. Some of those experiments end up in the work; this site and athlonesfinest.com both came out of one.",
-        image: { src: "", alt: "Niall experimenting with new tools" },
+        label: "Good company",
+        body: "My best ideas come from conversations with people who think differently. Travel, food and catching up with friends keep the perspective honest.",
+        image: { src: "/about/friends.jpg", alt: "Niall out with a friend" },
       },
     ],
   },
@@ -446,10 +432,6 @@ export const aboutPage = {
       {
         heading: "Video & content",
         tools: ["DaVinci Resolve", "CapCut", "YouTube"],
-      },
-      {
-        heading: "AI & emerging tools",
-        tools: ["Claude", "Claude Code", "Google Veo", "Higgsfield"],
       },
     ] satisfies ToolGroup[],
   },
@@ -547,20 +529,19 @@ export const aboutPage = {
 
   credentials: {
     heading: "Credentials",
-    intro: "Verified certifications in digital, performance and AI-enabled marketing.",
+    intro: "Certifications, awards and involvement.",
     certs: [
-      {
-        title: "Google Ads certification",
-        issuer: "Google",
-      },
-      {
-        title: "Google Analytics certification",
-        issuer: "Google",
-      },
-      {
-        title: "AI-Powered Performance Ads certification",
-        issuer: "Google",
-      },
+      { title: "Google Ads certification", issuer: "Google" },
+      { title: "Google Analytics certification", issuer: "Google" },
+      { title: "AI-Powered Performance Ads certification", issuer: "Google" },
+      { title: "Email Marketing certified", issuer: "HubSpot" },
+      { title: "Claude for Marketers", issuer: "Anthropic" },
+      { title: "Finalist, Real Impact Undergraduate of the Year", issuer: "2025" },
+      { title: "LIFT Ireland Facilitator", issuer: "LIFT Ireland" },
+      { title: "Event Manager, Public Speaking Society", issuer: "University of Galway" },
+      { title: "University of Galway Football Team", issuer: "Harding Cup" },
+      { title: "Gaisce Bronze Award", issuer: "Gaisce" },
+      { title: "French (conversational)", issuer: "Kedge Business School, Paris" },
     ],
   },
 
@@ -595,7 +576,7 @@ export const workPage = {
   eyebrow: "Work",
   headline: "Projects I've shipped.",
   intro:
-    "Seven case studies across strategy, brand, growth, content, web and events. Each one covers the problem, the audience, the decisions I made, and what happened after.",
+    "Six case studies across strategy, brand, growth, content, web and events. Each one covers the problem, the audience, the decisions I made, and what happened after.",
 
   groups: [
     {

@@ -10,10 +10,10 @@ export default function Template({ children }: { children: React.ReactNode }) {
 
   return (
     <m.div
-      initial={skip ? false : { opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={skip ? false : { opacity: 0, y: 24, filter: "blur(4px)" }}
+      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{
-        duration: 0.45,
+        duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
       }}
     >

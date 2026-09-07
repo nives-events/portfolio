@@ -41,6 +41,7 @@ const nextConfig = {
       { source: "/work/afe-2025", destination: "/work/athlones-finest", permanent: true },
       { source: "/work/afe-2026", destination: "/work/athlones-finest", permanent: true },
       { source: "/work/afe-tournament", destination: "/work/athlones-finest", permanent: true },
+      { source: "/work/feeltect-video", destination: "/work/feeltect-function", permanent: true },
     ];
   },
   // Security headers applied to every route.

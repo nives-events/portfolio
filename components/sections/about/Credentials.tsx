@@ -23,24 +23,24 @@ export function Credentials() {
           <p className="mt-3 max-w-prose text-lg text-primary/80">{intro}</p>
         </Reveal>
 
-        <ul className="mt-12 grid gap-6 sm:grid-cols-3">
+        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {certs.map((cert, i) => (
             <Reveal
               as="li"
               key={cert.title}
-              delay={i * 90}
-              className="list-none border-2 border-primary bg-bg p-6"
+              delay={i * 60}
+              className="list-none border-2 border-primary bg-bg p-5"
             >
               <span
                 aria-hidden="true"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary font-mono text-xs font-bold text-primary"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border-2 border-primary font-mono text-xs font-bold text-primary"
               >
                 ✓
               </span>
-              <h3 className="mt-4 font-display text-2xl font-bold leading-tight text-primary">
+              <h3 className="mt-3 font-display text-xl font-bold leading-tight text-primary">
                 {cert.title}
               </h3>
-              <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+              <p className="mt-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
                 {cert.issuer}
               </p>
             </Reveal>

@@ -433,6 +433,7 @@ export const caseStudies: CaseStudyDetail[] = [
           "The build produced a homepage with a clearer product-led entry point, a dedicated events and conferences destination, a careers page the site never had, a home for the 15-episode educational video series, a testimonials page carrying clinical trust signals, and a focused conversion landing page for the clinical immersion programme.",
           "Screenshots flatten a website, so these are screen recordings of the pages as they shipped. Judge the scroll rhythm, the information order and where the trust signals landed.",
         ],
+        fullWidthVideos: true,
         videos: [
           {
             src: "/work/feeltect-website/video-home.mp4",
@@ -653,137 +654,11 @@ export const caseStudies: CaseStudyDetail[] = [
         { value: "1", label: "International Bandaging Competition activation" },
       ],
     },
-    nextSlug: "feeltect-video",
-  },
-  {
-    slug: "feeltect-video",
-    index: "04",
-    tag: "Content / Video / Education",
-    title: "1,000+ partner views on a series I filmed myself",
-    intro:
-      "Clinicians needed to see the product used properly, and no written page does that job. I built a 15-episode educational video series from script to final cut, set up the studio in the office, and published it on the YouTube channel I created for it.",
-    meta: {
-      role: "Marketing & Communications Lead, working with clinical and engineering teams",
-      timeline: "Produced during the FeelTect placement, September 2025 to June 2026",
-      scope: ["Video production", "Content strategy", "DaVinci Resolve", "YouTube", "Vendor management"],
-    },
-    atAGlance: {
-      project: "A 15-episode educational video series for a clinical audience, produced entirely in-house.",
-      role: "Scripting, filming, editing, publishing and vendor coordination.",
-      outputs: [
-        "15-episode educational video series on YouTube",
-        "In-house green screen studio setup",
-        "Podcast pilot episode",
-        "Publishing cadence integrated into the content calendar",
-        "External video contractors sourced and managed via Upwork",
-      ],
-      primaryResult: "1,000+ YouTube views from partners",
-    },
-    whatILearned: [
-      "The best content brief I wrote started from what the audience needed to know and in what order. Scripting the testimonial video for a clinical audience taught me that: the clinician watching needed to see the problem recognised before they would accept the product as the answer.",
-    ],
-    heroImage: {
-      src: "/work/feeltect-function/production-green-screen.jpg",
-      alt: "Green screen studio set up in the FeelTect office for the video series",
-      ratio: "aspect-[3/2]",
-    },
-    heroStats: [
-      { value: "15", label: "Episodes filmed and edited" },
-      { value: "1,000+", label: "YouTube views from partners" },
-    ],
-    sections: [
-      {
-        kicker: "01 · The context",
-        heading: "A clinical product that needed to be seen",
-        body: [
-          "Tight Alright is easier to understand when you watch someone use it. The clinical value sits in the real-time pressure reading, and that only lands when a nurse sees it happen on screen. Written copy and static images were leaving that gap open.",
-          "There was no video content, no YouTube channel, and no production setup. I built all three.",
-        ],
-      },
-      {
-        kicker: "02 · The production",
-        heading: "Green screen, DaVinci Resolve, and learning on the job",
-        body: [
-          "I set up a green screen studio in the FeelTect office with the lighting and camera equipment the budget could carry, then taught myself DaVinci Resolve well enough to cut broadcast-quality educational content from it. Each episode followed the same structure: a clinical use case, a product demonstration, and a clear takeaway the viewer could apply immediately.",
-          "Around the series sat the repeatable pieces: social templates, testimonial cards and conference promos, plus a podcast episode to test whether longer-form content had an audience here. I shot, cut and captioned most of it, and briefed external contractors through Upwork when the work needed a second camera.",
-        ],
-        pullStat: { value: "15", label: "Episodes filmed and edited, brief to final cut" },
-        videos: [
-          {
-            src: "/work/feeltect-function/video-how-to-episode.mp4",
-            poster: "/work/feeltect-function/poster-how-to-episode.png",
-            label: "Episode from the educational series: how to optimise compression therapy with Tight Alright",
-            caption: "An episode from the series, exactly as it shipped. Shot in the office studio, cut in DaVinci Resolve.",
-          },
-          {
-            src: "/work/feeltect-function/podcast-episode-1.mp4",
-            poster: "/work/feeltect-function/podcast-episode-1-poster.jpg",
-            label: "Podcast episode one, produced during the placement",
-            caption: "Episode one of the podcast. Recorded, edited and published in-house.",
-          },
-        ],
-        images: [
-          {
-            src: "/work/feeltect-function/production-green-screen.jpg",
-            alt: "Green screen studio set up in the FeelTect office for the video series",
-            ratio: "aspect-[1600/1388]",
-            caption:
-              "The in-house studio. Green screen, lighting and camera set up in the office, with DaVinci Resolve handling the edit.",
-          },
-        ],
-      },
-      {
-        kicker: "03 · The cadence",
-        heading: "A publishing rhythm the team could plan against",
-        body: [
-          "Content only holds together with a cadence, and the Marketing and Communications Plan fixed one. Each format got a frequency, a channel and a job to do, which turned publishing from a weekly scramble into something the team could plan against and I could report on.",
-        ],
-        table: {
-          caption:
-            "The publishing cadence set out in the Marketing and Communications Plan. Each format has a frequency, a channel and a purpose.",
-          columns: ["Format", "Frequency", "Channel", "Goal"],
-          rows: [
-            ["Blog article or longform", "Bi-weekly", "Website, LinkedIn", "SEO, authority, lead generation"],
-            ["'Did You Know?' post", "Weekly", "LinkedIn, Twitter, Facebook", "Awareness, engagement"],
-            ["Educational video", "Monthly", "YouTube, LinkedIn, Facebook", "Education, demonstration"],
-            ["Newsletter", "Bimonthly", "Website, email", "Nurturing, retention"],
-            ["Client testimonial", "Per release", "Website, all social", "Trust, validation"],
-            ["Clinical evidence post", "Per release", "LinkedIn, website", "Credibility, KOL engagement"],
-          ],
-        },
-      },
-      {
-        kicker: "04 · The vendor work",
-        heading: "External contractors, managed properly",
-        body: [
-          "When the work needed a second camera or a specialist edit, I sourced and managed external video contractors through Upwork. After the first engagement showed me what happens without written terms, I introduced contracts with delivery milestones for every subsequent brief. When one vendor engagement went wrong commercially, I managed the dispute through to resolution rather than escalating it and losing the delivery date.",
-        ],
-      },
-      {
-        kicker: "05 · Tools & tech stack",
-        heading: "What the work ran on",
-        body: [
-          "Production: DaVinci Resolve, in-house green screen, lighting and camera setup.",
-          "Publishing: YouTube, LinkedIn and FeelTect's wider social channels.",
-          "Coordination: Upwork for external contractors, with written contracts and delivery milestones.",
-        ],
-      },
-    ],
-    results: {
-      heading: "What it produced",
-      summary:
-        "An educational content engine with a repeatable production process behind it, and an audience of relevant external partners watching it.",
-      stats: [
-        { value: "15", label: "Episodes filmed and edited" },
-        { value: "1,000+", label: "YouTube views from partners" },
-        { value: "1", label: "Podcast pilot produced" },
-      ],
-    },
     nextSlug: "athlones-finest",
   },
   {
     slug: "athlones-finest",
-    index: "05",
+    index: "04",
     tag: "Brand / Growth / Events / Community",
     title: "Athlone's Finest: a consumer sports brand from a blank page",
     intro:
@@ -946,7 +821,20 @@ export const caseStudies: CaseStudyDetail[] = [
           "The website was built with Claude Code, written as code from scratch instead of assembled in WordPress, with Google Analytics 4 and Google Tag Manager implemented and on-page SEO built in. It now ranks as the third six-a-side website in Ireland, which means the brand gets found through search as well as social.",
           "I also recognised that the operation itself was becoming the constraint. Marketing, content, the website, sponsorship, stakeholder management and event delivery were getting hard to run alone, so the strategy shifted from doing more to building a more scalable system, including bringing in help on the day: real referees, bigger prizes, proper food vendors and a bigger team. The impact showed. Teams travelled from outside Athlone for the first time, including from Limerick and Dublin, and the tournament reached 12 teams, the largest edition to date, with a record six sponsors, including local restaurants offering prizes worth over EUR 100.",
         ],
+        fullWidthVideos: true,
         videos: [
+          {
+            src: "/work/athlones-finest/video-creative-main.mp4",
+            poster: "/work/athlones-finest/poster-2026.jpg",
+            label: "Main creative video for the 2026 Athlone's Finest campaign",
+            caption: "The main creative for 2026: atmosphere, competition and community in one film.",
+          },
+          {
+            src: "/work/athlones-finest/video-creative-short.mp4",
+            poster: "/work/athlones-finest/poster-2026.jpg",
+            label: "Short creative cut for the 2026 campaign",
+            caption: "The short cut, built for feed placement and paid distribution.",
+          },
           {
             src: "/work/athlones-finest/video-tournament.mp4",
             poster: "/work/athlones-finest/video-tournament-poster.jpg",
@@ -957,6 +845,13 @@ export const caseStudies: CaseStudyDetail[] = [
           },
         ],
         images: [
+          {
+            src: "/work/athlones-finest/poster-2026.jpg",
+            alt: "2026 Athlone's Finest six-a-side tournament poster",
+            ratio: "aspect-[4/5]",
+            position: "top",
+            caption: "The 2026 poster. ATL Entertainment partnership, bigger prize, bigger ambition.",
+          },
           {
             src: "/work/athlones-finest/poster-6-aside.jpg",
             alt: "Poster for the six-aside charity tournament at Willow Park FC Stadium",
@@ -1003,6 +898,24 @@ export const caseStudies: CaseStudyDetail[] = [
         ],
         images: [
           {
+            src: "/work/athlones-finest/winners-2026.jpg",
+            alt: "2026 tournament winners holding the cup and giant cheque",
+            ratio: "aspect-[16/10]",
+            caption: "2026 winners. Cup, cheque, and the brand they registered for on a screen three weeks earlier.",
+          },
+          {
+            src: "/work/athlones-finest/best-player.jpg",
+            alt: "Best player award presentation at the tournament",
+            ratio: "aspect-[3/4]",
+            caption: "Best player. Individual recognition built into the event format from 2025.",
+          },
+          {
+            src: "/work/athlones-finest/sponsor-presentation.jpg",
+            alt: "Niall presenting a prize to the player of the tournament",
+            ratio: "aspect-[3/4]",
+            caption: "Player of the tournament, with the prize envelope and the brand behind it.",
+          },
+          {
             src: "/work/athlones-finest/sponsor-coffee.jpg",
             alt: "Grind & Dose coffee cart serving at an Athlone's Finest event",
             ratio: "aspect-[1047/1600]",
@@ -1013,6 +926,12 @@ export const caseStudies: CaseStudyDetail[] = [
             alt: "Winning team celebrating with the trophy after the six-aside tournament",
             ratio: "aspect-[3/4]",
             caption: "The product being delivered: the trophy lift that the whole campaign was selling.",
+          },
+          {
+            src: "/work/athlones-finest/winners-2025.jpg",
+            alt: "2025 tournament winners with medals and trophy",
+            ratio: "aspect-[16/10]",
+            caption: "2025 winners. The format proved itself; the brand made them want to come back.",
           },
         ],
       },
@@ -1054,7 +973,7 @@ export const caseStudies: CaseStudyDetail[] = [
   },
   {
     slug: "kombucha",
-    index: "06",
+    index: "05",
     tag: "Product marketing / Strategy / Positioning",
     title: "400+ stockists and nobody knew what it was for",
     intro:
@@ -1150,7 +1069,7 @@ export const caseStudies: CaseStudyDetail[] = [
   },
   {
     slug: "google-merch",
-    index: "07",
+    index: "06",
     tag: "Growth / CRO / Analytics",
     title: "95% of revenue from one device, and why",
     intro:
