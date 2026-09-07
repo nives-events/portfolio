@@ -1,18 +1,32 @@
+import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
 import { aboutPage } from "@/lib/content";
 import type { ToolGroup } from "@/lib/types";
 
-/**
- * The Tech Stack: one large container with the tools grouped by job, each
- * rendered as a chip that floats gently inside its category. The animation is
- * pure CSS (see .stack-chip in globals.css): a small bob with per-chip
- * duration and delay so the motion never syncs, hover pauses and lifts the
- * chip, and prefers-reduced-motion renders everything static. Chips stay in
- * normal flow, so nothing overlaps and every category keeps its tools.
- *
- * When `tools` is supplied (a flat string array), renders a single ungrouped
- * row of chips instead of the full categorised layout.
- */
+const ICON_MAP: Record<string, string> = {
+  "Google Analytics 4": "/icons/google-analytics.svg",
+  "Google Tag Manager": "/icons/google-tag-manager.svg",
+  "Google Search Console": "/icons/google-search-console.svg",
+  "Google Ads": "/icons/google-ads.svg",
+  "Google Business Profile": "/icons/google-business-profile.svg",
+  "Meta Ads Manager": "/icons/meta.svg",
+  "Meta Business Suite": "/icons/meta.svg",
+  "Instagram Insights": "/icons/instagram.svg",
+  "HubSpot CRM": "/icons/hubspot.svg",
+  "WordPress": "/icons/wordpress.svg",
+  "Elementor Pro": "/icons/elementor.svg",
+  "Wix": "/icons/wix.svg",
+  "Adobe InDesign": "/icons/adobe-indesign.svg",
+  "Adobe Illustrator": "/icons/adobe-illustrator.svg",
+  "Affinity Designer": "/icons/affinity-designer.svg",
+  "Canva": "/icons/canva.svg",
+  "DaVinci Resolve": "/icons/davinci-resolve.svg",
+  "CapCut": "/icons/capcut.svg",
+  "YouTube": "/icons/youtube.svg",
+  "LinkedIn": "/icons/linkedin.svg",
+  "Claude Code": "/icons/claude-code.svg",
+};
+
 export function TechStack({
   id = "tech-stack",
   tools,
@@ -58,10 +72,11 @@ export function TechStack({
                       const dur = 5 + (seed % 5) * 0.7;
                       const delay = -((seed * 1.3) % 6);
                       const rot = ((seed % 5) - 2) * 0.8;
+                      const icon = ICON_MAP[tool];
                       return (
                         <li
                           key={tool}
-                          className="stack-chip select-none rounded-full border border-primary/50 bg-surface px-4 py-2 text-sm font-medium text-primary"
+                          className="stack-chip flex select-none items-center gap-2 rounded-full border border-primary/50 bg-surface px-4 py-2 text-sm font-medium text-primary"
                           style={
                             {
                               "--chip-dur": `${dur}s`,
@@ -70,6 +85,15 @@ export function TechStack({
                             } as React.CSSProperties
                           }
                         >
+                          {icon ? (
+                            <Image
+                              src={icon}
+                              alt=""
+                              width={18}
+                              height={18}
+                              className="shrink-0"
+                            />
+                          ) : null}
                           {tool}
                         </li>
                       );
