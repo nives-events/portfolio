@@ -3,6 +3,8 @@ import { Reveal } from "@/components/motion/Reveal";
 import { aboutPage } from "@/lib/content";
 import type { ToolGroup } from "@/lib/types";
 
+const DARK_INVERT = new Set(["CapCut", "DaVinci Resolve"]);
+
 const ICON_MAP: Record<string, string> = {
   "Google Analytics 4": "/icons/google-analytics.svg",
   "Google Tag Manager": "/icons/google-tag-manager.svg",
@@ -91,7 +93,7 @@ export function TechStack({
                               alt=""
                               width={18}
                               height={18}
-                              className="shrink-0"
+                              className={`shrink-0${DARK_INVERT.has(tool) ? " dark:invert" : ""}`}
                             />
                           ) : null}
                           {tool}

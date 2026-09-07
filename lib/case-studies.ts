@@ -4,7 +4,7 @@ import type { CaseStudyDetail } from "./types";
  * Full write-ups for the individual /work/[slug] pages.
  *
  * Figures and claims are reconciled to the September 2026 revision document:
- *   - FeelTect: solo marketing lead who joined an existing marketing function.
+ *   - FeelTect: marketing intern who joined an existing marketing function.
  *     Never "first marketing hire", never "built marketing from scratch".
  *   - No qualified-lead or stakeholder-meeting counts anywhere (removed on
  *     Niall's instruction; the underlying evidence does not support them).
@@ -26,7 +26,7 @@ export const caseStudies: CaseStudyDetail[] = [
     tag: "Marketing strategy / Content / Digital growth",
     title: "Solo marketer at FeelTect",
     intro:
-      "FeelTect develops Tight Alright, a connected wound care technology that shows clinicians the pressure applied during compression therapy. As the solo marketing lead, I connected strategy, content and digital growth in a complex MedTech environment.",
+      "FeelTect develops Tight Alright, a connected wound care technology that shows clinicians the pressure applied during compression therapy. As the only marketer, I connected strategy, content and digital growth in a complex MedTech environment.",
     tools: [
       "Google Analytics 4",
       "Google Tag Manager",
@@ -42,7 +42,7 @@ export const caseStudies: CaseStudyDetail[] = [
       "Canva",
     ],
     meta: {
-      role: "Solo Marketing Lead, working with founders, CEO, clinical and engineering teams",
+      role: "Marketing Intern, working with founders, CEO, clinical and engineering teams",
       timeline: "September 2025 to June 2026",
       scope: [
         "Marketing strategy",
@@ -56,7 +56,7 @@ export const caseStudies: CaseStudyDetail[] = [
     atAGlance: {
       project:
         "Brought structure, consistency and connection to an existing but fragmented marketing environment at a MedTech company entering its first commercial markets.",
-      role: "Solo marketing lead, working directly with founders, CEO, clinical and engineering teams.",
+      role: "Marketing Intern, working directly with founders, CEO, clinical and engineering teams.",
       outputs: [
         "Marketing and Communications Plan reviewed and adopted by leadership",
         "Buyer, investor and KOL personas plus a competitor benchmark",
@@ -87,7 +87,7 @@ export const caseStudies: CaseStudyDetail[] = [
         kicker: "01 · The starting point",
         heading: "The opportunity was better connected marketing",
         body: [
-          "FeelTect already had marketing activity when I joined, but the different pieces were not yet operating as one coherent system. My job as the solo marketing lead was to understand what existed, identify the gaps and connect positioning, content, digital channels, brand communications and measurement into a more structured approach.",
+          "FeelTect already had marketing activity when I joined, but the different pieces were not yet operating as one coherent system. My job as the only marketer was to understand what existed, identify the gaps and connect positioning, content, digital channels, brand communications and measurement into a more structured approach.",
           "The company operates in a technically complex category, and its communications have to work for clinicians, investors, KOLs and other stakeholders at the same time. Marketing had to do more than describe the technology. It had to communicate the problem, explain the value clearly, establish credibility and make a complex product easier to understand.",
           "So I started by understanding the business, the product, the audiences and the existing activity before deciding what to change. Rather than immediately producing more content, I looked for the strategic gaps that clearer positioning, more structured content and better connected digital activity could close.",
         ],
@@ -231,7 +231,7 @@ export const caseStudies: CaseStudyDetail[] = [
         kicker: "11 · Working cross-functionally",
         heading: "Between strategy, clinical knowledge and execution",
         body: [
-          "Operating as the solo marketing lead meant there was no larger team to divide responsibilities across. I worked directly with the founders, CEO, clinical team and engineering team, often translating specialist information into customer facing communication.",
+          "Operating as the only marketer meant there was no larger team to divide responsibilities across. I worked directly with the founders, CEO, clinical team and engineering team, often translating specialist information into customer facing communication.",
           "That meant moving between technical understanding of how the product works, clinical understanding of the problem from the healthcare professional's perspective, marketing judgement about what mattered to the audience, creative execution, and measurement. It required independent prioritisation and the ability to take an ambiguous business problem to a practical marketing response without a specialist team behind me.",
         ],
       },
@@ -288,7 +288,7 @@ export const caseStudies: CaseStudyDetail[] = [
       "Tight Alright became commercially available in Switzerland in October 2025 and in the USA in March 2026. I rebuilt the FeelTect website around the audiences who now needed to understand, trust and act on a complex MedTech proposition.",
     tools: ["WordPress", "Elementor Pro", "Google Analytics 4", "Google Search Console"],
     meta: {
-      role: "Marketing & Communications Lead, working across marketing, clinical and leadership stakeholders",
+      role: "Marketing Intern, working across marketing, clinical and leadership stakeholders",
       timeline: "September 2025 to June 2026",
       scope: [
         "Information architecture",
@@ -519,7 +519,7 @@ export const caseStudies: CaseStudyDetail[] = [
       "EWMA put FeelTect in front of a highly relevant clinical audience. My job was to turn the conference from a standalone event into a connected marketing campaign spanning pre-event awareness, on-site brand activation and post-event content.",
     tools: ["Adobe InDesign", "Affinity Designer", "Canva", "LinkedIn", "YouTube"],
     meta: {
-      role: "Marketing & Communications Lead, coordinating activity across the FeelTect team",
+      role: "Marketing Intern, coordinating activity across the FeelTect team",
       timeline: "Delivered during the FeelTect placement",
       scope: [
         "Event marketing",
@@ -639,7 +639,7 @@ export const caseStudies: CaseStudyDetail[] = [
         kicker: "08 · Cross-functional execution",
         heading: "Marketing in a specialist environment",
         body: [
-          "As the solo marketing lead I worked directly with the founders, CEO, clinical team and engineering team to turn specialist knowledge into usable marketing communications. The challenge was usually translation: clinical and engineering colleagues think in evidence, technology and technical detail, and marketing has to turn that into communication a wider audience can absorb quickly.",
+          "As the only marketer I worked directly with the founders, CEO, clinical team and engineering team to turn specialist knowledge into usable marketing communications. The challenge was usually translation: clinical and engineering colleagues think in evidence, technology and technical detail, and marketing has to turn that into communication a wider audience can absorb quickly.",
           "That mattered doubly for the event, because the same proposition had to hold across stand graphics, clinical materials, social content and live demonstrations.",
         ],
       },

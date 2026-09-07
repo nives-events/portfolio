@@ -191,9 +191,10 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"
-          className={`absolute right-0 top-0 flex h-full w-4/5 max-w-sm flex-col bg-surface transition-transform duration-300 ease-drawer ${
-            open ? "translate-x-0" : "translate-x-full"
+          className={`absolute right-0 top-0 flex h-full w-4/5 max-w-sm flex-col bg-surface transition-[opacity,transform] duration-200 ${
+            open ? "scale-100 opacity-100" : "pointer-events-none scale-[0.97] opacity-0"
           }`}
+          style={{ transformOrigin: "top right" }}
         >
           <div className="flex h-16 items-center justify-end px-6">
             <button

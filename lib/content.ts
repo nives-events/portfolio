@@ -14,7 +14,7 @@ import type {
  *
  * Figures, job titles and credentials are reconciled to the September 2026
  * revision document. If the facts change, change them here too:
- *   - FeelTect: SOLO marketing lead who joined an existing marketing function.
+ *   - FeelTect: marketing intern who joined an existing marketing function.
  *     Never "first marketing hire", never "built marketing from scratch",
  *     no qualified-lead or stakeholder-meeting counts, no direct sales-team
  *     collaboration. Stakeholders: founders, CEO, clinical, engineering.
@@ -42,7 +42,7 @@ export const nav: NavItem[] = [
 ];
 
 export const feeltect = {
-  eyebrow: "B2B MedTech · 9 months · Solo Marketing Lead",
+  eyebrow: "B2B MedTech · 9 months · Marketing Intern",
   heading: "My work at FeelTect",
   statsBefore: [
     { value: "1,900%", label: "Increase in impressions" },
@@ -55,7 +55,7 @@ export const feeltect = {
       title: "Solo marketer at FeelTect",
       tag: "Marketing strategy / Content / Digital growth",
       href: "/work/feeltect-function",
-      body: "FeelTect had marketing activity when I joined, but the pieces were not yet operating as one system. As the solo marketing lead I connected positioning, content, digital channels and measurement, working directly with the founders, CEO, clinical and engineering teams. Impressions grew 1,900%, engagement 200% and followers 40% across the placement.",
+      body: "FeelTect had marketing activity when I joined, but the pieces were not yet operating as one system. As the only marketer I connected positioning, content, digital channels and measurement, working directly with the founders, CEO, clinical and engineering teams. Impressions grew 1,900%, engagement 200% and followers 40% across the placement.",
       image: {
         src: "/work/feeltect-function/production-tablet-demo.jpg",
         alt: "Filming a Tight Alright product demonstration for the educational video series",
@@ -281,7 +281,7 @@ export const homepage = {
       {
         value: "1,900%",
         label: "Impressions growth",
-        note: "FeelTect's digital visibility across my nine months as solo marketing lead.",
+        note: "FeelTect's digital visibility across my nine months as the only marketer.",
       },
       {
         value: "3rd",
@@ -361,7 +361,7 @@ export const aboutPage = {
     heading: "A marketer who likes taking things from strategy to execution.",
     paragraphs: [
       "My experience runs from marketing strategy, brand and positioning through audience research, content, social and paid advertising, and on into websites, UX, creative production, event marketing and analytics. The thread through all of it stays the same: strategy first, then the creative, then the digital execution, then an honest look at what the numbers say.",
-      "At FeelTect that meant translating a complex MedTech proposition for clinicians, investors and KOLs as the solo marketing lead. At Athlone's Finest it means building a consumer sports brand, community and event platform I founded myself. Two audiences that could hardly be less alike, and the same job underneath: understand the person, make the value obvious, measure what happened.",
+      "At FeelTect that meant translating a complex MedTech proposition for clinicians, investors and KOLs as the only marketer. At Athlone's Finest it means building a consumer sports brand, community and event platform I founded myself. Two audiences that could hardly be less alike, and the same job underneath: understand the person, make the value obvious, measure what happened.",
     ],
   },
 
@@ -498,11 +498,11 @@ export const aboutPage = {
 
   experience: [
     {
-      role: "Marketing & Communications Lead",
+      role: "Marketing Intern",
       company: "FeelTect",
       period: "September 2025 to June 2026",
       summary:
-        "Solo marketing lead at a MedTech company entering its first commercial markets. I joined an existing but fragmented marketing environment and connected strategy, positioning, content, digital activity and measurement into one system, working directly with the founders, CEO, clinical team and engineering team.",
+        "Marketing intern at a MedTech company entering its first commercial markets. As the only person handling marketing, I joined an existing but fragmented environment and connected strategy, positioning, content, digital activity and measurement into one system, working directly with the founders, CEO, clinical team and engineering team.",
       achievements: [
         "Developed the Marketing and Communications Plan that leadership reviewed and adopted, connecting positioning, messaging, content, channels, campaigns and measurement",
         "Built buyer, investor and KOL personas from secondary research and stakeholder interviews, and ran a competitor benchmark that identified three communication opportunities",
