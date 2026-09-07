@@ -178,8 +178,8 @@ export type EducationEntry = {
   institution: string;
   /** e.g. "2025 to 2026". Rendered in DM Mono. */
   period: string;
-  /** e.g. "Grade: 2.1". Rendered in DM Mono. */
-  grade: string;
+  /** e.g. "Grade: 2.1". Rendered in DM Mono. Optional: the About page keeps education compact. */
+  grade?: string;
   modules?: string;
   note?: string;
 };

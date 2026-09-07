@@ -33,9 +33,14 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   async redirects() {
+    // The four year-by-year Athlone's Finest write-ups were consolidated into
+    // one case study (September 2026 revision), so the old slugs redirect.
     return [
-      { source: "/work/athlones-finest", destination: "/work/afe-2025", permanent: true },
-      { source: "/work/afe-tournament", destination: "/work/afe-2024", permanent: true },
+      { source: "/work/afe-2023", destination: "/work/athlones-finest", permanent: true },
+      { source: "/work/afe-2024", destination: "/work/athlones-finest", permanent: true },
+      { source: "/work/afe-2025", destination: "/work/athlones-finest", permanent: true },
+      { source: "/work/afe-2026", destination: "/work/athlones-finest", permanent: true },
+      { source: "/work/afe-tournament", destination: "/work/athlones-finest", permanent: true },
     ];
   },
   // Security headers applied to every route.

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TechStack } from "@/components/sections/about/TechStack";
 import { CaseStudiesGrid } from "@/components/sections/work/CaseStudiesGrid";
 import { Closing } from "@/components/sections/work/Closing";
 import { Craft } from "@/components/sections/work/Craft";
@@ -6,7 +7,7 @@ import { Opening } from "@/components/sections/work/Opening";
 import { openGraphFor } from "@/lib/seo";
 
 const description =
-  "Ten case studies: a marketing strategy for a MedTech business, 467% ROAS on paid social, four years of a consumer sports brand, an international conference, a website rebuild, a video series, and a GA4 conversion analysis.";
+  "Seven case studies: solo marketing lead at a MedTech company, a website rebuilt for first commercial markets, an international conference campaign, four years of a consumer sports brand with 467% ROAS, and two applied strategy projects.";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -22,6 +23,7 @@ export default function WorkPage() {
       <Opening />
       <CaseStudiesGrid />
       <Craft />
+      <TechStack id="work-tech-stack" />
       <Closing />
     </>
   );

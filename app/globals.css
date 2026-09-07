@@ -692,3 +692,44 @@
     transition: none;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Tech stack chips. Each tool floats gently inside its category with  */
+/* its own duration, delay and resting rotation (set inline as CSS     */
+/* variables), so the motion never syncs. Chips stay in normal flow:   */
+/* nothing overlaps and every tool stays inside its group. Hover       */
+/* pauses and lifts the chip; reduced motion renders a static grid.    */
+/* ------------------------------------------------------------------ */
+@keyframes chip-bob {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(var(--chip-rot, 0deg));
+  }
+  30% {
+    transform: translate(1px, -5px) rotate(var(--chip-rot, 0deg));
+  }
+  65% {
+    transform: translate(-1px, 2px) rotate(var(--chip-rot, 0deg));
+  }
+}
+
+.stack-chip {
+  animation: chip-bob var(--chip-dur, 6s) ease-in-out infinite;
+  animation-delay: var(--chip-delay, 0s);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+  will-change: transform;
+}
+
+.stack-chip:hover {
+  animation-play-state: paused;
+  transform: translateY(-3px) rotate(0deg);
+  box-shadow: 0 10px 24px -12px var(--shadow-card);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack-chip,
+  .stack-chip:hover {
+    animation: none;
+    transform: none;
+  }
+}

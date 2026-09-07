@@ -16,18 +16,18 @@ type WallItem = {
 };
 
 /**
- * One continuous left-to-right sequence (photo 1 sits furthest left, photo 5
- * furthest right), each at a different height so none sits directly under
- * another. Tuned for the widest lg+ viewport; because widths are percentages,
- * everything shrinks together at narrower widths, so this same layout stays
- * safe down to the 1024px breakpoint (see WALL_HEIGHT below).
+ * One continuous left-to-right sequence (photo 1 sits furthest left, the last
+ * photo furthest right), each at a different height so none sits directly
+ * under another. Tuned for the four selected case studies at the widest lg+
+ * viewport; because widths are percentages, everything shrinks together at
+ * narrower widths, so this same layout stays safe down to the 1024px
+ * breakpoint (see WALL_HEIGHT below).
  */
 const DESKTOP_LAYOUT: WallItem[] = [
-  { top: 0, left: "0%", width: "27%", tilt: -3, direction: "up", rec: true },
-  { top: 220, left: "22%", width: "25%", tilt: 2.5, direction: "down", camera: true },
-  { top: 40, left: "44%", width: "28%", tilt: -2, direction: "left", rec: true },
-  { top: 280, left: "65%", width: "25%", tilt: 3, direction: "right", camera: true },
-  { top: 120, left: "78%", width: "20%", tilt: -2.5, direction: "up" },
+  { top: 0, left: "1%", width: "27%", tilt: -3, direction: "up", rec: true },
+  { top: 240, left: "25%", width: "26%", tilt: 2.5, direction: "down", camera: true },
+  { top: 30, left: "48%", width: "27%", tilt: -2, direction: "left", rec: true },
+  { top: 250, left: "72%", width: "26%", tilt: 3, direction: "right", camera: true },
 ];
 
 // Generous fixed height: comfortably covers the layout above at its widest

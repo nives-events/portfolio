@@ -1,28 +1,29 @@
 import type {
-  AboutPanel,
   CaseStudy,
   CraftItem,
-  Discipline,
   EducationEntry,
   ExperienceEntry,
   HowIWorkPoint,
   NavItem,
   Stat,
   ToolGroup,
-  WhatsNextLink,
 } from "./types";
 
 /**
  * Single source of truth for site copy.
  *
- * Figures, job titles, grades and credentials are reconciled to the master CV
- * (/public/Niall_Awogboro_CV.pdf). If the CV changes, change it here too:
- *   - Title at FeelTect: Marketing & Communications Lead.
- *   - 467% ROAS, €8.13 CPL, 4.1 CAC to CLTV, 150,000+ paid views.
- *   - FeelTect growth: 1,900% impressions, 40% followers, 200% engagement lift.
- *   - EWMA: 50+ qualified leads, 20+ stakeholder meetings.
- *   - Athlone's Finest organic: 36,000+ monthly impressions, followers doubled.
- *   - Both degrees are 2.1. No Google Ads, Excel or CRO certification is claimed.
+ * Figures, job titles and credentials are reconciled to the September 2026
+ * revision document. If the facts change, change them here too:
+ *   - FeelTect: SOLO marketing lead who joined an existing marketing function.
+ *     Never "first marketing hire", never "built marketing from scratch",
+ *     no qualified-lead or stakeholder-meeting counts, no direct sales-team
+ *     collaboration. Stakeholders: founders, CEO, clinical, engineering.
+ *   - FeelTect growth: 1,900% impressions, 40% followers, 200% engagement.
+ *   - Athlone's Finest: 467% ROAS, EUR 8.13 CPL, 4.1 CLTV, 400+ players,
+ *     50% repeat teams, 12 teams and 6 sponsors in 2026, Westmeath
+ *     Independent coverage. athlonesfinest.com built with Claude Code and
+ *     ranked the third six-a-side website in Ireland.
+ *   - Certifications: Google Ads, Google Analytics, AI-Powered Performance Ads.
  */
 
 export const site = {
@@ -40,81 +41,31 @@ export const nav: NavItem[] = [
   { label: "Lab", href: "/lab" },
 ];
 
-export const hero = {
-  eyebrow: "Marketing Executive · Brand, Growth, Content & Events",
-  headlineLines: ["Meet Niall Awogboro", "The marketer with 5 hats"],
-  positioning:
-    "I run marketing end to end. The research, the positioning, the creative, the spend, and the reporting that says whether any of it worked.",
-  supporting: [
-    "At FeelTect, a MedTech company in Galway, I work inside the marketing team alongside sales, clinical and leadership. Nine months in: 1,900% impressions growth, 40% follower growth, a Marketing and Communications Plan the business adopted as its operating reference, and 50+ qualified leads out of the Vienna clinical conference.",
-    "At Athlone's Finest, the consumer sports brand I founded in 2023, the last paid social campaign returned 467% on ad spend at €8.13 per qualified lead. I sold the sponsorships, hired the suppliers, and delivered the tournaments the campaign was selling.",
-  ],
-  stats: [
-    { value: "40%", label: "Follower growth" },
-    { value: "€8.13", label: "Cost per qualified lead (CPL)" },
-    { value: "400+", label: "Players engaged" },
-  ] satisfies Stat[],
-  primaryCta: { label: "See my work", href: "/work" },
-  secondaryCta: { label: "Get in touch", href: "#contact" },
-} as const;
-
-/**
- * The five briefs this site has to answer. Rendered high on the homepage so a
- * hiring reader can see their own job description inside 10 seconds.
- */
-export const disciplines: Discipline[] = [
-  {
-    label: "Brand",
-    body: "Contributed to a brand refresh at FeelTect and then applied it: brand guidelines, tone of voice and visual identity carried across digital, print, web and event collateral in InDesign, Affinity Designer and Canva. Built a consumer brand from nothing at Athlone's Finest and sold it to sponsors on commercial terms.",
-    href: "/work/afe-2025",
-  },
-  {
-    label: "Product marketing",
-    body: "Wrote the Marketing and Communications Plan that FeelTect approved and now runs on. Built buyer, investor and key opinion leader (KOL) personas from stakeholder interviews, and repositioned a drinks brand across 400+ retail outlets in an integrated marketing plan.",
-    href: "/work/feeltect-function",
-  },
-  {
-    label: "Growth",
-    body: "467% return on ad spend (ROAS) at €8.13 cost per lead (CPL) and a 4.1 CAC to CLTV ratio on Meta. Google Analytics 4 (GA4) and Google Tag Manager implemented from scratch, plus a conversion rate optimisation (CRO) analysis across 61,000 users.",
-    href: "/work/afe-2025",
-  },
-  {
-    label: "Content",
-    body: "A 15-episode video series filmed and edited in-house, and a content calendar running across TikTok, Instagram, Facebook, LinkedIn and YouTube. Video editing, graphic design and copywriting from the same person, with AI in the pipeline where it earns its place.",
-    href: "/work/feeltect-function",
-  },
-  {
-    label: "Events",
-    body: "An international clinical conference in Vienna with 50+ qualified leads and 20+ stakeholder meetings, and a live tournament series delivered on budget with suppliers, contracts and sponsors attached. B2B and consumer, both with a commercial number on the end.",
-    href: "/work/ewma",
-  },
-];
-
 export const feeltect = {
-  eyebrow: "B2B MedTech · 9 months · Marketing & Communications Lead",
+  eyebrow: "B2B MedTech · 9 months · Solo Marketing Lead",
   heading: "My work at FeelTect",
   statsBefore: [
-    { value: "1,900%", label: "Impressions growth" },
+    { value: "1,900%", label: "Increase in impressions" },
     { value: "40%", label: "Follower growth" },
-    { value: "200%", label: "Digital engagement lift" },
-    { value: "50+", label: "Qualified leads, Vienna conference" },
+    { value: "200%", label: "Increase in digital engagement" },
+    { value: "1,000+", label: "YouTube views from partners" },
   ] satisfies Stat[],
   cards: [
     {
-      title: "First marketing hire, full strategy shipped",
-      tag: "Product marketing / Strategy / Insight",
+      title: "Solo marketer at FeelTect",
+      tag: "Marketing strategy / Content / Digital growth",
       href: "/work/feeltect-function",
-      body: "Before anything shipped, I ran a competitor benchmark that surfaced three positioning gaps, and built buyer, investor and clinical KOL personas from secondary research and stakeholder interviews. Those fed the Marketing and Communications Plan, which leadership approved and adopted as the operating reference for the business. Then I built the analytics and the content engine to deliver against it.",
+      body: "FeelTect had marketing activity when I joined, but the pieces were not yet operating as one system. As the solo marketing lead I connected positioning, content, digital channels and measurement, working directly with the founders, CEO, clinical and engineering teams. Impressions grew 1,900%, engagement 200% and followers 40% across the placement.",
       image: {
         src: "/work/feeltect-function/production-tablet-demo.jpg",
         alt: "Filming a Tight Alright product demonstration for the educational video series",
       },
     },
     {
-      title: "Six pages shipped, no external developer",
-      tag: "Web / CRO / UX",
+      title: "Rebuilding a MedTech website for its first commercial markets",
+      tag: "Web / UX / CRO",
       href: "/work/feeltect-website",
-      body: "The site was structured around the company rather than the people trying to use it. A clinician looking for evidence of clinical outcomes had to dig for it. A partner looking for where FeelTect was presenting had no way to find it. I rebuilt the information architecture with the commercial team, introduced trust signals at the right points in the scroll journey, and shipped six pages without an external developer.",
+      body: "As Tight Alright entered its first commercial markets, the website had to help clinicians, partners and investors understand a complex proposition and take the next step. I restructured the information architecture around audience needs, wrote the copy, built in the on-page SEO and shipped six pages in WordPress and Elementor Pro without an external developer.",
       image: {
         src: "/work/feeltect-website/hero-new.png",
         alt: "The rebuilt FeelTect homepage hero with the Tight Alright brand illustration",
@@ -123,31 +74,31 @@ export const feeltect = {
     },
     {
       title: "1,000+ partner views on a series I filmed myself",
-      tag: "Content / Video / Sales enablement",
+      tag: "Content / Video / Education",
       href: "/work/feeltect-video",
-      body: "Clinicians needed to see the product used properly. I built a 15-episode educational video series from script to final cut, set up the studio in the office, and delivered it as a sales enablement asset the commercial team still uses. Over 1,000 partner views.",
+      body: "Clinicians needed to see the product used properly. I built a 15-episode educational video series from script to final cut, set up the studio in the office, and published it on the YouTube channel I created for it. Over 1,000 YouTube views from partners.",
       image: {
         src: "/work/feeltect-function/production-green-screen.jpg",
         alt: "Green screen studio set up in the FeelTect office for the video series",
       },
     },
     {
-      title: "An international conference campaign",
-      tag: "Events / Brand activation / ABM",
+      title: "FeelTect at EWMA",
+      tag: "Event marketing / Brand activation / Content",
       href: "/work/ewma",
-      body: "A conference campaign is three problems, not one. Before was the stand design, the bilingual English and German clinical materials, and the social campaign. During was the International Bandaging Competition. After was the lead tracking that made the trip worth the budget. Fifty-plus qualified leads and twenty-plus stakeholder meetings, logged as they happened.",
+      body: "An international conference turned into a connected marketing campaign across three stages. Before: stand creative, bilingual English and German clinical materials and a social campaign. During: the International Bandaging Competition, an interactive way to experience the product. After: content and digital activity that extended the event well past the closing day.",
       image: {
         src: "/work/ewma/poster-back.png",
-        alt: "Bandaging Competition poster designed for the EWMA conference stand in Vienna",
+        alt: "Bandaging Competition poster designed for the EWMA conference stand",
         position: "top",
       },
     },
   ] satisfies CaseStudy[],
   statsAfter: [
     { value: "15", label: "Episodes filmed and edited" },
-    { value: "1,000+", label: "Partner views on the series" },
     { value: "6", label: "Pages built and shipped" },
-    { value: "3", label: "Positioning gaps found in the benchmark" },
+    { value: "88%", label: "Increase in social channel visitors" },
+    { value: "2", label: "Languages of clinical materials" },
   ] satisfies Stat[],
 } as const;
 
@@ -156,69 +107,37 @@ export const athlonesFinest = {
   heading: "Athlone's Finest. Built it. Still running it.",
   cards: [
     {
-      title: "Built the brand from a blank page",
-      tag: "2023 · Brand / Identity / Content",
-      href: "/work/afe-2023",
-      body: "Founded Athlone's Finest because local football in the midlands had an audience and nobody covering it. Built the brand identity, launched the social channels, and put out the first content inside a month.",
+      title: "Athlone's Finest: a consumer sports brand from a blank page",
+      tag: "Brand / Growth / Events / Community",
+      href: "/work/athlones-finest",
+      body: "I founded Athlone's Finest in 2023 because the summer football tournament I had waited years for never came back, so I built it myself. Four years of consumer research, brand building, organic content, paid acquisition, events and partnerships later: 400+ players, 12 teams, a record six sponsors, 467% ROAS on paid acquisition and coverage in the Westmeath Independent.",
       image: {
         src: "/work/athlones-finest/hero-match.jpg",
-        alt: "Athlone's Finest players in yellow kit in the first season",
-      },
-    },
-    {
-      title: "First tournament, delivered on budget",
-      tag: "2024 · Events / Partnerships / Operations",
-      href: "/work/afe-2024",
-      body: "Live football tournament delivered end to end: budget, suppliers, timelines, venue, referees, prizes and on-site logistics, with the whole thing pointed at a charity total.",
-      image: {
-        src: "/work/athlones-finest/poster-5ives-2024.jpg",
-        alt: "Poster for the 2024 5IVES seven-aside tournament at Pioneer's FC, Athlone",
-        position: "top",
-      },
-    },
-    {
-      title: "467% ROAS on paid social",
-      tag: "2025 · Growth / Paid media / Creative testing",
-      href: "/work/afe-2025",
-      body: "Twelve qualified leads was the target, on a budget with no room for waste. Sequenced the Meta campaign so paid spend only hit people who had already seen the organic content, then moved budget onto the format the data preferred. Return on ad spend came in at 467%.",
-      image: {
-        src: "/work/athlones-finest/poster-6-aside.jpg",
-        alt: "Poster for the 2025 six-aside charity tournament at Willow Park FC Stadium",
-        position: "top",
+        alt: "Athlone's Finest players in yellow kit in front of the watching crowd",
       },
       stats: [
         { value: "467%", label: "Return on ad spend" },
-        { value: "€8.13", label: "Cost per qualified lead" },
+        { value: "400+", label: "Players across four years" },
       ],
-    },
-    {
-      title: "Year four, still running",
-      tag: "2026 · Growth / Content / Events",
-      href: "/work/afe-2026",
-      body: "Local press coverage in the Westmeath Independent, a growing audience, and a tournament calendar being planned. Four years from blank page to newsprint.",
-      image: {
-        src: "/work/athlones-finest/hero-match.jpg",
-        alt: "Athlone's Finest match action in 2026",
-      },
     },
   ] satisfies CaseStudy[],
 } as const;
 
 /**
- * MSc applied projects. Kept in their own group so the strategy and
- * analytics work reads as commercial thinking rather than coursework.
+ * MSc applied projects. Kept in their own group, clearly framed as module
+ * projects, so the strategy and analytics work reads honestly.
  */
 export const strategyProjects = {
   eyebrow: "Applied strategy · MSc Marketing Practice · University of Galway",
   heading: "Strategy and analytics projects",
   intro:
-    "Two commercial briefs run to a deliverable: a marketing strategy for a drinks brand losing to its own category, and a conversion analysis of an ecommerce store leaking revenue on mobile.",
+    "Two commercial briefs run to a deliverable as MSc module projects: a marketing strategy for a drinks brand losing to its own category, and a conversion analysis of an ecommerce store leaking revenue on mobile.",
   cards: [
     {
       title: "400+ stockists and nobody knew what it was for",
       tag: "Product marketing / Strategy / Positioning",
       href: "/work/kombucha",
-      body: "Distribution was not the constraint. The brand was in 400+ retail outlets and still growing slowly, because most shoppers did not understand what kombucha was for. I repositioned it from niche health product to everyday wellness drink, built the integrated marketing plan behind that, and designed a subscription model around customer lifetime value with a target of doubling subscription sales in six months.",
+      body: "The brand sat in 400+ retail outlets and still grew slowly, because most shoppers did not understand what kombucha was for. I repositioned it from niche health product to everyday wellness drink, built the integrated marketing plan behind that, and designed a subscription model around customer lifetime value.",
       image: {
         src: "/work/kombucha/positioning.svg",
         alt: "Positioning diagram: kombucha repositioned from niche health product to everyday wellness drink",
@@ -228,7 +147,7 @@ export const strategyProjects = {
       title: "95% of revenue from one device, and why",
       tag: "Growth / CRO / GA4",
       href: "/work/google-merch",
-      body: "Desktop and mobile brought near-identical traffic across 61,000+ users. Desktop produced 95.4% of the revenue. Funnel analysis in Google Analytics 4 traced it to 70.3% mobile checkout abandonment and an engagement gap of 22% against 59%, and the output was a prioritised fix roadmap rather than a list of observations.",
+      body: "Desktop and mobile brought near-identical traffic across 61,000+ users. Desktop produced 95.4% of the revenue. Funnel analysis in Google Analytics 4 traced it to 70.3% mobile checkout abandonment and an engagement gap of 22% against 59%, and the output was a prioritised fix roadmap.",
       image: {
         src: "/work/google-merch/funnel.svg",
         alt: "Funnel diagram: 70.3% mobile checkout abandonment against desktop revenue share",
@@ -259,7 +178,7 @@ export const craft = {
     {
       image: {
         src: "/work/ewma/banner-german.png",
-        alt: "German-language Tight Alright banner for the Vienna conference",
+        alt: "German-language Tight Alright banner for the conference",
         ratio: "aspect-[390/555]",
       },
       note: "Bilingual campaign asset. English creative rebuilt in German for the host market.",
@@ -291,7 +210,7 @@ export const craft = {
     {
       image: {
         src: "/work/athlones-finest/poster-6-aside.jpg",
-        alt: "Poster for the 2025 six-aside charity tournament",
+        alt: "Poster for the six-aside charity tournament",
         ratio: "aspect-[1400/2164]",
         position: "top",
       },
@@ -308,68 +227,41 @@ export const craft = {
   ] satisfies CraftItem[],
 } as const;
 
-export const about = {
-  paragraphs: [
-    "I have built a marketing function inside a MedTech company and a consumer sports brand from nothing. One taught me how to work through clinical, sales and leadership stakeholders who all read information differently. The other taught me what happens when the budget is yours.",
-    "MSc Marketing Practice at University of Galway, after a 2.1 in Commerce and an Erasmus at Kedge in Paris. Real Impact Undergraduate of the Year finalist and a LIFT Ireland facilitator. Based between Galway and Dublin.",
-  ],
-  credentials: [
-    "Marketing and Communications Plan adopted by FeelTect leadership",
-    "467% ROAS, €8.13 CPL, 4.1 CAC to CLTV",
-    "MSc Marketing Practice, University of Galway",
-    "Finalist, Real Impact Undergraduate of the Year 2025",
-  ],
-  link: { label: "More about me", href: "/about" },
-} as const;
-
-export const closing = {
-  heading: "Open to new opportunities",
-  body: "I take on brand, product marketing, growth, content and event briefs, in-house or freelance, across Europe and remote. FMCG, MedTech, SaaS and events are where I have shipped. If one of those is your problem, get in touch.",
-} as const;
-
 /**
- * Homepage copy for the redesigned monochrome layout.
+ * Homepage copy.
  *
- * Section order (see app/page.tsx): Hero, About, Key Stats, Interests, Work,
- * Contact. The hero is deliberately sparse: photo, six discipline labels, one
- * button. Everything else below carries the substance.
+ * Section order (see app/page.tsx): Hero, About (Act I), Key Stats (Act II),
+ * Selected Work (Act III), Tech Stack, FAQ, Contact. The hero carries the
+ * headline, the positioning lives in Act I, and the evidence follows.
  */
 export const homepage = {
   hero: {
-    // Six labels floating around the headshot, top-left through bottom-right.
-    // Kept as data so the layout logic in the component stays declarative.
-    labels: ["Web Design", "Growth", "Events", "Content", "Brand", "Strategy"],
+    headline: "Hi, I'm Niall Awogboro",
+    supporting: "I build brands, audiences and growth.",
     // Marquee chip above the performer. The component dresses it in stars.
     marquee: "Live from Ireland",
-    cta: { label: "Learn more", href: "#about" },
+    cta: { label: "Learn more about me", href: "/about" },
     headshot: {
       src: "/headshot.png",
-      alt: "Niall Awogboro, marketing across brand, growth, content and events, based in Dublin",
+      alt: "Niall Awogboro, commercially minded marketer, based in Dublin",
     },
   },
 
   about: {
-    // Comedy-set pacing: each section opens with a tiny mono "act" kicker.
     kicker: "Act I · The one about me",
-    // Backstage print pinned beside the copy. Real photo, treated monochrome.
     photo: {
       src: "/work/feeltect-function/production-tablet-demo.jpg",
       alt: "Filming a Tight Alright product demonstration behind the scenes at FeelTect",
       caption: "backstage at FeelTect",
     },
-    // Written in caps in the brief; rendered in sentence case per the site's
-    // heading conventions.
-    //
-    // FLAG (do not silently change): "3 years of marketing experience" is the
-    // figure supplied in the brief. Other pages describe experience differently
-    // (FeelTect is 9 months full-function, Sept 2025 to June 2026; Athlone's
-    // Finest is ongoing since May 2023). "3 years" only holds if AFE counts as
-    // marketing experience throughout. Confirm this is the number you want here.
     heading:
       "Who's Niall Awogboro: a 22 year old marketing lead with 3 years of marketing experience",
-    // Existing About narrative, unchanged. Single source stays `about.paragraphs`.
-    paragraphs: about.paragraphs,
-    link: about.link,
+    paragraphs: [
+      "I'm a commercially minded marketer combining strategy, creative execution and digital growth to turn audience attention into measurable results. I have been doing it since 2023.",
+      "I have been the solo marketer inside a MedTech company and built a consumer sports brand from nothing. One taught me how to work through clinical, engineering and leadership stakeholders who all read information differently. The other taught me what happens when the budget is yours.",
+      "MSc Marketing Practice at University of Galway, after a 2.1 in Commerce and an Erasmus at Kedge in Paris. Based between Galway and Dublin.",
+    ],
+    link: { label: "More about me", href: "/about" },
   },
 
   keyStats: {
@@ -379,15 +271,14 @@ export const homepage = {
     ovation: "Results that get a standing ovation",
     /**
      * Every figure below is reconciled against the canonical data:
-     *  - "400+ players": Athlone's Finest turnout across four years
-     *    (see lib/case-studies.ts, athlones-finest results copy).
-     *  - "467%": ROAS on the most recent Meta campaign (Athlone's Finest).
+     *  - "400+ players": Athlone's Finest turnout across four years.
+     *  - "467%": ROAS on the 2026 Meta campaign (Athlone's Finest).
      *  - "Westmeath Independent": real 2026 press feature, live URL in
      *    case-studies.ts (athlones-finest).
-     *  - "40%": FeelTect follower growth over nine months. NOTE: Athlone's
-     *    Finest follower growth is reported separately as "doubled" (100%).
-     *    These are two different brands, not a stale duplicate. If you'd rather
-     *    headline the AFE "doubled" figure here instead, swap it in.
+     *  - "1,900%": FeelTect impressions growth over the nine months.
+     *  - "3rd": athlonesfinest.com's ranking among six-a-side websites in
+     *    Ireland (supplied in the September 2026 revision document).
+     *  - "40%": FeelTect follower growth over nine months.
      */
     stats: [
       {
@@ -398,7 +289,17 @@ export const homepage = {
       {
         value: "467%",
         label: "Return on ad spend",
-        note: "On the last Meta campaign, at €8.13 per qualified lead.",
+        note: "On the 2026 Meta campaign, built on three years of audience.",
+      },
+      {
+        value: "1,900%",
+        label: "Impressions growth",
+        note: "FeelTect's digital visibility across my nine months as solo marketing lead.",
+      },
+      {
+        value: "3rd",
+        label: "Six-a-side site in Ireland",
+        note: "Where athlonesfinest.com ranks among six-a-side websites in Ireland.",
       },
       {
         value: "Featured",
@@ -408,53 +309,27 @@ export const homepage = {
       {
         value: "40%",
         label: "Follower growth",
-        note: "At FeelTect in nine months, alongside 1,900% impressions growth.",
-      },
-    ],
-  },
-
-  interests: {
-    kicker: "Intermission",
-    heading: "Away from the desktop",
-    // Text only. No stock photography, no captions to explain.
-    items: [
-      {
-        label: "Football",
-        body: "Manchester United fan, and I still play. Athlone's Finest started because local football deserved better coverage than it got.",
-      },
-      {
-        label: "Comedy",
-        body: "I watch a lot of stand-up. Good comedians read a room better than most marketers do.",
-      },
-      {
-        label: "Psychology",
-        body: "I read about how people make decisions, which is most of marketing anyway.",
+        note: "At FeelTect in nine months, alongside a 200% lift in engagement.",
       },
     ],
   },
 
   work: {
     kicker: "Act III · The main set",
-    heading: "Recent work",
-    subheading: "Some of the case studies I've been working on lately.",
+    heading: "Selected work",
+    subheading: "Four case studies covering both sides of my range: B2B MedTech and consumer sport.",
     scrollHint: "Scroll to explore",
-    // Five strongest cards, drawn from the case study data above. Revealed one
-    // at a time on scroll; a "See all" link follows for the full set at /work.
+    // The four selected studies, in the order the revision document set:
+    // solo marketer at FeelTect, Athlone's Finest, the website rebuild, EWMA.
     // Indices are non-null: these arrays are defined literally above. The `!`
     // satisfies noUncheckedIndexedAccess without widening the tuple types.
     cards: [
-      athlonesFinest.cards[2]!,
       feeltect.cards[0]!,
-      feeltect.cards[3]!,
-      athlonesFinest.cards[1]!,
-      feeltect.cards[1]!,
-      feeltect.cards[2]!,
       athlonesFinest.cards[0]!,
-      athlonesFinest.cards[3]!,
-      strategyProjects.cards[0]!,
-      strategyProjects.cards[1]!,
+      feeltect.cards[1]!,
+      feeltect.cards[3]!,
     ] satisfies CaseStudy[],
-    seeAll: { label: "See all", href: "/work" },
+    seeAll: { label: "See more", href: "/work" },
   },
 
   contact: {
@@ -468,7 +343,7 @@ export const homepage = {
       "/about",
       "/lab",
       "/work/feeltect-function",
-      "/work/afe-2025",
+      "/work/athlones-finest",
       "/work/ewma",
       "/work/kombucha",
       "/work/feeltect-video",
@@ -476,77 +351,158 @@ export const homepage = {
   },
 } as const;
 
-export const whatsNext: WhatsNextLink[] = [
-  {
-    title: "See the case studies",
-    description:
-      "Ten write-ups covering the brief, the decision, the delivery and the number on the end of it.",
-    href: "/work",
-  },
-  {
-    title: "Learn more about me",
-    description: "How I work, who I have worked with, and what I am looking for.",
-    href: "/about",
-  },
-  {
-    title: "Get in touch",
-    description: "If you have seen enough and want to have a conversation.",
-    href: "#contact",
-  },
-];
-
 /**
- * Copy for the standalone /about page. Distinct from the homepage `about`
- * snippet above, which stays short by design.
+ * Copy for the standalone /about page, rebuilt September 2026 to the revision
+ * document's structure: Hero, Personal introduction, Away from the desktop,
+ * Tech Stack, How I work, Experience, Credentials, Education, Closing CTA.
  */
 export const aboutPage = {
-  headline: "I own the outcome, usually with other people's deadlines attached.",
-  opening: [
-    "A lot of the work I am proudest of started as a blank page. At FeelTect I joined as the first marketing hire with no handover and no documented strategy. I spent nine months building the system it runs on: stakeholder interviews with clinical and commercial leads, a competitor benchmark, personas, and a Marketing and Communications Plan leadership approved. Then the delivery, which is the part most plans do not survive.",
-    "At Athlone's Finest I turned an idea about local football into a brand with a paid media budget, three sponsors and a supplier list. Both jobs taught me the same thing: strategy is cheap until someone has to stand behind a stall at eight in the morning and make it happen.",
-  ],
+  hero: {
+    kicker: "About",
+    heading: "Meet Niall Awogboro",
+    headshot: {
+      src: "/headshot.png",
+      alt: "Niall Awogboro, commercially minded marketer",
+    },
+    lede: "I build brands, audiences and growth.",
+    paragraphs: [
+      "I'm a commercially minded marketer working across strategy, creative execution and digital growth. My experience spans B2B and B2C, from positioning and audience research to content, campaigns, websites and performance measurement.",
+      "I like understanding the problem, figuring out what will move the audience, building the work and then looking at what happened.",
+    ],
+  },
 
-  panels: [
-    {
-      label: "Strategist",
-      body: "Competitor benchmark, personas, positioning, and a Marketing and Communications Plan FeelTect approved and now runs on.",
-    },
-    {
-      label: "Builder",
-      body: "Fifteen episodes filmed and edited, six web pages shipped, a brand system applied across print and digital.",
-    },
-    {
-      label: "Operator",
-      body: "Contractors briefed, contracts written with delivery milestones, budgets held, one commercial dispute resolved.",
-    },
-  ] satisfies AboutPanel[],
+  intro: {
+    heading: "A marketer who likes taking things from strategy to execution.",
+    paragraphs: [
+      "My experience runs from marketing strategy, brand and positioning through audience research, content, social and paid advertising, and on into websites, UX, creative production, event marketing and analytics. The thread through all of it stays the same: strategy first, then the creative, then the digital execution, then an honest look at what the numbers say.",
+      "At FeelTect that meant translating a complex MedTech proposition for clinicians, investors and KOLs as the solo marketing lead. At Athlone's Finest it means building a consumer sports brand, community and event platform I founded myself. Two audiences that could hardly be less alike, and the same job underneath: understand the person, make the value obvious, measure what happened.",
+    ],
+  },
 
-  howIWork: [
-    {
-      heading: "Most bad marketing decisions happen before the campaign launches",
-      body: "Usually because nobody spent enough time with the people they are trying to reach. At FeelTect that meant sitting down with clinical and commercial colleagues and turning what they knew into buyer, investor and KOL personas before I wrote a word of campaign copy. I have seen campaigns built on assumptions fall apart the moment they met a real audience. I would rather do the research first, even when there is pressure to move.",
-    },
-    {
-      heading: "Two audiences that could not be less alike",
-      body: "I have marketed wound care technology to clinical procurement leads, and football events to teenagers in the midlands. Those groups read information, make decisions and respond to formats in completely different ways. Knowing the difference is most of the job, and it is why I do not arrive with a template.",
-    },
-    {
-      heading: "I have written the plan and delivered it",
-      body: "At FeelTect there were mornings writing the Marketing and Communications Plan and afternoons building pages in Elementor. It made the plan better, because I was one of the people who had to deliver it, and because the commercial team told me quickly when something would not work in front of a customer.",
-    },
-    {
-      heading: "I work fine without structure, and better with people in the room",
-      body: "I have run projects where I set my own priorities and reported out to people who were not in the day to day. I have also briefed external video contractors, taken direction from clinical leads who knew the audience better than I did, and presented a six-month performance report to leadership and then argued about what it meant. Both need the same thing: be honest about what you know, and ask early when it matters.",
-    },
-    {
-      heading: "I use new tools when they actually help",
-      body: "I picked up DaVinci Resolve, Affinity Designer, Elementor and Claude Code because a job needed them, not because they were interesting. Same with AI. Google Veo and Higgsfield cut my video production time down to something a one-person budget can carry, but the decision about what ships is still mine, and most of what those tools make does not.",
-    },
-    {
-      heading: "I try to use data honestly",
-      body: "I implemented Google Analytics 4 and Google Tag Manager at FeelTect and again for the Athlone's Finest site, so campaign performance was measurable rather than guessed at. I have also watched people treat a good-looking dashboard as a substitute for thinking. Numbers tell you what happened. They are worse at telling you why. I use them as the start of the argument.",
-    },
-  ] satisfies HowIWorkPoint[],
+  /**
+   * "Away from the desktop": a personal, visual section. Photo slots render a
+   * labelled placeholder until Niall supplies the photographs; drop the files
+   * into /public/about/ and fill in the src values here.
+   */
+  awayFromDesk: {
+    heading: "Away from the desktop",
+    intro: "The person behind the portfolio, when the laptop is closed.",
+    items: [
+      {
+        label: "Football",
+        body: "Manchester United fan, and I still play. I turned out for the University of Galway team in the Harding Cup, and Athlone's Finest exists because I wanted local football to have something worth showing up for.",
+        image: { src: "", alt: "Niall playing football" },
+      },
+      {
+        label: "Building Athlone's Finest",
+        body: "Part hobby, part second job. Running a real brand with my own money on the line is the best marketing education I have found.",
+        image: { src: "", alt: "Niall at an Athlone's Finest tournament" },
+      },
+      {
+        label: "Comedy and psychology",
+        body: "I watch a lot of stand-up and read about how people make decisions. Good comedians read a room better than most marketers do, and the decision science is most of marketing anyway.",
+        image: { src: "", alt: "Niall away from work" },
+      },
+      {
+        label: "New tools",
+        body: "I push new tools until they break, from AI video to no-code builds. Some of those experiments end up in the work; this site and athlonesfinest.com both came out of one.",
+        image: { src: "", alt: "Niall experimenting with new tools" },
+      },
+    ],
+  },
+
+  /**
+   * Tech Stack: one interactive container, tools grouped by job. Only tools
+   * with genuine practical experience behind them. Rendered by
+   * components/sections/about/TechStack.tsx with a gentle floating animation.
+   */
+  techStack: {
+    heading: "Tech stack",
+    intro:
+      "The tools I actually work in, grouped by the job they do. Strategy is only useful when you can execute it yourself.",
+    groups: [
+      {
+        heading: "Marketing & analytics",
+        tools: [
+          "Google Analytics 4",
+          "Google Tag Manager",
+          "Google Search Console",
+          "Google Ads",
+          "Google Business Profile",
+          "Meta Ads Manager",
+          "Meta Business Suite",
+          "HubSpot CRM",
+          "Instagram Insights",
+        ],
+      },
+      {
+        heading: "Web",
+        tools: ["WordPress", "Elementor Pro", "Wix"],
+      },
+      {
+        heading: "Design",
+        tools: ["Adobe InDesign", "Adobe Illustrator", "Affinity Designer", "Canva"],
+      },
+      {
+        heading: "Video & content",
+        tools: ["DaVinci Resolve", "CapCut", "YouTube"],
+      },
+      {
+        heading: "AI & emerging tools",
+        tools: ["Claude", "Claude Code", "Google Veo", "Higgsfield"],
+      },
+    ] satisfies ToolGroup[],
+  },
+
+  /**
+   * How I work: compact principles rather than essays. Inspired by the values
+   * box on bastienmoiroux.fr/about, rebuilt in this site's own visual system.
+   */
+  howIWork: {
+    heading: "How I work",
+    principles: [
+      {
+        heading: "Strategy first",
+        body: "Understand the problem before jumping into execution.",
+      },
+      {
+        heading: "Understand the audience",
+        body: "Research, personas and audience behaviour inform the work.",
+      },
+      {
+        heading: "Question the brief",
+        body: "The first idea rarely survives contact with the real problem.",
+      },
+      {
+        heading: "Think commercially",
+        body: "Marketing activity connects to a business objective, or it goes.",
+      },
+      {
+        heading: "Make it clear",
+        body: "Good marketing makes the value obvious.",
+      },
+      {
+        heading: "Create with purpose",
+        body: "Every piece of creative has a reason behind it.",
+      },
+      {
+        heading: "Test and learn",
+        body: "Performance data improves the next decision.",
+      },
+      {
+        heading: "Use the data",
+        body: "Numbers are evidence, never the entire argument.",
+      },
+      {
+        heading: "Take ownership",
+        body: "Someone has to get the work over the line. Happily, me.",
+      },
+      {
+        heading: "Strategy into execution",
+        body: "A plan improves when its author has to deliver it.",
+      },
+    ] satisfies HowIWorkPoint[],
+  },
 
   experience: [
     {
@@ -554,34 +510,29 @@ export const aboutPage = {
       company: "FeelTect",
       period: "September 2025 to June 2026",
       summary:
-        "Nine-month placement on the marketing team at a MedTech company. Cross-functional collaboration with sales, clinical and leadership across strategy, brand, content, events and vendor management.",
+        "Solo marketing lead at a MedTech company entering its first commercial markets. I joined an existing but fragmented marketing environment and connected strategy, positioning, content, digital activity and measurement into one system, working directly with the founders, CEO, clinical team and engineering team.",
       achievements: [
-        "Wrote the Marketing and Communications Plan that leadership approved and adopted as the operating reference for the business",
-        "Built buyer, investor and KOL personas from secondary research and stakeholder interviews, and ran a competitor benchmark that surfaced three positioning gaps",
-        "Grew impressions 1,900%, followers 40% and digital engagement 200% in nine months through integrated B2B demand generation, organic social and content marketing",
-        "Set up YouTube, Google Business Profile, LinkedIn, Google Analytics 4 and Google Tag Manager as the channel and measurement infrastructure. Campaign attribution, KPI tracking and funnel reporting all run on it",
-        "Filmed and edited a 15-episode short-form video series in DaVinci Resolve, adopted by the commercial team as an ongoing client-facing sales enablement asset, 1,000+ partner views",
-        "Contributed to a brand refresh, applying updated tone of voice and visual guidelines across digital and print collateral in InDesign, Affinity Designer and Canva",
-        "Built six WordPress and Elementor pages including the homepage, jobs page and testimonials, without an external developer",
-        "Delivered the event marketing programme for the EWMA International Bandaging Competition in Vienna, with 50+ qualified leads and 20+ stakeholder meetings tracked from stand to follow-up in HubSpot CRM",
-        "Sourced and managed external video contractors through Upwork, introduced written contracts with delivery milestones, and resolved a commercial dispute with a vendor",
-        "Presented a six-month digital performance report with competitor benchmarking at leadership level. Leadership agreed the next set of planning priorities off the back of it",
+        "Developed the Marketing and Communications Plan that leadership reviewed and adopted, connecting positioning, messaging, content, channels, campaigns and measurement",
+        "Built buyer, investor and KOL personas from secondary research and stakeholder interviews, and ran a competitor benchmark that identified three communication opportunities",
+        "Grew impressions 1,900%, digital engagement 200% and followers 40% across the nine month placement",
+        "Produced a 15-episode educational video series end to end, from studio setup and scripting through filming, editing and publication, with 1,000+ YouTube views from partners",
+        "Built and shipped six website pages in WordPress and Elementor Pro with on-page SEO, no external developer required",
+        "Established measurement across GA4, Google Tag Manager, LinkedIn, YouTube and Google Business Profile, and presented a six month digital performance report with competitor benchmarking to leadership",
       ],
     },
     {
-      role: "Founder and Marketing Lead",
+      role: "Founder & Marketing Lead",
       company: "Athlone's Finest Events",
       period: "May 2023 to present",
       summary:
-        "A consumer sports brand for 16 to 25 year olds in the midlands, with a paid media budget, sponsors, suppliers and live events. I started it and I still run it.",
+        "A consumer sports brand, community and event platform I founded and still run. Four years of consumer research, brand building, organic content, paid acquisition, live events, sponsorship and retention, with local media recognition along the way through a feature in the Westmeath Independent.",
       achievements: [
-        "467% return on ad spend at €8.13 per qualified lead and a 4.1 CAC to CLTV ratio on the most recent Meta campaign, across 150,000+ paid views",
-        "Reallocated budget mid-campaign after engagement data showed found match footage outperforming polished promotional creative, and improved return doing it",
-        "Grew organic to 36,000+ monthly impressions and doubled followers on a cross-platform content calendar across TikTok, Instagram and Facebook, with community management and audience engagement handled daily",
-        "Produce social-first content end to end: short-form video, Reels, on-camera pieces, promotional posters, campaign copywriting and AI-generated video built with Google Veo and Higgsfield, reaching 40,000+ campaign views",
-        "Secure commercial sponsorships and brand partnerships by presenting audience data against each partner's objectives, then negotiating terms and managing the relationship through delivery",
-        "Deliver live event activations end to end: budgets, suppliers, timelines, venue and on-site event logistics for consumer sports tournaments, with no budget overruns",
-        "Built athlonesfinest.com in Claude Code and implemented Google Analytics 4 and Google Tag Manager on it",
+        "467% return on ad spend on the 2026 paid campaign, with EUR 700.70 in gross registration revenue attributed to two weeks of spend, and a EUR 8.13 cost per lead on the 2025 campaign",
+        "Grew participation to 400+ players across four years, reaching 12 teams and a record six sponsors in 2026, with teams travelling from Limerick and Dublin",
+        "Held a 50% repeat team participation rate across consecutive editions through community management and retention-focused messaging",
+        "Built an organic audience of 36,000+ monthly impressions and 150,000+ paid Meta views across TikTok, Instagram and Facebook",
+        "Built athlonesfinest.com with Claude Code, with GA4, Google Tag Manager and on-page SEO; it ranks as the third six-a-side website in Ireland",
+        "Earned local press coverage in the Westmeath Independent, evidence of the brand's growing visibility in the community",
       ],
     },
     {
@@ -589,101 +540,51 @@ export const aboutPage = {
       company: "Circle K",
       period: "August 2022 to October 2024",
       summary:
-        "Customer-facing operations across two locations. I hit a 29% upsell conversion rate against a 16% store average by reading what the customer needed before recommending anything.",
-      achievements: [
-        "Handled trading operations, merchandising and in-store brand presentation during peak trade across two locations",
-      ],
+        "Front-line customer experience across two locations. I hit a 29% upsell conversion rate against a 16% store average by reading what the customer needed before recommending anything.",
+      achievements: [],
     },
   ] satisfies ExperienceEntry[],
+
+  credentials: {
+    heading: "Credentials",
+    intro: "Verified certifications in digital, performance and AI-enabled marketing.",
+    certs: [
+      {
+        title: "Google Ads certification",
+        issuer: "Google",
+      },
+      {
+        title: "Google Analytics certification",
+        issuer: "Google",
+      },
+      {
+        title: "AI-Powered Performance Ads certification",
+        issuer: "Google",
+      },
+    ],
+  },
 
   education: [
     {
       credential: "MSc Marketing Practice",
       institution: "University of Galway",
       period: "2025 to 2026",
-      grade: "Grade: 2.1",
-      modules:
-        "Key modules: Customer Engagement and Analytics via Digital Platform (74%), Marketing Practice for Sustainable Value (70%), Digital Sales and Marketing Alignment (68%), Applied Marketing Practice (68%), Inbound Marketing Strategy (67%).",
-      note: "Applied projects: the All About Kombucha marketing strategy and the Google Merchandise Store conversion analysis. Both are written up in the work section.",
     },
     {
       credential: "Bachelor of Commerce, Marketing",
       institution: "University of Galway",
       period: "2022 to 2025",
-      grade: "Grade: 2.1",
-      modules:
-        "Key modules: Mathematics for Business (94%), Market Research (78%), Consumer Behaviour (71%), Global Marketing (68%), Marketing Analytics (67%), Digital Marketing (65%).",
       note: "Erasmus Exchange, Kedge Business School, Paris (2024).",
     },
   ] satisfies EducationEntry[],
 
-  toolkit: [
-    {
-      heading: "Performance and analytics",
-      tools: [
-        "Google Analytics 4 (GA4)",
-        "Google Tag Manager",
-        "Google Search Console",
-        "Meta Ads Manager",
-        "Meta Business Suite",
-        "HubSpot CRM",
-        "Google Ads",
-        "Instagram Insights",
-      ],
-    },
-    {
-      heading: "Content and design",
-      tools: [
-        "DaVinci Resolve",
-        "CapCut",
-        "Adobe InDesign",
-        "Affinity Designer",
-        "Canva",
-        "Google Veo",
-        "Higgsfield",
-      ],
-    },
-    {
-      heading: "Web and workflow",
-      tools: ["WordPress", "Elementor", "Claude", "Claude Code", "Notion", "Upwork"],
-    },
-  ] satisfies ToolGroup[],
-
-  outsideWork: [
-    "I have played football most of my life, including for the University of Galway team in the Harding Cup, which is part of why Athlone's Finest exists. Building something around a sport people already care about holds my attention better than most digital marketing problems. I still think local football deserved better coverage than it was getting.",
-    "Outside that I am usually reading about how organisations make decisions, learning about consumer behaviour, pushing a new tool to see where it breaks, or watching comedy. Not always in that order. I also facilitate leadership sessions with LIFT Ireland, which is the best practice I get at explaining an idea to a room that did not ask for it.",
-  ],
-
-  credentials: [
-    "Finalist, Real Impact Undergraduate of the Year (2025)",
-    "Email Marketing certified",
-    "Claude for Marketers",
-    "LIFT Ireland Facilitator",
-    "Event Manager, Public Speaking Society, University of Galway",
-    "University of Galway Football Team (Harding Cup)",
-    "Gaisce Bronze Award",
-    "French",
-  ],
+  closing: {
+    heading: "Have a marketing problem worth solving?",
+    sub: "Let's talk.",
+    cta: { label: "Get in touch", href: "/#contact" },
+  },
 
   cv: { label: "Download my CV", href: "/Niall_Awogboro_CV.pdf" },
-
-  whatsNext: [
-    {
-      title: "View my projects",
-      description: "Ten case studies with the brief, the decision, and the number on the end.",
-      href: "/work",
-    },
-    {
-      title: "See the Lab",
-      description: "Builds and experiments outside client work, including athlonesfinest.com.",
-      href: "/lab",
-    },
-    {
-      title: "Get in touch",
-      description: "Open to full-time roles and freelance projects. Happy to have a conversation.",
-      href: "/#contact",
-    },
-  ] satisfies WhatsNextLink[],
 } as const;
 
 /**
@@ -694,7 +595,7 @@ export const workPage = {
   eyebrow: "Work",
   headline: "Projects I've shipped.",
   intro:
-    "Ten case studies across brand, product marketing, growth, content and events. Each one covers the brief, the decision I made, who I made it with, and what happened after.",
+    "Seven case studies across strategy, brand, growth, content, web and events. Each one covers the problem, the audience, the decisions I made, and what happened after.",
 
   groups: [
     {
@@ -707,7 +608,8 @@ export const workPage = {
     {
       eyebrow: athlonesFinest.eyebrow,
       heading: "Athlone's Finest",
-      intro: undefined as string | undefined,
+      intro:
+        "Four years of a consumer sports brand, told as one story: from a 2am first registration to press coverage, a record sponsor count and 467% ROAS.",
       cards: athlonesFinest.cards,
       brand: "afe" as string | undefined,
     },
@@ -721,9 +623,9 @@ export const workPage = {
   ],
 
   closing: {
-    heading: "Want the full story on any of these?",
-    body: "Each card links to a complete write-up. Or skip the reading and get in touch directly.",
-    primaryCta: { label: "Get in touch", href: `mailto:${site.email}` },
+    heading: "Seen enough?",
+    body: "Each card above links to a complete write-up. If you would rather skip the reading, get in touch directly.",
+    primaryCta: { label: "Contact me", href: `mailto:${site.email}` },
     secondaryCta: { label: "More about me", href: "/about" },
   },
 } as const;
@@ -750,12 +652,11 @@ export const faqItems = [
   {
     question: "What types of marketing work do you do?",
     answer:
-      "Brand, product marketing, growth, content and events, from strategy through to delivery.",
+      "Strategy, brand, growth, content and events, from research and positioning through to delivery and measurement, across B2B and B2C.",
   },
   {
     question: "Do you work freelance or full-time?",
-    answer:
-      "Open to both, happy to have a conversation about what fits.",
+    answer: "Open to both, happy to have a conversation about what fits.",
   },
   {
     question: "What is the best way to discuss a project?",

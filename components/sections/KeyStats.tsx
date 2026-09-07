@@ -43,12 +43,16 @@ const SHAPES: Record<ShapeKind, { node: ReactNode; box: string }> = {
 
 // One card per stat: shape, resting tilt, highlighter colour, drop distance.
 // Short numbers go to the tighter shapes (triangle), wide ones to the roomy
-// shapes (hexagon, cloud) so nothing has to shrink too far.
+// shapes (hexagon, cloud) so nothing has to shrink too far. Six entries for
+// the six key achievements (1,900% and the 3rd-ranked site joined the board
+// in the September 2026 revision).
 const CARDS = [
   { shape: "hexagon" as ShapeKind, tilt: -3, marker: "#b6f24d", drop: -120 },
   { shape: "cloud" as ShapeKind, tilt: 2.5, marker: "#ff7a4d", drop: -150 },
   { shape: "circle" as ShapeKind, tilt: -2, marker: "#d59bf6", drop: -110 },
   { shape: "triangle" as ShapeKind, tilt: 3, marker: "#7db3f6", drop: -140 },
+  { shape: "cloud" as ShapeKind, tilt: -2.5, marker: "#ffd84d", drop: -130 },
+  { shape: "hexagon" as ShapeKind, tilt: 2, marker: "#6de5c3", drop: -145 },
 ];
 
 export function KeyStats() {
