@@ -26,7 +26,7 @@ export const caseStudies: CaseStudyDetail[] = [
     tag: "Marketing strategy / Content / Digital growth",
     title: "Solo marketer at FeelTect",
     intro:
-      "FeelTect develops Tight Alright, a connected wound care technology that shows clinicians the pressure applied during compression therapy. As the only marketer, I connected strategy, content and digital growth in a complex MedTech environment.",
+      "FeelTect develops Tight Alright, a connected wound care technology that shows clinicians the pressure applied during compression therapy. As the solo marketing lead, I connected strategy, content and digital growth in a complex MedTech environment.",
     tools: [
       "Google Analytics 4",
       "Google Tag Manager",
@@ -87,7 +87,7 @@ export const caseStudies: CaseStudyDetail[] = [
         kicker: "01 · The starting point",
         heading: "The opportunity was better connected marketing",
         body: [
-          "FeelTect already had marketing activity when I joined, but the different pieces were not yet operating as one coherent system. My job as the only marketer was to understand what existed, identify the gaps and connect positioning, content, digital channels, brand communications and measurement into a more structured approach.",
+          "FeelTect already had marketing activity when I joined, but the different pieces were not yet operating as one coherent system. My job as the solo marketing lead was to understand what existed, identify the gaps and connect positioning, content, digital channels, brand communications and measurement into a more structured approach.",
           "The company operates in a technically complex category, and its communications have to work for clinicians, investors, KOLs and other stakeholders at the same time. Marketing had to do more than describe the technology. It had to communicate the problem, explain the value clearly, establish credibility and make a complex product easier to understand.",
           "So I started by understanding the business, the product, the audiences and the existing activity before deciding what to change. Rather than immediately producing more content, I looked for the strategic gaps that clearer positioning, more structured content and better connected digital activity could close.",
         ],
@@ -231,7 +231,7 @@ export const caseStudies: CaseStudyDetail[] = [
         kicker: "11 · Working cross-functionally",
         heading: "Between strategy, clinical knowledge and execution",
         body: [
-          "Operating as the only marketer meant there was no larger team to divide responsibilities across. I worked directly with the founders, CEO, clinical team and engineering team, often translating specialist information into customer facing communication.",
+          "Operating as the solo marketing lead meant there was no larger team to divide responsibilities across. I worked directly with the founders, CEO, clinical team and engineering team, often translating specialist information into customer facing communication.",
           "That meant moving between technical understanding of how the product works, clinical understanding of the problem from the healthcare professional's perspective, marketing judgement about what mattered to the audience, creative execution, and measurement. It required independent prioritisation and the ability to take an ambiguous business problem to a practical marketing response without a specialist team behind me.",
         ],
       },
@@ -639,7 +639,7 @@ export const caseStudies: CaseStudyDetail[] = [
         kicker: "08 · Cross-functional execution",
         heading: "Marketing in a specialist environment",
         body: [
-          "As the only marketer I worked directly with the founders, CEO, clinical team and engineering team to turn specialist knowledge into usable marketing communications. The challenge was usually translation: clinical and engineering colleagues think in evidence, technology and technical detail, and marketing has to turn that into communication a wider audience can absorb quickly.",
+          "As the solo marketing lead I worked directly with the founders, CEO, clinical team and engineering team to turn specialist knowledge into usable marketing communications. The challenge was usually translation: clinical and engineering colleagues think in evidence, technology and technical detail, and marketing has to turn that into communication a wider audience can absorb quickly.",
           "That mattered doubly for the event, because the same proposition had to hold across stand graphics, clinical materials, social content and live demonstrations.",
         ],
       },
