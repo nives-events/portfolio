@@ -129,11 +129,6 @@ export function HomeHero() {
         </Link>
       </div>
 
-      <div aria-hidden="true" className="curtain">
-        <span className="curtain__valance" />
-        <span className="curtain__panel curtain__panel--left" />
-        <span className="curtain__panel curtain__panel--right" />
-      </div>
     </section>
   );
 }
