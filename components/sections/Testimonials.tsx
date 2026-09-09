@@ -135,7 +135,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
 
                   {slide.isCta ? (
                     <p className="mt-8 font-display text-2xl font-bold uppercase tracking-tight text-primary sm:text-3xl">
-                      Your testimonial should be here
+                      Why not you?
                     </p>
                   ) : (
                     <p className="mt-8 text-lg leading-relaxed text-primary/80 sm:text-xl">
@@ -143,26 +143,18 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
                     </p>
                   )}
 
-                  {slide.author ? (
-                    <footer className="mt-8 border-t border-border pt-6 w-full">
-                      <cite className="not-italic">
-                        <span className="block font-medium text-primary">
-                          {slide.author}
-                        </span>
-                        {slide.role && (
-                          <span className="mt-1 block font-mono text-[11px] uppercase tracking-[0.18em] text-primary/50">
-                            {slide.role}
-                          </span>
-                        )}
-                      </cite>
-                    </footer>
-                  ) : slide.isCta ? (
-                    <footer className="mt-6">
-                      <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-primary/50">
-                        Get in touch to work together
+                  <footer className="mt-8 border-t border-border pt-6 w-full">
+                    <cite className="not-italic">
+                      <span className="block font-medium text-primary">
+                        {slide.author || "Your testimonial should be here"}
                       </span>
-                    </footer>
-                  ) : null}
+                      {slide.role && (
+                        <span className="mt-1 block font-mono text-[11px] uppercase tracking-[0.18em] text-primary/50">
+                          {slide.role}
+                        </span>
+                      )}
+                    </cite>
+                  </footer>
                 </blockquote>
               </div>
             );

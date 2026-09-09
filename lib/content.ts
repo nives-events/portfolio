@@ -227,7 +227,7 @@ export const craft = {
 export const homepage = {
   hero: {
     headline: "Hi, I'm Niall Awogboro",
-    supporting: "I build brands, audiences and growth.",
+    supporting: "I grow businesses via events, content creation and branding.",
     // Marquee chip above the performer. The component dresses it in stars.
     marquee: "Live from Ireland",
     cta: { label: "Learn more about me", href: "/about" },
@@ -244,7 +244,7 @@ export const homepage = {
       alt: "Filming a Tight Alright product demonstration behind the scenes at FeelTect",
       caption: "backstage at FeelTect",
     },
-    heading: "Commercially minded. Clinically aware. Built to execute.",
+    heading: "Commercially minded. Built to execute.",
     paragraphs: [
       "I combine marketing strategy with hands-on creative and digital execution, and I understand how to communicate in clinical and technical environments where the audience reads information differently.",
     ],
