@@ -345,12 +345,12 @@ export const homepage = {
 export const aboutPage = {
   hero: {
     kicker: "About",
-    heading: "Meet Niall Awogboro",
+    heading: "Meet Niall AWOGBORO",
     headshot: {
       src: "/headshot.png",
       alt: "Niall Awogboro, commercially minded marketer",
     },
-    lede: "I build brands, audiences and growth.",
+    lede: "I grow businesses via events, content creation and branding.",
     paragraphs: [
       "I'm a commercially minded marketer working across strategy, creative execution and digital growth. My experience spans B2B and B2C, from positioning and audience research to content, campaigns, websites and performance measurement.",
       "I like understanding the problem, figuring out what will move the audience, building the work and then looking at what happened.",

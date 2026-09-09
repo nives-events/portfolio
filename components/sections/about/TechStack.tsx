@@ -27,6 +27,9 @@ const ICON_MAP: Record<string, string> = {
   "YouTube": "/icons/youtube.svg",
   "LinkedIn": "/icons/linkedin.svg",
   "Claude Code": "/icons/claude-code.svg",
+  "Claude": "/icons/claude.svg",
+  "Google Sheets": "/icons/google-sheets.svg",
+  "Microsoft Excel": "/icons/microsoft-excel.svg",
 };
 
 export function TechStack({

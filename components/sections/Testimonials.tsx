@@ -71,12 +71,12 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
 
   function getTransform(i: number) {
     if (i === active)
-      return { x: "-50%", scale: 1, opacity: 1, z: 20 };
+      return { x: "-50%", scale: 1, opacity: 1, blur: 0, z: 20, clickable: false };
     if (i === prevIdx)
-      return { x: "calc(-50% - 60%)", scale: 0.8, opacity: 0.35, z: 10 };
+      return { x: "calc(-50% - 62%)", scale: 0.82, opacity: 0.7, blur: 4, z: 10, clickable: true };
     if (i === nextIdx)
-      return { x: "calc(-50% + 60%)", scale: 0.8, opacity: 0.35, z: 10 };
-    return { x: "calc(-50% + 120%)", scale: 0.6, opacity: 0, z: 0 };
+      return { x: "calc(-50% + 62%)", scale: 0.82, opacity: 0.7, blur: 4, z: 10, clickable: true };
+    return { x: "calc(-50% + 130%)", scale: 0.65, opacity: 0, blur: 8, z: 0, clickable: false };
   }
 
   return (
@@ -94,7 +94,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
 
         <div
           className="relative mt-16 overflow-hidden"
-          style={{ height: "380px" }}
+          style={{ height: "400px" }}
           onMouseEnter={() => {
             pausedRef.current = true;
             if (timerRef.current) clearTimeout(timerRef.current);
@@ -107,27 +107,35 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
           {allSlides.map((slide, i) => {
             const t = getTransform(i);
             const visible = i === active || i === prevIdx || i === nextIdx;
+            const isLeft = i === prevIdx;
+            const isRight = i === nextIdx;
+
             return (
               <div
                 key={i}
-                className="absolute top-1/2 left-1/2 w-[88%] max-w-2xl"
+                className="absolute top-1/2 left-1/2 w-[82%] max-w-xl"
                 style={{
                   transform: `translateX(${t.x}) translateY(-50%) scale(${t.scale})`,
                   opacity: t.opacity,
+                  filter: t.blur > 0 ? `blur(${t.blur}px)` : undefined,
                   zIndex: t.z,
-                  transition:
-                    "transform 600ms cubic-bezier(0.23, 1, 0.32, 1), opacity 600ms cubic-bezier(0.23, 1, 0.32, 1)",
-                  pointerEvents: i === active ? "auto" : "none",
-                  willChange: visible ? "transform, opacity" : undefined,
+                  transition: "transform 600ms cubic-bezier(0.23, 1, 0.32, 1), opacity 600ms cubic-bezier(0.23, 1, 0.32, 1), filter 600ms cubic-bezier(0.23, 1, 0.32, 1)",
+                  pointerEvents: t.clickable || i === active ? "auto" : "none",
+                  willChange: visible ? "transform, opacity, filter" : undefined,
+                  cursor: t.clickable ? "pointer" : "default",
                 }}
                 aria-hidden={i !== active}
+                onClick={() => {
+                  if (isLeft) goTo(prevIdx);
+                  else if (isRight) goTo(nextIdx);
+                }}
               >
-                <blockquote className="flex flex-col items-center rounded-xl border border-border bg-surface px-6 py-10 text-center sm:px-10 sm:py-12">
+                <blockquote className="flex flex-col items-center border-2 border-border bg-surface px-6 py-10 text-center sm:px-10 sm:py-12">
                   <Stars count={slide.stars ?? 5} />
 
                   {slide.isCta ? (
                     <p className="mt-8 font-display text-2xl font-bold uppercase tracking-tight text-primary sm:text-3xl">
-                      Why not you?
+                      Your testimonial should be here
                     </p>
                   ) : (
                     <p className="mt-8 text-lg leading-relaxed text-primary/80 sm:text-xl">
@@ -136,7 +144,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
                   )}
 
                   {slide.author ? (
-                    <footer className="mt-8">
+                    <footer className="mt-8 border-t border-border pt-6 w-full">
                       <cite className="not-italic">
                         <span className="block font-medium text-primary">
                           {slide.author}
@@ -151,7 +159,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
                   ) : slide.isCta ? (
                     <footer className="mt-6">
                       <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-primary/50">
-                        Your testimonial could be here
+                        Get in touch to work together
                       </span>
                     </footer>
                   ) : null}
