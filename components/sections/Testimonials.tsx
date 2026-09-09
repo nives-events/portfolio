@@ -43,8 +43,16 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
 
   const [active, setActive] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pausedRef = useRef(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const goTo = useCallback(
     (idx: number) => {
@@ -69,7 +77,15 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
   const prevIdx = ((active - 1) % total + total) % total;
   const nextIdx = (active + 1) % total;
 
-  function getTransform(i: number) {
+  function getTransform(i: number, isMobile: boolean = false) {
+    if (isMobile) {
+      // Mobile: stack cards vertically with simple opacity transitions
+      if (i === active)
+        return { x: "-50%", scale: 1, opacity: 1, blur: 0, z: 20, clickable: false };
+      return { x: "-50%", scale: 1, opacity: 0, blur: 0, z: 0, clickable: false };
+    }
+
+    // Desktop: carousel with scale and blur effects
     if (i === active)
       return { x: "-50%", scale: 1, opacity: 1, blur: 0, z: 20, clickable: false };
     if (i === prevIdx)
@@ -94,7 +110,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
 
         <div
           className="relative mt-16 overflow-hidden"
-          style={{ height: "400px" }}
+          style={{ height: isMobile ? "auto" : "400px" }}
           onMouseEnter={() => {
             pausedRef.current = true;
             if (timerRef.current) clearTimeout(timerRef.current);
@@ -105,16 +121,21 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
           }}
         >
           {allSlides.map((slide, i) => {
-            const t = getTransform(i);
-            const visible = i === active || i === prevIdx || i === nextIdx;
+            const t = getTransform(i, isMobile);
+            const visible = i === active || (!isMobile && (i === prevIdx || i === nextIdx));
             const isLeft = i === prevIdx;
             const isRight = i === nextIdx;
 
             return (
               <div
                 key={i}
-                className="absolute top-1/2 left-1/2 w-[82%] max-w-xl"
-                style={{
+                className={`w-[82%] max-w-xl ${isMobile ? "w-full" : "absolute top-1/2 left-1/2"}`}
+                style={isMobile ? {
+                  opacity: t.opacity,
+                  transition: "opacity 600ms cubic-bezier(0.23, 1, 0.32, 1)",
+                  display: i === active ? "block" : "none",
+                  pointerEvents: i === active ? "auto" : "none",
+                } : {
                   transform: `translateX(${t.x}) translateY(-50%) scale(${t.scale})`,
                   opacity: t.opacity,
                   filter: t.blur > 0 ? `blur(${t.blur}px)` : undefined,
