@@ -226,7 +226,7 @@ export const craft = {
  */
 export const homepage = {
   hero: {
-    headline: "Hi, I'm Niall Awogboro",
+    headline: "Meet Niall",
     supporting: "I grow businesses via events, content creation and branding.",
     // Marquee chip above the performer. The component dresses it in stars.
     marquee: "Live from Ireland",
