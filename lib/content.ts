@@ -246,7 +246,7 @@ export const homepage = {
     },
     heading: "Commercially minded. Built to execute.",
     paragraphs: [
-      "I combine marketing strategy with hands-on creative and digital execution, and I understand how to communicate in clinical and technical environments where the audience reads information differently.",
+      "I combine marketing strategy with hands-on creative and digital execution, understanding how to create clear & engaging communications for audiences ranging from technical decision makers to everyday consumers.",
     ],
     link: { label: "Learn more about me", href: "/about" },
   },
@@ -345,7 +345,7 @@ export const homepage = {
 export const aboutPage = {
   hero: {
     kicker: "About",
-    heading: "Meet Niall AWOGBORO",
+    heading: "Meet Niall",
     headshot: {
       src: "/headshot.png",
       alt: "Niall Awogboro, commercially minded marketer",
