@@ -4,8 +4,9 @@ import { HomeAbout } from "@/components/sections/HomeAbout";
 import { HomeHero } from "@/components/sections/HomeHero";
 import { HomeWork } from "@/components/sections/HomeWork";
 import { KeyStats } from "@/components/sections/KeyStats";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { TechStack } from "@/components/sections/about/TechStack";
-import { faqItems } from "@/lib/content";
+import { faqItems, testimonials } from "@/lib/content";
 
 /**
  * Homepage order per the September 2026 revision: hero, Act I (positioning),
@@ -19,6 +20,7 @@ export default function HomePage() {
       <HomeAbout />
       <KeyStats />
       <HomeWork />
+      <Testimonials items={testimonials} />
       <TechStack id="home-tech-stack" />
       <FAQ items={faqItems} />
       <Contact />

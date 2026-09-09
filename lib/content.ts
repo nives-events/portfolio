@@ -375,14 +375,19 @@ export const aboutPage = {
     intro: "The person behind the portfolio, when the laptop is closed.",
     items: [
       {
+        label: "Graduation",
+        body: "Bachelor of Commerce from the University of Galway, with an Erasmus exchange at Kedge Business School in Paris. Now finishing the MSc.",
+        image: { src: "/about/graduation.jpg", alt: "Niall at graduation in academic dress" },
+      },
+      {
         label: "Football",
         body: "Manchester United fan, and I still play. I turned out for the University of Galway team in the Harding Cup, and Athlone's Finest exists because I wanted local football to have something worth showing up for.",
-        image: { src: "/work/athlones-finest/winners-2025.jpg", alt: "Tournament winners celebrating with the cup" },
+        image: { src: "/about/football.jpg", alt: "Niall playing football in the Harding Cup" },
       },
       {
         label: "Building Athlone's Finest",
         body: "Part hobby, part second job. Running a real brand with my own money on the line is the best marketing education I have found.",
-        image: { src: "/work/athlones-finest/sponsor-presentation.jpg", alt: "Niall presenting an award at an Athlone's Finest tournament" },
+        image: { src: "/about/athlones-finest-pitch.jpg", alt: "Niall on the pitch at an Athlone's Finest event" },
       },
       {
         label: "Boxing for charity",
@@ -393,11 +398,6 @@ export const aboutPage = {
         label: "Good company",
         body: "My best ideas come from conversations with people who think differently. Travel, food and catching up with friends keep the perspective honest.",
         image: { src: "/about/friends.jpg", alt: "Niall out with a friend" },
-      },
-      {
-        label: "Graduation",
-        body: "Bachelor of Commerce from the University of Galway, with an Erasmus exchange at Kedge Business School in Paris. Now finishing the MSc.",
-        image: { src: "/about/graduation.jpg", alt: "Niall at graduation in academic dress" },
       },
       {
         label: "University of Galway",
@@ -429,11 +429,13 @@ export const aboutPage = {
           "Meta Business Suite",
           "HubSpot CRM",
           "Instagram Insights",
+          "Google Sheets",
+          "Microsoft Excel",
         ],
       },
       {
         heading: "Web",
-        tools: ["WordPress", "Elementor Pro", "Wix"],
+        tools: ["WordPress", "Elementor Pro", "Wix", "Claude", "Claude Code"],
       },
       {
         heading: "Design",
@@ -623,19 +625,18 @@ export const workPage = {
 
 export const testimonials = [
   {
-    quote: "Your testimonial here.",
-    author: "",
-    role: "",
+    quote:
+      "Niall combined strategic thinking, creativity and commercial focus with strong execution, delivering growth focused marketing solutions that strengthened our brand and digital presence.",
+    author: "Andrew Cameron",
+    role: "CEO, FeelTect",
+    stars: 5,
   },
   {
-    quote: "Your testimonial here.",
-    author: "",
-    role: "",
-  },
-  {
-    quote: "Your testimonial here.",
-    author: "",
-    role: "",
+    quote:
+      "Niall is a great guy. He showed a strong understanding of commercial challenges and audience needs. He was able to translate those insights into focused marketing communications that made a positive contribution to the business. We were very glad to have him with us.",
+    author: "Darren Burke",
+    role: "CTO, FeelTect",
+    stars: 5,
   },
 ];
 
