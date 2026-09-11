@@ -30,7 +30,7 @@ export const site = {
   name: "Niall Awogboro",
   role: "Marketing",
   location: "Dublin",
-  email: "niallawo@gmail.com",
+  email: "niall7696@gmail.com",
   linkedin: "https://www.linkedin.com/in/niall-awogboro",
   linkedinLabel: "linkedin.com/in/niall-awogboro",
 } as const;
@@ -46,7 +46,7 @@ export const feeltect = {
   heading: "My work at FeelTect",
   statsBefore: [
     { value: "1,900%", label: "Increase in impressions" },
-    { value: "40%", label: "Follower growth" },
+    { value: "40%", label: "Follower growth on Linkedin" },
     { value: "200%", label: "Increase in digital engagement" },
     { value: "1,000+", label: "YouTube views from partners" },
   ] satisfies Stat[],
@@ -227,7 +227,7 @@ export const craft = {
 export const homepage = {
   hero: {
     headline: "Meet Niall",
-    supporting: "I grow businesses via events, content creation and branding.",
+    supporting: "I'm a digital marketer who turns audience insight into content, campaigns and measurable growth",
     // Marquee chip above the performer. The component dresses it in stars.
     marquee: "Live from Ireland",
     cta: { label: "Learn more about me", href: "/about" },
@@ -372,16 +372,15 @@ export const aboutPage = {
    */
   awayFromDesk: {
     heading: "Away from the desktop",
-    intro: "The person behind the portfolio, when the laptop is closed.",
     items: [
       {
         label: "Graduation",
-        body: "Bachelor of Commerce from the University of Galway, with an Erasmus exchange at Kedge Business School in Paris. Now finishing the MSc.",
+        body: "MSc in marketing pratice and Bachelor of Commerce from the University of Galway, with an Erasmus exchange at Kedge Business School in Paris.",
         image: { src: "/about/graduation.jpg", alt: "Niall at graduation in academic dress" },
       },
       {
         label: "Football",
-        body: "Manchester United fan, and I still play. I turned out for the University of Galway team in the Harding Cup, and Athlone's Finest exists because I wanted local football to have something worth showing up for.",
+        body: "Manchester United fan (sadly). I turned out for the University of Galway team in the Harding Cup and created Athlone's finest give people my age something to play for.",
         image: { src: "/about/football.jpg", alt: "Niall playing football in the Harding Cup" },
       },
       {
@@ -414,8 +413,7 @@ export const aboutPage = {
    */
   techStack: {
     heading: "Tech stack",
-    intro:
-      "The tools I actually work in, grouped by the job they do. Strategy is only useful when you can execute it yourself.",
+    intro: "",
     groups: [
       {
         heading: "Marketing & analytics",
@@ -469,7 +467,7 @@ export const aboutPage = {
       },
       {
         heading: "Think commercially",
-        body: "Marketing activity connects to a business objective, or it goes.",
+        body: "Marketing activity connects to a business objective.",
       },
       {
         heading: "Make it clear",
@@ -489,7 +487,7 @@ export const aboutPage = {
       },
       {
         heading: "Take ownership",
-        body: "Someone has to get the work over the line. Happily, me.",
+        body: "Someone has to take responsiblity to get work over the line.",
       },
       {
         heading: "Strategy into execution",
@@ -528,14 +526,6 @@ export const aboutPage = {
         "Built athlonesfinest.com with Claude Code, with GA4, Google Tag Manager and on-page SEO; it ranks as the third six-a-side website in Ireland",
         "Earned local press coverage in the Westmeath Independent, evidence of the brand's growing visibility in the community",
       ],
-    },
-    {
-      role: "Senior Sales Assistant",
-      company: "Circle K",
-      period: "August 2022 to October 2024",
-      summary:
-        "Front-line customer experience across two locations. I hit a 29% upsell conversion rate against a 16% store average by reading what the customer needed before recommending anything.",
-      achievements: [],
     },
   ] satisfies ExperienceEntry[],
 
